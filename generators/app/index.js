@@ -8,28 +8,26 @@ module.exports = yeoman.generators.Base.extend({
     var done = this.async();
 
     // have Yeoman greet the user
-    this.log(yosay('Welcome to the amazing ' + chalk.red('Evolution 3.0.1 boilerplate') + ' generator!'));
+    this.log(yosay('Evolution Tool Box'));
 
     var prompts = [{
         name: 'appName',
-        message: 'What is your app\'s name ?'
+        message: 'What is the title of your project?'
     },{
         type: 'list',
-        name: 'addProductFamily',
-        message: 'Please select a Product Family:',
-        choices : ['Standard Boilerplate', 'Communication Sites', 'Employee Portals' ]
+        name: 'addProductSuite',
+        message: 'Please select a product suite:',
+        choices : ['Core', 'Benefits Portals' ]
     }];
 
     this.prompt(prompts, function (props) {
-        this.appName = props.appName;
-        this.addProductFamily = props.addProductFamily;
+        this.addProductSuite = props.addProductSuite;
         
-        var productFamily = props.addProductFamily;
-        var siteTitle = props.appName;
+        var productSuite = props.addProductSuite;
         
         done();
 
-        if ( productFamily == 'Standard Boilerplate') {
+        if ( productSuite == 'Core') {
             this.fs.copy(
               this.templatePath('assets/css/core/global/_variables_overrides.scss'),
               this.destinationPath('assets/css/core/global/_variables_overrides.scss')
@@ -52,37 +50,9 @@ module.exports = yeoman.generators.Base.extend({
             );
             this.fs.copyTpl(
               this.templatePath('templates/layouts/layout.html'),
-              this.destinationPath('templates/layouts/layout.html'),
-              { title: siteTitle }
+              this.destinationPath('templates/layouts/layout.html')
             );
-          } else if (productFamily == 'Communication Sites') {
-            this.fs.copy(
-              this.templatePath('assets/css/comm/core/global/_variables_overrides.scss'),
-              this.destinationPath('assets/css/core/global/_variables_overrides.scss')
-            );
-            this.fs.copy(
-              this.templatePath('assets/scripts/'),
-              this.destinationPath('assets/scripts/')
-            );
-            this.fs.copy(
-              this.templatePath('assets/images/'),
-              this.destinationPath('assets/images/')
-            );
-            this.fs.copy(
-              this.templatePath('templates/'),
-              this.destinationPath('templates/')
-            );
-            this.fs.copy(
-              this.templatePath('templates/includes/'),
-              this.destinationPath('templates/includes/')
-            );
-            this.fs.copyTpl(
-              this.templatePath('templates/layouts/layout.html'),
-              this.destinationPath('templates/layouts/layout.html'),
-              { title: siteTitle }
-            );
-
-          } else if (productFamily == 'Employee Portals') {
+          } else if (productSuite == 'Benefits Portals') {
               this.fs.copy(
                 this.templatePath('assets/css/ee/core/global/_variables_overrides.scss'),
                 this.destinationPath('assets/css/core/global/_variables_overrides.scss')
@@ -105,8 +75,7 @@ module.exports = yeoman.generators.Base.extend({
               );
               this.fs.copyTpl(
                 this.templatePath('templates/layouts/layout.html'),
-                this.destinationPath('templates/layouts/layout.html'),
-                { title: siteTitle }
+                this.destinationPath('templates/layouts/layout.html')
               );
             }
 

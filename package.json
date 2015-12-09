@@ -1,13 +1,13 @@
 {
   "name": "generator-evolution",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
+  "version": "3.0.1",
+  "description": "Evolution Yeoman Generator",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "uxuimercergroup/generator-evolution",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
+    "email": "douglas.fraize@mercer.com",
     "url": "https://github.com/uxuimercergroup"
   },
   "scripts": {
@@ -17,7 +17,7 @@
     "generators"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator, generator-evolution, evolution"
   ],
   "dependencies": {
     "yeoman-generator": "^0.19.0",
@@ -27,6 +27,6 @@
   "devDependencies": {
     "mocha": "*",
     "yeoman-environment": "^1.2.7",
-    "yo": "^1.4.8"
+    "yo": "^1.5.0"
   }
 }
