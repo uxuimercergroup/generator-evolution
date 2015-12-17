@@ -1,0 +1,85 @@
+---
+title: "Index"
+people: ["Doug Fraize", "Matthew Holmes", "Sherry Seeton"]
+---
+
+<div class="small-12 columns">
+
+	{{> paragraph }}
+
+	<p>test20</p>
+
+	<img src="{{ assets }}/images/gronk.jpg" alt="" />
+
+	<h1 {{#is basename "index"}}class="active"{{/is}}>{{ title }}</h1>
+
+	{{#repeat count=3}}
+		<p class="num-{{@index}}">{{lorem count=5}}</p>
+	{{/repeat}}
+
+	<ul>
+	{{#each people}}
+		<li>{{this}}</li>
+	{{/each}}
+	</ul>
+
+{{# markdown }}
+## {{ title }}
+### Post of the day
+Vestibulum posuere, quam sed bibendum posuere
+Pellentesque habitant morbi tristique senectus
+Pellentesque nulla augue, volutpat vitae
+Read more...
+In hac habitasse platea dictumst. Morbi non rutrum risus.
+
+{{global.title}}
+{{#each people}}
+* {{this}}
+{{/each}}
+
+1. Item
+2. Item
+3. Item
+
+[Visit GitHub!](https://www.github.com)
+[Test](/test)
+
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
+
+`<addr>`
+
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+***
+{{/ markdown }}
+
+{{!-- This comment will not be in the output --}}
+{{! This comment will not be in the output }}
+<!-- This comment will be in the output -->
+	
+	<h4>Section Title</h4>
+	<ul>
+		<li><a href="home.html">Home</a></li>
+		<li><a href="template.html">Template</a></li>
+		<li><a href="/test">Test</a></li>
+	</ul>
+
+</div>

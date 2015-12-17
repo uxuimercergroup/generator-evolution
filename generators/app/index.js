@@ -11,102 +11,147 @@ module.exports = yeoman.generators.Base.extend({
     this.log(yosay('Evolution Tool Box'));
 
     var prompts = [{
-        name: 'appName',
-        message: 'What is the title of your project?'
+      name: 'appName',
+      message: 'What is the title of your project?'
     },{
-        type: 'list',
-        name: 'addProductSuite',
-        message: 'Please select a product suite:',
-        choices : ['Core', 'Benefits Portals' ]
+      type: 'list',
+      name: 'addProductSuite',
+      message: 'Please select a product suite:',
+      choices : ['Core', 'Benefits Portals']
     }];
 
     this.prompt(prompts, function (props) {
-        this.addProductSuite = props.addProductSuite;
-        
-        var productSuite = props.addProductSuite;
-        
-        done();
 
-        if ( productSuite == 'Core') {
-            this.fs.copy(
-              this.templatePath('assets/css/core/global/_variables_overrides.scss'),
-              this.destinationPath('assets/css/core/global/_variables_overrides.scss')
-            );
-            this.fs.copy(
-              this.templatePath('assets/scripts/'),
-              this.destinationPath('assets/scripts/')
-            );
-            this.fs.copy(
-              this.templatePath('assets/images/'),
-              this.destinationPath('assets/images/')
-            );
-            this.fs.copy(
-              this.templatePath('templates/'),
-              this.destinationPath('templates/')
-            );
-            this.fs.copy(
-              this.templatePath('templates/includes/'),
-              this.destinationPath('templates/includes/')
-            );
-            this.fs.copyTpl(
-              this.templatePath('templates/layouts/layout.html'),
-              this.destinationPath('templates/layouts/layout.html')
-            );
-          } else if (productSuite == 'Benefits Portals') {
-              this.fs.copy(
-                this.templatePath('assets/css/ee/core/global/_variables_overrides.scss'),
-                this.destinationPath('assets/css/core/global/_variables_overrides.scss')
-              );
-              this.fs.copy(
-                this.templatePath('assets/scripts/'),
-                this.destinationPath('assets/scripts/')
-              );
-              this.fs.copy(
-                this.templatePath('assets/images/'),
-                this.destinationPath('assets/images/')
-              );
-              this.fs.copy(
-                this.templatePath('templates/'),
-                this.destinationPath('templates/')
-              );
-              this.fs.copy(
-                this.templatePath('templates/includes/'),
-                this.destinationPath('templates/includes/')
-              );
-              this.fs.copyTpl(
-                this.templatePath('templates/layouts/layout.html'),
-                this.destinationPath('templates/layouts/layout.html')
-              );
-            }
+      this.addProductSuite = props.addProductSuite;
+      var productSuite = props.addProductSuite;
+
+      done();
+
+      if (productSuite == 'Core') {
+        this.fs.copy(
+          this.templatePath('src/assets/css/core/global/_variables_overrides.scss'),
+          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
+        );
+      } else if (productSuite == 'Benefits Portals') {
+        this.fs.copy(
+          this.templatePath('src/assets/css/bp/core/global/_variables_overrides.scss'),
+          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
+        );
+      }
 
     }.bind(this));
   },
 
   writing: {
+
     app: function () {
-      this.fs.copy(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json')
-      );
       this.fs.copy(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json')
+      );
+      this.fs.copy(
+        this.templatePath('_package.json'),
+        this.destinationPath('package.json')
       );
     },
 
     projectfiles: function () {
 
       this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
+        this.templatePath('src/assets/css/core/base'),
+        this.destinationPath('src/assets/css/core/base')
       );
       this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
+        this.templatePath('src/assets/css/core/foundation'),
+        this.destinationPath('src/assets/css/core/foundation')
       );
       this.fs.copy(
-        this.templatePath('Gruntfile.tpl.js'),
-        this.destinationPath('Gruntfile.js')
+        this.templatePath('src/assets/css/core/global/_color_variables.scss'),
+        this.destinationPath('src/assets/css/core/global/_color_variables.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/global/_functions.scss'),
+        this.destinationPath('src/assets/css/core/global/_functions.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/global/_mixins.scss'),
+        this.destinationPath('src/assets/css/core/global/_mixins.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/global/_variables.scss'),
+        this.destinationPath('src/assets/css/core/global/_variables.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/objects'),
+        this.destinationPath('src/assets/css/core/objects')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/_core.scss'),
+        this.destinationPath('src/assets/css/core/_core.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/_settings.scss'),
+        this.destinationPath('src/assets/css/core/_settings.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/_ui_core.scss'),
+        this.destinationPath('src/assets/css/core/_ui_core.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/_ui_settings.scss'),
+        this.destinationPath('src/assets/css/core/_ui_settings.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/partials'),
+        this.destinationPath('src/assets/css/partials')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/evolution.scss'),
+        this.destinationPath('src/assets/css/evolution.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/evolution_ui.scss'),
+        this.destinationPath('src/assets/css/evolution_ui.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/ie.scss'),
+        this.destinationPath('src/assets/css/ie.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/styles.scss'),
+        this.destinationPath('src/assets/css/styles.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/fonts'),
+        this.destinationPath('src/assets/fonts/')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/images/'),
+        this.destinationPath('src/assets/images/')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scripts/'),
+        this.destinationPath('src/assets/scripts/')
+      );
+      this.fs.copy(
+        this.templatePath('src/data/'),
+        this.destinationPath('src/data/')
+      );
+      this.fs.copy(
+        this.templatePath('src/design/'),
+        this.destinationPath('src/design/')
+      );
+      this.fs.copy(
+        this.templatePath('src/helpers/'),
+        this.destinationPath('src/helpers/')
+      );
+      this.fs.copy(
+        this.templatePath('src/patterns/'),
+        this.destinationPath('src/patterns/')
+      );
+      this.fs.copy(
+        this.templatePath('src/views/'),
+        this.destinationPath('src/views/')
       );
       this.fs.copy(
         this.templatePath('.ftppass'),
@@ -117,80 +162,12 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('favicon.ico')
       );
       this.fs.copy(
-        this.templatePath('design/'),
-        this.destinationPath('design/')
+        this.templatePath('Gruntfile.tpl.js'),
+        this.destinationPath('Gruntfile.js')
       );
       this.fs.copy(
-        this.templatePath('assets/fonts'),
-        this.destinationPath('assets/fonts/')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/_core.scss'),
-        this.destinationPath('assets/css/core/_core.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/_settings.scss'),
-        this.destinationPath('assets/css/core/_settings.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/_ui_core.scss'),
-        this.destinationPath('assets/css/core/_ui_core.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/_ui_settings.scss'),
-        this.destinationPath('assets/css/core/_ui_settings.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/evolution.scss'),
-        this.destinationPath('assets/css/evolution.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/evolution_ui.scss'),
-        this.destinationPath('assets/css/evolution_ui.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/ie.scss'),
-        this.destinationPath('assets/css/ie.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/styles.scss'),
-        this.destinationPath('assets/css/styles.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/base'),
-        this.destinationPath('assets/css/core/base')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/foundation'),
-        this.destinationPath('assets/css/core/foundation')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/objects'),
-        this.destinationPath('assets/css/core/objects')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/global/_color_variables.scss'),
-        this.destinationPath('assets/css/core/global/_color_variables.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/global/_functions.scss'),
-        this.destinationPath('assets/css/core/global/_functions.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/global/_mixins.scss'),
-        this.destinationPath('assets/css/core/global/_mixins.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/core/global/_variables.scss'),
-        this.destinationPath('assets/css/core/global/_variables.scss')
-      );
-      this.fs.copy(
-        this.templatePath('assets/css/partials'),
-        this.destinationPath('assets/css/partials')
-      );
-      this.fs.copy(
-        this.templatePath('models/'),
-        this.destinationPath('models/')
+        this.templatePath('grunt/'),
+        this.destinationPath('grunt/')
       );
     }
   },
@@ -198,5 +175,6 @@ module.exports = yeoman.generators.Base.extend({
   install: function () {
     this.installDependencies();
   }
+  
 });
 
