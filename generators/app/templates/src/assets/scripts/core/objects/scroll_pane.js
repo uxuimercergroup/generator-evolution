@@ -1,10 +1,8 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Scroll Pane JS
+// Mercer Evolution - Core v3.0.1 - Scroll Pane JS
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
-
-// SCROLL PANE
 
 // Depends on Malihu Jquery Custom Scrollbar Plugin
 // https://github.com/malihu/malihu-custom-scrollbar-plugin

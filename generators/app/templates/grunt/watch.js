@@ -31,7 +31,9 @@ module.exports = {
   },
   assets_misc: {
     files: [
+      'src/assets/docs/**',
       'src/assets/fonts/**',
+      'src/assets/images/core/favicon.ico',
       'src/assets/scripts/core/foundation/vendor/modernizr.js'
     ],
     tasks: ['newer:copy:dist', 'notify:copy']

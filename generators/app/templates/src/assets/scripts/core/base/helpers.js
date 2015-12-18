@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Global Helper JS Functions
+// Mercer Evolution - Core v3.0.1 - Global Helper JS Functions
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------

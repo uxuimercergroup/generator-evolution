@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Global Variables Overrides Partial
+// Mercer Evolution - Core v3.0.1 - Global Variables Overrides Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -304,7 +304,7 @@ $definition-list-header-weight: $font-weight-normal;
 
 // We use these to style blockquotes
 // $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-// $blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-padding: rem-calc(9 20 2 19);
 $blockquote-border: 1px solid $onyx-dark-30;
 // $blockquote-cite-font-size: rem-calc(13);
 // $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
@@ -658,14 +658,14 @@ $input-font-size: rem-calc(16);
 $input-bg-color: $white;
 $input-focus-bg-color: scale-color($white, $lightness: 0%);
 // $input-border-color: scale-color($white, $lightness: -20%);
-$input-focus-border-color: scale-color($white, $lightness: -40%);
+$input-focus-border-color: $onyx-dark-40;
 // $input-border-style: solid;
 // $input-border-width: 1px;
 $input-border-radius: $global-radius;
 $input-disabled-bg: $white;
 // $input-disabled-cursor: $cursor-default-value;
 $input-box-shadow: inset 0 1px 1px $onyx-dark-6;
-$input-include-glowing-effect: false;
+$input-include-glowing-effect: true;
 
 // We use these to style the fieldset border and spacing.
 $fieldset-border-style: solid;
@@ -685,7 +685,7 @@ $fieldset-margin: rem-calc(0 0);
 // $input-prefix-border-size: 1px;
 // $input-prefix-border-type: solid;
 // $input-prefix-overflow: hidden;
-// $input-prefix-font-color: $oil;
+$input-prefix-font-color: $form-label-font-color;
 // $input-prefix-font-color-alt: $white;
 
 // We use this setting to turn on/off HTML5 number spinners (the up/down arrows)
@@ -702,7 +702,7 @@ $input-error-message-bg-color: $transparent;
 $input-error-message-font-color-alt: $alert-color;
 
 // We use this to style the glowing effect of inputs when focused
-// $glowing-effect-fade-time: .45s;
+$glowing-effect-fade-time: .25s;
 $glowing-effect-color: $input-focus-border-color;
 
 // We use this to style the transition when inputs are focused and when the glowing effect is disabled.
@@ -881,7 +881,7 @@ $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness
 $off-canvas-back-bg: $onyx-dark-70;
 $off-canvas-back-border-top: none;
 // $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
-// $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
+$off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
 $off-canvas-back-hover-border-top: none;
 // $off-canvas-back-hover-border-bottom: none;
 
@@ -1506,8 +1506,8 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 	// $evo-base-shadow-base-color: 		$black;
 	// $evo-base-shadow-horizontal: 		0;
 	// $evo-base-shadow-vertical: 			rem-calc(3);
-	// $evo-base-shadow-blur: 				rem-calc(3);
-	// $evo-base-shadow-color:				scale-color($evo-base-shadow-base-color, $lightness: 75%);
+	// $evo-base-shadow-blur: 				rem-calc(5);
+	// $evo-base-shadow-color:				rgba($black, .25);
 
 // Z-INDEX MASTER LIST
 // Used for a bird's eye view of components dependent on the z-axis
@@ -1578,8 +1578,6 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 
 // BOXES
 // ------------------------------------------------------------------------------------------
-
-// CORE BOX
 // $evo-box-hdr-rule-size: 					rem-calc(3);
 // $evo-box-hdr-rule-style: 				solid;
 // $evo-box-hdr-rule-color: 				$onyx-dark-50;
@@ -1589,11 +1587,6 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $evo-box-border-color: 					$onyx-dark-30;
 // $evo-box-body-text-align: 				left;
 
-// CORE BOX SHADOW
-// $evo-box-shadow-vertical: 				0;
-// $evo-box-shadow-horizontal: 				rem-calc(3);
-// $evo-box-shadow-blur: 					rem-calc(6);
-// $evo-box-shadow-color: 					$onyx-dark-30;
 
 // BUTTONS
 // ------------------------------------------------------------------------------------------
@@ -1605,12 +1598,13 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 
 // FORM
 // ------------------------------------------------------------------------------------------
+// $evo-form-required-icon-font-color: 		$alert-color;
 // $evo-form-label-font-family: 			$evo-font-medium-stack;
 // $evo-form-input-border-radius: 			$global-radius;
 // $evo-form-input-focus-border-color: 		$onyx-dark-10;
 // $evo-form-input-margin-top: 				rem-calc(3);
-// $evo-form-input-hover-border-color: 		$onyx-dark-14;
-// $evo-form-input-hover-background-color: 	$white;
+// $evo-form-input-hover-border-color: 		$onyx-dark-40;
+$evo-form-input-hover-background-color: 	$white;
 // $evo-form-input-radio-checkbox-margin-bottom: rem-calc(18);
 // $evo-form-input-radio-checkbox-label-font-family: $font-family-sans-serif;
 // $evo-form-placholder-font-color: 		$onyx-dark-10;
@@ -1730,6 +1724,32 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $evo-autocomplete-item-border-bottom-color: $transparent;
 // $evo-autocomplete-item-hover-background-color: $onyx-dark-10;
 // $evo-autocomplete-background-color: 		$onyx-dark-2;
+
+
+// BADGES
+// ------------------------------------------------------------------------------------------
+// $evo-badge-border-radius: 				$global-rounded;
+// $evo-badge-shadow-horizontal: 			0;
+// $evo-badge-shadow-vertical: 				rem-calc(1);
+// $evo-badge-shadow-blur: 					rem-calc(2);
+// $evo-badge-shadow-color: 				$evo-base-shadow-color;
+// $evo-badge-line-height: 					1;
+// $evo-badge-text-align: 					center;
+// $evo-badge-font-size: 					rem-calc(12);
+// $evo-badge-padding: 						rem-calc(5 6 3 6);
+// $evo-badge-min-width: 					rem-calc(20);
+// $evo-badge-small-font-size: 				rem-calc(12);
+// $evo-badge-small-padding: 				rem-calc(5 6 3 6);
+// $evo-badge-small-min-width: 				rem-calc(20);
+// $evo-badge-medium-font-size: 			rem-calc(14);
+// $evo-badge-medium-padding: 				rem-calc(9 7 7 7);
+// $evo-badge-medium-min-width: 			rem-calc(30);
+// $evo-badge-large-font-size: 				rem-calc(16);
+// $evo-badge-large-padding: 				rem-calc(12 10);
+// $evo-badge-large-min-width: 				rem-calc(40);
+// $evo-badge-x-large-font-size: 			rem-calc(18);
+// $evo-badge-x-large-padding: 				rem-calc(17 15 15 15);
+// $evo-badge-x-large-min-width: 			rem-calc(50);
 
 
 // CAROUSEL
@@ -1855,21 +1875,23 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $evo-off-canvas-tab-bar-header-image-margin: rem-calc(-3 0 0 0);
 // $evo-off-canvas-menu-label-font-family: 	$font-family-sans-serif;
 // $evo-off-canvas-menu-label-letter-spacing: rem-calc(3);
-// $evo-off-canvas-menu-anchor-font-size: 	rem-calc(14);
+// $evo-off-canvas-menu-anchor-font-size: 	rem-calc(16);
 // $evo-off-canvas-menu-anchor-line-height: 1.5;
 // $evo-off-canvas-menu-anchor-letter-spacing: rem-calc(3);
-// $evo-off-canvas-menu-anchor-text-transform: uppercase;
+// $evo-off-canvas-menu-anchor-text-transform: none;
 // $evo-off-canvas-menu-anchor-icon-font-family: $evo-icon-font-stack;
 // $evo-off-canvas-menu-anchor-icon-font-size: rem-calc(16);
 // $evo-off-canvas-menu-anchor-icon-position-top: 2px;
 // $evo-off-canvas-menu-back-padding-top: 	rem-calc(9);
 // $evo-off-canvas-menu-back-padding-bottom: rem-calc(12);
+// $evo-off-canvas-menu-back-letter-spacing: rem-calc(3);
+// $evo-off-canvas-menu-back-text-transform: uppercase;
 // $evo-off-canvas-menu-back-icon-font-family: $evo-icon-font-stack;
 // $evo-off-canvas-menu-back-icon-position-top: 2px;
 // $evo-off-canvas-menu-left-anchor-padding-right: rem-calc(40);
 // $evo-off-canvas-menu-left-has-submenu-anchor-padding-right: rem-calc(14);
 // $evo-off-canvas-menu-left-has-submenu-icon: '\edc5';
-// $evo-off-canvas-menu-left-has-submenu-icon-position-top: -2px;
+// $evo-off-canvas-menu-left-has-submenu-icon-position-top: 0;
 // $evo-off-canvas-menu-left-has-submenu-icon-margin-left: rem-calc(5);
 // $evo-off-canvas-menu-left-back-anchor-padding-left: rem-calc(19);
 // $evo-off-canvas-menu-left-back-icon: 	'\edc7';
@@ -1943,14 +1965,15 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $evo-slider-handle-position-top-ie9: 	-11px;
 
 // SLIDER TICK MARKS
+// $evo-slider-tick-marker-margin: 			rem-calc(3 0 0 0);
+// $evo-slider-tick-marker-width: 			rem-calc(1);
+// $evo-slider-tick-marker-height: 			rem-calc(10);
+// $evo-slider-tick-marker-color: 			$evo-slider-background-color;
 // $evo-slider-tick-marker-container-margin-top: rem-calc(7);
 // $evo-slider-tick-marker-number-font-size: $small-font-size;
 // $evo-slider-tick-marker-number-min-position-left: -5px;
 // $evo-slider-tick-marker-number-max-position-right: -10px;
-// $evo-slider-tick-marker-margin: 			rem-calc(-28 0 0 0);
-// $evo-slider-tick-marker-width: 			rem-calc(1);
-// $evo-slider-tick-marker-height: 			rem-calc(10);
-// $evo-slider-tick-marker-color: 			$evo-slider-background-color;
+// $evo-slider-tick-marker-min-max-margin: 	rem-calc(-28 0 0 0);
 // $evo-slider-tick-marker-min-position-left: 5px;
 // $evo-slider-tick-marker-max-position-right: 10px;
 
@@ -1977,7 +2000,7 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $evo-top-bar-section-anchor-icon-color: 	$topbar-link-color;
 // $evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover;
 // $evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active;
-// $evo-top-bar-section-dropdown-active-background-color: $topbar-link-bg-active;
+// $evo-top-bar-section-dropdown-active-background-color: scale-color($topbar-bg-color, $lightness: 40%);
 // $evo-top-bar-section-dropdown-label-padding-bottom: rem-calc(8);
 // $evo-top-bar-section-dropdown-border-radius: 0 0 $global-radius $global-radius;
 // $evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-active;
@@ -1992,3 +2015,9 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 // $evo-top-bar-section-dropdown-sub-icon: '\edc5';
 // $evo-top-bar-section-dropdown-sub-icon-position-top: rem-calc(1);
 // $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1);
+// $evo-top-bar-mega-menu-ctn-padding: rem-calc(20 0);
+// $evo-top-bar-mega-menu-ctn-border-top-width: 2px;
+// $evo-top-bar-mega-menu-ctn-border-top-style: solid;
+// $evo-top-bar-mega-menu-ctn-border-top-color: $evo-top-bar-section-dropdown-active-background-color;
+// $evo-top-bar-mega-menu-ctn-background-color: $onyx-dark-6;
+// $evo-top-bar-mega-menu-ctn-border-radius: 0;

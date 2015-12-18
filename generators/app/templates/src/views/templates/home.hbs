@@ -4,8 +4,14 @@ title: "Home"
 
 <div class="small-12 columns">
 
-	<h1>{{ title }}</h1>
-	
-	<p>This boilerplate template is for the project homepage.</p>
+{{# markdown }}
+# {{ title }}
+
+This boilerplate template is for the project homepage.
+
+{{#repeat count=5}}
+	{{lorem count=5}}
+{{/repeat}}
+{{/ markdown }}
 
 </div>

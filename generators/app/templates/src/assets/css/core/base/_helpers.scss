@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Global Helpers Partial
+// Mercer Evolution - Core v3.0.1 - Global Helpers Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -132,6 +132,21 @@ img										{
 
 // LAYOUT HELPERS
 // ------------------------------------------------------------------------------------------
+
+// GRID WIDTH
+
+// CONTAIN TO GRID
+// Apply class to element to contain its width to the grid row max-width ($row-width, a foundation variable) and center it on the page.
+.evo-contain-to-grid					{
+										max-width: $row-width;
+										margin: 0 auto;
+										}
+
+// FULL WIDTH
+// Apply class to element to set its width to 100% full width and take up full width of whatever it's contained in.
+.evo-full-width							{width: 100%;}
+
+
 
 // HORIZONTAL CENTERING FOR BLOCK ELEMENTS
 // Apply class to element that needs to be centered horizontally

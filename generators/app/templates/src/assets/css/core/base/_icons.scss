@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Base Icons Partial
+// Mercer Evolution - Core v3.0.1 - Base Icons Partial
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //-------------------------------------------------------------------------------------------
@@ -132,7 +132,7 @@ $evo-icon-shield-font-color:				$white !default;
 											display: block;
 											float: left;
 											border: 2px solid $evo-icon-shield-border-color;
-		[class*="evo-icon-"]					{
+		[class^="evo-icon-"]					{
 												color: $evo-icon-shield-font-color !important;
 												font-size: 1rem;
 			&.evo-icon-shield-vert-adjust-down		{top: 1px;}
@@ -147,31 +147,31 @@ $evo-icon-shield-font-color:				$white !default;
 											width: $evo-icon-shield-size;
 											height: $evo-icon-shield-size;
 											padding: 6px 0;
-		[class*="evo-icon-"]					{font-size: 1rem;}
+		[class^="evo-icon-"]					{font-size: 1rem;}
 											}
 	.evo-icon-shield-size-small-medium		{
 											width: ($evo-icon-shield-size * 1.4);
 											height: ($evo-icon-shield-size * 1.43);
 											padding: 8px 0;
-		[class*="evo-icon-"]					{font-size: (1rem*1.5);}
+		[class^="evo-icon-"]					{font-size: (1rem*1.5);}
 											}
 	.evo-icon-shield-size-medium			{
 											width: ($evo-icon-shield-size * 2);
 											height: ($evo-icon-shield-size * 2);
 											padding: 14px 0;
-		[class*="evo-icon-"]					{font-size: ((1rem*2) - rem-calc(2));}
+		[class^="evo-icon-"]					{font-size: ((1rem*2) - rem-calc(2));}
 											}
 	.evo-icon-shield-size-large				{
 											width: ($evo-icon-shield-size * 3);
 											height: ($evo-icon-shield-size * 3);
 											padding: 21px 0;
-		[class*="evo-icon-"]					{font-size: ((1rem*3) - rem-calc(2));}
+		[class^="evo-icon-"]					{font-size: ((1rem*3) - rem-calc(2));}
 											}
 	.evo-icon-shield-size-x-large			{
 											width: ($evo-icon-shield-size * 4);
 											height: ($evo-icon-shield-size * 4);
 											padding: 27px 0;
-		[class*="evo-icon-"]					{font-size: ((1rem*4) - rem-calc(2));}
+		[class^="evo-icon-"]					{font-size: ((1rem*4) - rem-calc(2));}
 											}
 
 	
@@ -259,6 +259,19 @@ $evo-icon-shield-font-color:				$white !default;
 	.evo-icon-file-excel:before {content: "\ef39";}
 	.evo-icon-menu-open:before {content: "\ee38";}
 	.evo-icon-menu7:before {content: "\ec6e";}
+	.evo-icon-google-plus2:before {content: "\eee5";}
+	.evo-icon-facebook2:before {content: "\eee9";}
+	.evo-icon-twitter2:before {content: "\eeee";}
+	.evo-icon-youtube:before {content: "\eef3";}
+	.evo-icon-vimeo2:before {content: "\eef9";}
+	.evo-icon-dribbble2:before {content: "\ef03";}
+	.evo-icon-github:before {content: "\ef0d";}
+	.evo-icon-wordpress2:before {content: "\ef13";}
+	.evo-icon-tumblr2:before {content: "\ef18";}
+	.evo-icon-skype:before {content: "\ef22";}
+	.evo-icon-linkedin:before {content: "\ef24";}
+	.evo-icon-pinterest2:before {content: "\ef2d";}
+	.evo-icon-cart:before {content: "\e9fe";}
 	.evo-icon-custom-asterisk-small:before {content: "\e600";}
 	.evo-icon-custom-asterisk:before {content: "\e601";}
 

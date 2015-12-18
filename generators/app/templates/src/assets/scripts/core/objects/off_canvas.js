@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Foundation - Off-canvas JS
+// Mercer Evolution - Core v3.0.1 - Foundation - Off-canvas JS
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------

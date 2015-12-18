@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Abide Validation JS
+// Mercer Evolution - Core v3.0.1 - Abide Validation JS
 // DATE - June 3, 2015
 // AUTHOR - Doug Fraize, Matthew Holmes
 //--------------------------------------------------------------------------------------------------------
