@@ -1,0 +1,25 @@
+default:
+  - 'clean'
+  - 'sass'
+  - 'concat'
+  - 'imagemin'
+  - 'copy'
+  - 'assemble'
+  - 'browserSync'
+  - 'notify:browserSync'
+  - 'watch'
+
+prod:
+  - 'clean'
+  - 'sass'
+  - 'concat'
+  - 'uglify'
+  - 'imagemin'
+  - 'copy'
+  - 'assemble'
+  - 'notify:prod'
+
+deploy:
+  - 'prod'
+  - 'sftp-deploy'
+  - 'notify:deploy'
