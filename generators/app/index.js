@@ -122,6 +122,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/css/styles.scss')
       );
       this.fs.copy(
+        this.templatePath('src/assets/docs'),
+        this.destinationPath('src/assets/docs/')
+      );
+      this.fs.copy(
         this.templatePath('src/assets/fonts'),
         this.destinationPath('src/assets/fonts/')
       );
@@ -150,16 +154,16 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/patterns/')
       );
       this.fs.copy(
+        this.templatePath('src/snippets/'),
+        this.destinationPath('src/snippets/')
+      );
+      this.fs.copy(
         this.templatePath('src/views/'),
         this.destinationPath('src/views/')
       );
       this.fs.copy(
         this.templatePath('.ftppass'),
         this.destinationPath('.ftppass')
-      );
-      this.fs.copy(
-        this.templatePath('favicon.ico'),
-        this.destinationPath('favicon.ico')
       );
       this.fs.copy(
         this.templatePath('Gruntfile.tpl.js'),
