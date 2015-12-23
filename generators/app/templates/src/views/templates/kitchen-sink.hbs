@@ -6,6 +6,80 @@ title: "Kitchen Sink"
 
 {{# markdown }}
 # {{ title }}
+
+This page includes every single Evolution Core element so that we can make sure things work together smoothly.
+
+***
 {{/ markdown }}
+
+{{!-- ACCORDION - BEGINS --}}
+	<h3>Accordion</h3>
+	<div class="row">
+		<div class="small-12 columns">
+			<h6 class="evo-hdr-rule">Basic</h6>
+			{{> accordion }}
+
+			<h6 class="evo-hdr-rule">With Icons</h6>
+			{{> accordion-icons }}
+		</div>
+	</div>
+{{!-- ACCORDION - ENDS --}}
+
+	<hr />
+
+{{!-- BOX - BEGINS --}}
+	<h3>Box</h3>
+	<div class="row">
+		<div class="small-12 columns">
+			<h6 class="evo-hdr-rule">Basic</h6>
+			{{> box }}
+
+			<h6 class="evo-hdr-rule">With Header</h6>
+			{{> box-hdr }}
+
+			<h6 class="evo-hdr-rule">With Shadow</h6>
+			{{> box-hdr-shadow }}
+		</div>
+	</div>
+{{!-- BOX - ENDS --}}
+
+	<hr />
+
+{{!-- ITEM SELECTION PANEL - BEGINS --}}
+	<h3>Item Selection Panel</h3>
+	<div class="row">
+		<div class="small-12 columns">
+			<h6 class="evo-hdr-rule">Basic</h6>
+			{{> item-selection-panel }}
+
+			<h6 class="evo-hdr-rule">Photo Icons</h6>
+			{{> item-selection-panel-photo-icons }}
+		</div>
+	</div>
+{{!-- ITEM SELECTION PANEL - ENDS --}}
+
+	<hr />
+
+{{!-- SOCIAL MEDIA BADGES - BEGINS --}}
+	<h3>Social Media Badges</h3>
+	<div class="row">
+		<div class="small-12 columns">
+			{{> social-media-badges }}
+		</div>
+	</div>
+{{!-- SOCIAL MEDIA BADGES - ENDS --}}
+
+	<hr />
+
+{{!-- THIN FOOTER - BEGINS --}}
+	<h3>Thin Footer</h3>
+	<div class="row">
+		<div class="small-12 columns">
+			{{> thin-footer }}
+		</div>
+	</div>
+{{!-- THIN FOOTER - ENDS --}}
+
+	<hr />
 	
 </div>

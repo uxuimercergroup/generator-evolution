@@ -6,7 +6,7 @@ module.exports = {
     spawn: false
   },
   partials: {
-    files: ['src/views/partials/**/*.hbs', 'src/patterns/**/*.hbs'],
+    files: ['src/views/partials/**/*', 'src/patterns/**/*'],
     tasks: ['assemble', 'notify:assemble']
   },
   templates: {
@@ -22,14 +22,14 @@ module.exports = {
     tasks: ['newer:imagemin:dist', 'notify:imagemin']
   },
   sass: {
-    files: ['src/assets/css/**/*.scss'],
+    files: ['src/assets/css/**/*.scss', 'src/patterns/**/*.scss'],
     tasks: ['sass', 'notify:sass']
   },
   scripts: {
-    files: ['src/assets/scripts/**/*.js'],
+    files: ['src/assets/scripts/**/*.js', 'src/patterns/**/*.js'],
     tasks: ['newer:concat:core', 'newer:concat:site', 'notify:concat']
   },
-  assets_misc: {
+  assets_copy: {
     files: [
       'src/assets/docs/**',
       'src/assets/fonts/**',
@@ -37,6 +37,12 @@ module.exports = {
       'src/assets/scripts/core/foundation/vendor/modernizr.js'
     ],
     tasks: ['newer:copy:dist', 'notify:copy']
+  },
+  patterns_copy: {
+    files: [
+      'src/patterns/**/*.js'
+    ],
+    tasks: ['newer:copy:patterns', 'notify:copy']
   }
 
 };

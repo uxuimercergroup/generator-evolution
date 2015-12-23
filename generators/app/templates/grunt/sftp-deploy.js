@@ -9,7 +9,7 @@ module.exports = {
     src: 'dist/',
     dest: '/www/content/uxui/docs/assemble_test',
     serverSep: '/',
-    concurrency: 4,
+    concurrency: 3,
     progress: true
   }
 

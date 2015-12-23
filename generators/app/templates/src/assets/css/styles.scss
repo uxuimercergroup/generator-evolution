@@ -40,3 +40,16 @@ AUTHOR -
 		"partials/global/responsive_xlarge",
 		"partials/global/responsive_xxlarge"
 		;
+
+// ===========================================================================================
+// PATTERN IMPORTS
+// ===========================================================================================
+
+// ITEM SELECTION PANEL
+@import	"../../patterns/organisms/item-selection-panel/item-selection-panel.scss";
+
+// SOCIAL MEDIA BADGES
+@import	"../../patterns/organisms/social-media-badges/social-media-badges.scss";
+
+// THIN FOOTER
+@import	"../../patterns/organisms/thin-footer/thin-footer.scss";

@@ -20,6 +20,20 @@ module.exports = {
       ext: '.html'
       }
     ]
+  },
+  patterns: {
+    options: {
+      layout: 'pattern-layout.hbs'
+    },
+    files: [
+      {
+      expand: true,
+      cwd: 'src/patterns/',
+      src: '**/*.hbs',
+      dest: 'dist/patterns/',
+      ext: '.html'
+      }
+    ]
   }
 
 };

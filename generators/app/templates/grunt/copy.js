@@ -15,6 +15,18 @@ module.exports = {
       dest: 'dist/assets'
       }
     ]
+  },
+  patterns: {
+    files: [
+      {
+      expand: true,
+      cwd: 'src/patterns/',
+      src: [
+        '**/*.js'
+      ],
+      dest: 'dist/patterns'
+      }
+    ]
   }
 
 };
