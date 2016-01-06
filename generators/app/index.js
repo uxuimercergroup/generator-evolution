@@ -14,6 +14,9 @@ module.exports = yeoman.generators.Base.extend({
       name: 'appName',
       message: 'What is the title of your project?'
     },{
+      name: 'addPrimaryColor',
+      message: 'What is the primary color of your project?'
+    },{
       type: 'list',
       name: 'addProductSuite',
       message: 'Please select a product suite:',
@@ -22,15 +25,19 @@ module.exports = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
 
+      this.addPrimaryColor = props.addPrimaryColor;
+      var sitePrimaryColor = props.addPrimaryColor;
+
       this.addProductSuite = props.addProductSuite;
       var productSuite = props.addProductSuite;
 
       done();
 
       if (productSuite == 'Core') {
-        this.fs.copy(
+        this.fs.copyTpl(
           this.templatePath('src/assets/css/core/global/_variables_overrides.scss'),
-          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
+          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss'),
+          { primaryColor: sitePrimaryColor }
         );
       } else if (productSuite == 'Benefits Portals') {
         this.fs.copy(
