@@ -1,6 +1,10 @@
 {
   "name": "generator-evolution",
-  "version": "3.0.1",
+  "version": "3.0.2",
+  "auto-updater":{
+  "repo":"/uxuimercergroup/generator-evolution",
+  "branch":"d3.0.1.1"
+},
   "description": "Evolution Yeoman Generator",
   "license": "MIT",
   "main": "app/index.js",
@@ -25,6 +29,7 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
+    "auto-updater": "^1.0.1",
     "mocha": "*",
     "yeoman-environment": "^1.2.7",
     "yo": "^1.5.0"
