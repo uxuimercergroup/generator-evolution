@@ -2,7 +2,7 @@
 title: "Thin Footer"
 ---
 
-<!-- THIN FOOTER COMPONENT - BEGINS -->
+<!-- THIN FOOTER - BEGINS -->
 	<footer class="evo-thin-footer">
 
 	<!-- CONTENT SECTION - BEGINS -->
@@ -15,16 +15,16 @@ title: "Thin Footer"
 
 						<!-- SOCIAL MEDIA BADGES - BEGINS -->
 							<div class="evo-social-media-badges-ctn">
-								<a class="evo-icon-facebook2 evo-icon-size-medium" href="javascript:;" title="Facebook" aria-label="Facebook"></a>
-								<a class="evo-icon-twitter2 evo-icon-size-medium" href="javascript:;" title="Twitter" aria-label="Twitter"></a>
-								<a class="evo-icon-tumblr2 evo-icon-size-medium" href="javascript:;" title="Tumblr" aria-label="Tumblr"></a>
-								<a class="evo-icon-linkedin evo-icon-size-medium" href="javascript:;" title="LinkedIn" aria-label="LinkedIn"></a>
+								{{> icon tagname="a" class="evo-icon-facebook2 evo-icon-size-medium" href="#/" icon-title="Facebook" aria-label="Facebook"}}
+								{{> icon tagname="a" class="evo-icon-twitter2 evo-icon-size-medium" href="#/" icon-title="Twitter" aria-label="Twitter"}}
+								{{> icon tagname="a" class="evo-icon-tumblr2 evo-icon-size-medium" href="#/" icon-title="Tumblr" aria-label="Tumblr"}}
+								{{> icon tagname="a" class="evo-icon-linkedin evo-icon-size-medium" href="#/" icon-title="LinkedIn" aria-label="LinkedIn"}}
 							</div>
 						<!-- SOCIAL MEDIA BADGES - ENDS -->
 
 						</div>
 						<div class="small-only-text-center medium-7 large-7 columns evo-thin-footer-logo">
-							<img src="{{ assets }}/images/core/corp-logos/marsh-mclennan/mmc_logo_rgb.png" alt="Marsh &amp; McLennan Companies" width="225" height="10" />
+							{{> image src="core/corp-logos/marsh-mclennan/mmc_logo_rgb.png" alt="Marsh &amp; McLennan Companies" width="225" height="10"}}
 						</div>
 					</section>
 				</div>
@@ -48,7 +48,7 @@ title: "Thin Footer"
 			<!-- FOOTER BRAND LOGO - BEGINS -->
 				<div class="medium-6 medium-push-6 columns small-text-center medium-text-right evo-footer-logo">
 					<a class="small-only-text-center" href="http://www.mercer.com/" target="_blank" title="Mercer - Make Tomorrow, Today">
-						<img src="{{ assets }}/images/core/corp-logos/mercer/mercer_mtt_horizontal_rgb.png" alt="Mercer - Make Tomorrow, Today" width="395" height="15" />
+						{{> image src="core/corp-logos/mercer/mercer_mtt_horizontal_rgb.png" alt="Mercer - Make Tomorrow, Today" width="395" height="15"}}
 					</a>
 				</div>
 			<!-- FOOTER BRAND LOGO - ENDS -->
@@ -65,4 +65,4 @@ title: "Thin Footer"
 	<!-- BRAND BAR - ENDS -->
 
 	</footer>
-<!-- THIN FOOTER COMPONENT - ENDS -->
+<!-- THIN FOOTER - ENDS -->

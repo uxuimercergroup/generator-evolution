@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------------------------------------
 Mercer Evolution - Core v3.0.1
-Social Media Badge Component v1.0 - SASS
+Social Media Badges v1.0 - SASS
 DATE - August 19, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 --------------------------------------------------------------------------------------------*/
@@ -18,21 +18,21 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
 //
 
-// Component default variables
+// Organism default variables
 $evo-social-media-badge-font-color: $onyx-medium !default;
 $evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color !default;
 $evo-social-media-badge-font-color-focus: $evo-social-media-badge-font-color !default;
 $evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color !default;
 
 //
-// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+// @Product suite organism theme variables - IMPORTANT: DO NOT MODIFY!
 //
 
-// Family setting
-$evo-family: core;
+// Product suite setting
+$evo-product: core;
 
 // Communications
-@if $evo-family == comm {
+@if $evo-product == comm {
 
 	$evo-social-media-badge-font-color: $onyx-medium;
 	$evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color;
@@ -40,7 +40,7 @@ $evo-family: core;
 	$evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color;
 
 // Benefits Portals
-} @else if $evo-family == bp {
+} @else if $evo-product == bp {
 
 	$evo-social-media-badge-font-color: $sapphire-medium;
 	$evo-social-media-badge-font-color-hover: $evo-social-media-badge-font-color;
@@ -58,7 +58,7 @@ $evo-family: core;
 // $evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color;
 
 
-// SOCIAL MEDIA BADGE COMPONENT - BEGINS
+// SOCIAL MEDIA BADGES - BEGINS
 	.evo-social-media-badges-ctn 
 						{
 
@@ -71,15 +71,13 @@ $evo-family: core;
 							}
 
 						}
-// SOCIAL MEDIA BADGE COMPONENT - ENDS
+// SOCIAL MEDIA BADGES - ENDS
 
 //=== MEDIA QUERIES =========================================================================
 
 // MEDIUM MEDIA QUERY RANGE AND UP - 768px +
 @media #{$medium-up} {
 
-	// SOCIAL MEDIA BADGE COMPONENT - BEGINS
-
-	// SOCIAL MEDIA BADGE COMPONENT - ENDS
+	
 
 }
