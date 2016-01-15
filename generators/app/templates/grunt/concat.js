@@ -27,12 +27,13 @@ module.exports = {
         'src/assets/scripts/core/foundation/foundation/foundation.topbar.js',
         'src/assets/scripts/core/lib/jquery/jquery-ui.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.ui.touch-punch.js',
-        'src/assets/scripts/core/lib/jquery/plugins/owl.carousel.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.dataTables.js',
         'src/assets/scripts/core/lib/jquery/plugins/datatables.foundation.js',
+        'src/assets/scripts/core/lib/jquery/plugins/jquery.autosize.input.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.maskedinput.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.mousewheel.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.mCustomScrollbar.js',
+        'src/assets/scripts/core/lib/jquery/plugins/owl.carousel.js',
         'src/assets/scripts/core/lib/mobile/ios-orientationchange-fix.js',
         'src/assets/scripts/core/base/abide.js',
         'src/assets/scripts/core/base/base.js',
@@ -58,6 +59,7 @@ module.exports = {
     files: {
       'dist/assets/scripts/site.js': [
         'src/assets/scripts/site.js',
+        'src/patterns/organisms/conversational-form/conversational-form.js',
         'src/patterns/organisms/item-selection-panel/item-selection-panel.js'
       ]
     }

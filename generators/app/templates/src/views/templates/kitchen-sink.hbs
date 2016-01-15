@@ -7,79 +7,35 @@ title: "Kitchen Sink"
 {{# markdown }}
 # {{ title }}
 
-This page includes every single Evolution Core element so that we can make sure things work together smoothly.
+This page includes every single Evolution element so that we can make sure things work together smoothly.
 
 ***
 {{/ markdown }}
 
-{{!-- ACCORDION - BEGINS --}}
-	<h3>Accordion</h3>
-	<div class="row">
-		<div class="small-12 columns">
-			<h6 class="evo-hdr-rule">Basic</h6>
-			{{> accordion }}
 
-			<h6 class="evo-hdr-rule">With Icons</h6>
-			{{> accordion-icons }}
-		</div>
-	</div>
-{{!-- ACCORDION - ENDS --}}
+{{> type-header size="2" class="evo-h2-hdr-background" text="Atoms"}}
 
-	<hr />
+<hr>
 
-{{!-- BOX - BEGINS --}}
-	<h3>Box</h3>
-	<div class="row">
-		<div class="small-12 columns">
-			<h6 class="evo-hdr-rule">Basic</h6>
-			{{> box }}
+{{> atoms}}
 
-			<h6 class="evo-hdr-rule">With Header</h6>
-			{{> box-hdr }}
+<hr>
 
-			<h6 class="evo-hdr-rule">With Shadow</h6>
-			{{> box-hdr-shadow }}
-		</div>
-	</div>
-{{!-- BOX - ENDS --}}
+{{> type-header size="2" class="evo-h2-hdr-background" text="Molecules"}}
 
-	<hr />
+<hr>
 
-{{!-- ITEM SELECTION PANEL - BEGINS --}}
-	<h3>Item Selection Panel</h3>
-	<div class="row">
-		<div class="small-12 columns">
-			<h6 class="evo-hdr-rule">Basic</h6>
-			{{> item-selection-panel }}
+{{> molecules}}
 
-			<h6 class="evo-hdr-rule">Photo Icons</h6>
-			{{> item-selection-panel-photo-icons }}
-		</div>
-	</div>
-{{!-- ITEM SELECTION PANEL - ENDS --}}
+<hr>
 
-	<hr />
+{{> type-header size="2" class="evo-h2-hdr-background" text="Organisms"}}
 
-{{!-- SOCIAL MEDIA BADGES - BEGINS --}}
-	<h3>Social Media Badges</h3>
-	<div class="row">
-		<div class="small-12 columns">
-			{{> social-media-badges }}
-		</div>
-	</div>
-{{!-- SOCIAL MEDIA BADGES - ENDS --}}
+<hr>
 
-	<hr />
+{{> organisms}}
 
-{{!-- THIN FOOTER - BEGINS --}}
-	<h3>Thin Footer</h3>
-	<div class="row">
-		<div class="small-12 columns">
-			{{> thin-footer }}
-		</div>
-	</div>
-{{!-- THIN FOOTER - ENDS --}}
+<br>
+<br>
 
-	<hr />
-	
 </div>

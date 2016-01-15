@@ -28,9 +28,9 @@ module.exports = {
     files: [
       {
       expand: true,
-      cwd: 'src/patterns/',
+      cwd: 'src/patterns/organisms',
       src: '**/*.hbs',
-      dest: 'dist/patterns/',
+      dest: 'dist/patterns/organisms',
       ext: '.html'
       }
     ]

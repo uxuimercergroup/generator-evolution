@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------------------------------------
 Mercer Evolution - Core v3.0.1
-Item Selection Panel Component v1.0 - SASS
+Item Selection Panel v1.0 - SASS
 DATE - September 1, 2015
 AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 --------------------------------------------------------------------------------------------*/
@@ -18,7 +18,7 @@ AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
 // @variables - IMPORTANT: DO NOT MODIFY! MODIFY VARIABLE OVERRIDES ONLY.
 //
 
-// Component default variables
+// Organism default variables
 $evo-item-selection-panel-text-align: center !default;
 $evo-item-selection-panel-list-item-padding: rem-calc(15) !default;
 $evo-item-selection-panel-item-icon-border-radius: 100% !default;
@@ -50,14 +50,14 @@ $evo-item-selection-panel-photo-item-icon-height: rem-calc(80) !default;
 $evo-item-selection-panel-photo-item-label-margin: rem-calc(8) auto 0 auto !default;
 
 //
-// @family component theme variables - IMPORTANT: DO NOT MODIFY!
+// @Product suite organism theme variables - IMPORTANT: DO NOT MODIFY!
 //
 
-// Family setting
-$evo-family: core;
+// Product suite setting
+$evo-product: core;
 
 // Communications
-@if $evo-family == comm {
+@if $evo-product == comm {
 
 	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
 	$evo-item-selection-panel-item-icon-font-color: $onyx-medium;
@@ -68,7 +68,7 @@ $evo-family: core;
 	$evo-item-selection-panel-item-selected-label-font-color: $onyx-medium;
 
 // Benefits Portals
-} @else if $evo-family == bp {
+} @else if $evo-product == bp {
 
 	$evo-item-selection-panel-item-icon-border-color: $onyx-light;
 	$evo-item-selection-panel-item-icon-font-color: $sapphire-bright;
