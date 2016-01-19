@@ -22,7 +22,8 @@ module.exports = {
       expand: true,
       cwd: 'src/patterns/',
       src: [
-        '**/*.js'
+        '**/*.js',
+        '**/*.json'
       ],
       dest: 'dist/patterns'
       }

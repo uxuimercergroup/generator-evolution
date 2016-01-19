@@ -16,6 +16,9 @@ module.exports = {
     update: true // Only compile changed files.
   },
   dist: {
+    options: {
+      style: 'expanded'
+    },
     files: [
       {
       expand: true,

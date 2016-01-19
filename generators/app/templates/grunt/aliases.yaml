@@ -5,6 +5,7 @@ default:
   - 'imagemin'
   - 'copy'
   - 'assemble'
+  - 'string-replace'
   - 'browserSync'
   - 'notify:browserSync'
   - 'watch'
@@ -17,6 +18,7 @@ prod:
   - 'imagemin'
   - 'copy'
   - 'assemble'
+  - 'string-replace'
   - 'notify:prod'
 
 deploy:

@@ -1,7 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0.1 - Global Variables Overrides Partial
-// DATE - June 3, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes
+// Mercer Evolution - Global Variables Overrides Partial
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
@@ -125,7 +123,7 @@ $font-weight-bold: bold;
 // $black       : #000000;
 
 // We use these as default colors throughout, Message container colors
-$primary-color: <%= primaryColor %>; //$onyx-dark-70
+$primary-color: $onyx-dark-70;
 $secondary-color: $onyx-dark-6;
 $alert-color: $evo-base-alert-color;
 $success-color: $evo-base-success-color;
