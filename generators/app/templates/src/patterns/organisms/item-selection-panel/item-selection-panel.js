@@ -1,8 +1,9 @@
 //--------------------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0.1
-// Item Selection Panel v1.0 - JS
-// DATE - September 1, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton
+// Mercer Evolution v{{ evo_meta_version }}
+// {{ item_selection_panel_meta_name }} v{{ item_selection_panel_meta_version }} - JS
+// DATE: {{ item_selection_panel_meta_date }}
+// AUTHOR: {{ evo_meta_author }}
+// URL: {{ evo_meta_url }}
 //--------------------------------------------------------------------------------------------------------
 
 // ITEM SELECTION PANEL ITEM SELECTED TOGGLE - BEGINS
