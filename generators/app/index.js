@@ -10,20 +10,35 @@ module.exports = yeoman.generators.Base.extend({
     // have Yeoman greet the user
     this.log(yosay('Evolution Tool Box'));
 
-    var prompts = [{
-      name: 'addProjectName',
-      message: 'What is the title of your project?'
-    },{
-      name: 'addPrimaryColor',
-      message: 'What is the primary color of your project?'
-    },{
-      type: 'list',
-      name: 'addProductSuite',
-      message: 'Please select a product suite:',
-      choices : ['Core', 'Benefits Portals']
-    }];
+    var prompts = [
+      {
+        type: 'input',
+        name: 'addProjectAuthor',
+        message: 'What is your full name?'
+      },
+      {
+        type: 'input',
+        name: 'addProjectName',
+        message: 'What is the name of your project?'
+      },
+      {
+        type: 'input',
+        name: 'addPrimaryColor',
+        message: 'What is the primary color of your project?',
+        default: '$onyx-dark-70'
+      },
+      {
+        type: 'list',
+        name: 'addProductSuite',
+        message: 'Please select a product suite:',
+        choices : ['Core', 'Benefits Portals']
+      }
+    ];
 
     this.prompt(prompts, function (props) {
+
+      this.addProjectAuthor = props.addProjectAuthor;
+      var siteProjectAuthor = props.addProjectAuthor;
 
       this.addProjectName = props.addProjectName;
       var siteProjectName = props.addProjectName;
@@ -39,7 +54,10 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),
-        { projectName: siteProjectName }
+        {
+          projectAuthor: siteProjectAuthor,
+          projectName: siteProjectName
+        }
       );
 
       if (productSuite == 'Core') {
