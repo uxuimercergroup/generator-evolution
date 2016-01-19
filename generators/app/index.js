@@ -65,8 +65,8 @@ module.exports = yeoman.generators.Base.extend({
     projectfiles: function () {
 
       this.fs.copy(
-        this.templatePath('src/assets/css/core/base'),
-        this.destinationPath('src/assets/css/core/base')
+        this.templatePath('src/assets/css/core/atoms'),
+        this.destinationPath('src/assets/css/core/atoms')
       );
       this.fs.copy(
         this.templatePath('src/assets/css/core/foundation'),
@@ -89,8 +89,8 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/css/core/global/_variables.scss')
       );
       this.fs.copy(
-        this.templatePath('src/assets/css/core/objects'),
-        this.destinationPath('src/assets/css/core/objects')
+        this.templatePath('src/assets/css/core/molecules'),
+        this.destinationPath('src/assets/css/core/molecules')
       );
       this.fs.copy(
         this.templatePath('src/assets/css/core/_core.scss'),
