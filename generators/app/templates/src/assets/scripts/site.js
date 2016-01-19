@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------
-// {{ meta_name }} v{{ meta_version }} - Site JS
+// {{ meta_project }} v{{ meta_version }} - Site JS
 // DATE: {{ meta_date }}
 // AUTHOR: {{ meta_author }}
 // URL: {{ meta_url }}

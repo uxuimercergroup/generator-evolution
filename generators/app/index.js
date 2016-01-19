@@ -11,7 +11,7 @@ module.exports = yeoman.generators.Base.extend({
     this.log(yosay('Evolution Tool Box'));
 
     var prompts = [{
-      name: 'appName',
+      name: 'addProjectName',
       message: 'What is the title of your project?'
     },{
       name: 'addPrimaryColor',
@@ -25,6 +25,9 @@ module.exports = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
 
+      this.addProjectName = props.addProjectName;
+      var siteProjectName = props.addProjectName;
+
       this.addPrimaryColor = props.addPrimaryColor;
       var sitePrimaryColor = props.addPrimaryColor;
 
@@ -32,6 +35,12 @@ module.exports = yeoman.generators.Base.extend({
       var productSuite = props.addProductSuite;
 
       done();
+
+      this.fs.copyTpl(
+        this.templatePath('_package.json'),
+        this.destinationPath('package.json'),
+        { projectName: siteProjectName }
+      );
 
       if (productSuite == 'Core') {
         this.fs.copyTpl(
@@ -55,10 +64,6 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json')
-      );
-      this.fs.copy(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json')
       );
     },
 

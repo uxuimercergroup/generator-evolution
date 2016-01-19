@@ -27,8 +27,8 @@ module.exports = {
           replacement: '<%= package.evolution.url %>'
         },
         {
-          pattern: /{{ meta_name }}/g,
-          replacement: '<%= package.name %>'
+          pattern: /{{ meta_project }}/g,
+          replacement: '<%= package.project %>'
         },
         {
           pattern: /{{ meta_version }}/g,

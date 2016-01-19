@@ -6,7 +6,7 @@
     "url": "https://github.com/uxuimercergroup/evolution"
   },
 
-  "name": "",
+  "project": "<%= projectName %>",
   "version": "0.0.0",
   "author": "",
   "date": "",
