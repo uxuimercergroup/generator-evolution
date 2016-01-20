@@ -37,7 +37,7 @@ $evo-stepper-item-active-background-color: $onyx-dark-40 !default;
 //
 
 // Product setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communications
 @if $evo-product == comm {

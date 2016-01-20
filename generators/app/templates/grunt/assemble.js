@@ -8,7 +8,7 @@ module.exports = {
     helpers: ['src/helpers/**/*.js'],
     layoutdir: 'src/views/layouts',
     layout: 'default-layout.hbs',
-    data: ['src/data/**/*.json']
+    data: ['src/data/**/*.json', 'package.json']
   },
   dist: {
     files: [

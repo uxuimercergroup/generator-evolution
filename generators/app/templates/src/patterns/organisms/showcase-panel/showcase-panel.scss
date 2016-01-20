@@ -71,7 +71,7 @@ $evo-showcase-panel-fixed-width: 100% !default;
 //
 
 // Product setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communications
 @if $evo-product == comm {

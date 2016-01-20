@@ -42,7 +42,7 @@ $evo-pricing-table-total-row-font-color: $white !default;
 //
 
 // Product setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communications
 @if $evo-product == comm {

@@ -46,7 +46,7 @@ $evo-thin-footer-content-section-min-height: rem-calc(80) !default;
 //
 
 // Product suite setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communication
 @if $evo-product == comm {

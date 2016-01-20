@@ -55,7 +55,7 @@ $evo-item-selection-panel-photo-item-label-margin: rem-calc(8) auto 0 auto !defa
 //
 
 // Product suite setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communications
 @if $evo-product == comm {

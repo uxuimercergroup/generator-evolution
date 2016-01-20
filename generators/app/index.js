@@ -92,10 +92,24 @@ module.exports = yeoman.generators.Base.extend({
           this.destinationPath('src/assets/css/core/global/_variables_overrides.scss'),
           { primaryColor: sitePrimaryColor }
         );
+        this.fs.copyTpl(
+          this.templatePath('src/patterns/organisms/'),
+          this.destinationPath('src/patterns/organisms/'),
+          {
+            productSuiteType: 'core'
+          }
+        );
       } else if (productSuite == 'Benefits Portals') {
         this.fs.copy(
           this.templatePath('src/assets/css/bp/core/global/_variables_overrides.scss'),
           this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
+        );
+        this.fs.copyTpl(
+          this.templatePath('src/patterns/organisms/'),
+          this.destinationPath('src/patterns/organisms/'),
+          {
+            productSuiteType: 'bp'
+          }
         );
       }
 
@@ -206,8 +220,12 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/helpers/')
       );
       this.fs.copy(
-        this.templatePath('src/patterns/'),
-        this.destinationPath('src/patterns/')
+        this.templatePath('src/patterns/atoms/'),
+        this.destinationPath('src/patterns/atoms/')
+      );
+      this.fs.copy(
+        this.templatePath('src/patterns/molecules/'),
+        this.destinationPath('src/patterns/molecules/')
       );
       this.fs.copy(
         this.templatePath('src/snippets/'),

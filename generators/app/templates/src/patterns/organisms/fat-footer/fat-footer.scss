@@ -47,7 +47,7 @@ $evo-fat-footer-social-media-badge-font-color-visited: $evo-fat-footer-social-me
 //
 
 // Product setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communication
 @if $evo-product == comm {

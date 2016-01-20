@@ -30,7 +30,7 @@ $evo-social-media-badge-font-color-visited: $evo-social-media-badge-font-color !
 //
 
 // Product suite setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communications
 @if $evo-product == comm {

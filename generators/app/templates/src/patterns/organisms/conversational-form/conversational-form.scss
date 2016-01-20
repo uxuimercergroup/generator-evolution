@@ -50,7 +50,7 @@ $evo-conversational-form-select-hover-background-color: $evo-form-input-hover-ba
 //
 
 // Product setting
-$evo-product: core;
+$evo-product: <%= productSuiteType %>;
 
 // Communications
 @if $evo-product == comm {
