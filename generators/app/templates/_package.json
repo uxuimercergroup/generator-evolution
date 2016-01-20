@@ -11,6 +11,7 @@
   "author": "<%= projectAuthor %>",
   "date": "<%= projectCreationDate %>",
   "url": "<%= projectURL %>",
+  "product_suite": "<%= productSuiteType %>",
 
   "devDependencies": {
     "grunt": "~0.4.5",

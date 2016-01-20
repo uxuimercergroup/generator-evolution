@@ -68,17 +68,6 @@ module.exports = yeoman.generators.Base.extend({
       done();
 
       this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        {
-          projectAuthor: siteProjectAuthor,
-          projectName: siteProjectName,
-          projectCreationDate: siteProjectCreationDate,
-          projectURL: siteProjectURL
-        }
-      );
-
-      this.fs.copyTpl(
         this.templatePath('src/data/global.json'),
         this.destinationPath('src/data/global.json'),
         {
@@ -87,6 +76,17 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       if (productSuite == 'Core') {
+        this.fs.copyTpl(
+          this.templatePath('_package.json'),
+          this.destinationPath('package.json'),
+          {
+            projectAuthor: siteProjectAuthor,
+            projectName: siteProjectName,
+            projectCreationDate: siteProjectCreationDate,
+            projectURL: siteProjectURL,
+            productSuiteType: 'core'
+          }
+        );
         this.fs.copyTpl(
           this.templatePath('src/assets/css/core/global/_variables_overrides.scss'),
           this.destinationPath('src/assets/css/core/global/_variables_overrides.scss'),
@@ -100,6 +100,17 @@ module.exports = yeoman.generators.Base.extend({
           }
         );
       } else if (productSuite == 'Benefits Portals') {
+        this.fs.copyTpl(
+          this.templatePath('_package.json'),
+          this.destinationPath('package.json'),
+          {
+            projectAuthor: siteProjectAuthor,
+            projectName: siteProjectName,
+            projectCreationDate: siteProjectCreationDate,
+            projectURL: siteProjectURL,
+            productSuiteType: 'bp'
+          }
+        );
         this.fs.copy(
           this.templatePath('src/assets/css/bp/core/global/_variables_overrides.scss'),
           this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
