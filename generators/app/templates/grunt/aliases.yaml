@@ -1,6 +1,7 @@
 default:
   - 'clean'
-  - 'sass'
+  - 'sass:dist'
+  - 'sass:patterns'
   - 'concat'
   - 'imagemin'
   - 'copy'
@@ -12,7 +13,8 @@ default:
 
 prod:
   - 'clean'
-  - 'sass'
+  - 'sass:prod'
+  - 'sass:patterns'
   - 'concat'
   - 'uglify'
   - 'imagemin'

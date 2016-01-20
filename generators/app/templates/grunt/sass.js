@@ -29,6 +29,17 @@ module.exports = {
       }
     ]
   },
+  prod: {
+    files: [
+      {
+      expand: true,
+      cwd: 'src/assets/css/',
+      src: ['**/*.scss'],
+      dest: 'dist/assets/css',
+      ext: '.css'
+      }
+    ]
+  },
   patterns: {
     options: {
       style: 'expanded'
