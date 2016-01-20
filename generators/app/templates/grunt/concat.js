@@ -65,8 +65,7 @@ module.exports = {
     files: {
       'dist/assets/scripts/site.js': [
         'src/assets/scripts/site.js',
-        'src/patterns/organisms/conversational-form/conversational-form.js',
-        'src/patterns/organisms/item-selection-panel/item-selection-panel.js'
+        'src/patterns/organisms/**/*.js'
       ]
     }
   }
