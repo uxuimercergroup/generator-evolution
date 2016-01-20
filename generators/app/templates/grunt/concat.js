@@ -6,7 +6,13 @@ module.exports = {
   },
   core: {
     options: {
-      banner: '/*!\nMercer Evolution - Core JS\nAUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton\n*/\n\n'
+      banner:
+        '/*!\n' +
+        '* Mercer Evolution v<%= package.evolution.version %> - Core JS\n' +
+        '* DATE: <%= package.evolution.date %>\n' +
+        '* AUTHOR: <%= package.evolution.author %>\n' +
+        '* URL: <%= package.evolution.url %>\n' +
+        '*/\n\n'
     },
     files: {
       'dist/assets/scripts/evolution.js': [
