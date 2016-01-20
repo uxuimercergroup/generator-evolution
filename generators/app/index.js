@@ -23,6 +23,16 @@ module.exports = yeoman.generators.Base.extend({
       },
       {
         type: 'input',
+        name: 'addProjectCreationDate',
+        message: 'What is today\'s date? (January 1, 2016)'
+      },
+      {
+        type: 'input',
+        name: 'addProjectURL',
+        message: 'Where will this project be hosted? (URL)'
+      },
+      {
+        type: 'input',
         name: 'addPrimaryColor',
         message: 'What is the primary color of your project?',
         default: '$onyx-dark-70'
@@ -43,6 +53,12 @@ module.exports = yeoman.generators.Base.extend({
       this.addProjectName = props.addProjectName;
       var siteProjectName = props.addProjectName;
 
+      this.addProjectCreationDate = props.addProjectCreationDate;
+      var siteProjectCreationDate = props.addProjectCreationDate;
+
+      this.addProjectURL = props.addProjectURL;
+      var siteProjectURL = props.addProjectURL;
+
       this.addPrimaryColor = props.addPrimaryColor;
       var sitePrimaryColor = props.addPrimaryColor;
 
@@ -56,6 +72,16 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('package.json'),
         {
           projectAuthor: siteProjectAuthor,
+          projectName: siteProjectName,
+          projectCreationDate: siteProjectCreationDate,
+          projectURL: siteProjectURL
+        }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('src/data/global.json'),
+        this.destinationPath('src/data/global.json'),
+        {
           projectName: siteProjectName
         }
       );
@@ -168,8 +194,8 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/scripts/')
       );
       this.fs.copy(
-        this.templatePath('src/data/'),
-        this.destinationPath('src/data/')
+        this.templatePath('src/data/form.json'),
+        this.destinationPath('src/data/form.json')
       );
       this.fs.copy(
         this.templatePath('src/design/'),
