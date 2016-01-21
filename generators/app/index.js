@@ -32,16 +32,16 @@ module.exports = yeoman.generators.Base.extend({
         message: 'Where will this project be hosted? (URL)'
       },
       {
-        type: 'input',
-        name: 'addPrimaryColor',
-        message: 'What is the primary color of your project?',
-        default: '$onyx-dark-70'
-      },
-      {
         type: 'list',
         name: 'addProductSuite',
         message: 'Please select a product suite:',
         choices : ['Core', 'Benefits Portals']
+      },
+      {
+        type: 'input',
+        name: 'addPrimaryColor',
+        message: 'What is the primary color of your project? (Core product suite only)',
+        default: '$onyx-dark-70'
       }
     ];
 
