@@ -16,11 +16,17 @@
 $evo-top-bar-icon-font-family: $evo-icon-font-stack !default;
 $evo-top-bar-icon-site-font-family: $evo-icon-site-font-stack !default;
 $evo-top-bar-anchor-decoration: none !default;
+$evo-top-bar-title-area-image-position-top: -2px !default;
+$evo-top-bar-title-area-image-position-left: -7px !default;
 $evo-top-bar-title-area-name-font-family: $font-family-sans-serif !default;
 $evo-top-bar-title-area-name-letter-spacing: rem-calc(3) !default;
 $evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
 $evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%) !default;
 $evo-top-bar-title-area-sub-name-font-family: $font-family-sans-serif !default;
+$evo-top-bar-section-anchor-icon-margin-top: -1px !default;
+$evo-top-bar-section-anchor-icon-padding-right: rem-calc(18) !default;
+$evo-top-bar-section-anchor-icon-padding-left: rem-calc(18) !default;
+$evo-top-bar-section-anchor-icon-font-size: rem-calc(24) !default;
 $evo-top-bar-section-anchor-icon-color: $topbar-link-color !default;
 $evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover !default;
 $evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active !default;
@@ -66,6 +72,17 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 				// TOP BAR TITLE AREA
 				.title-area						{
 					.name							{
+						a								{
+														display: block;
+														line-height: $topbar-height;
+														padding-left: $topbar-link-padding;
+														padding-right: $topbar-link-padding;
+														}
+						img								{
+														position: relative;
+														top: $evo-top-bar-title-area-image-position-top;
+														left: $evo-top-bar-title-area-image-position-left;
+														}
 						h1								{
 														font-family: $evo-top-bar-title-area-name-font-family !important;
 														letter-spacing: $evo-top-bar-title-area-name-letter-spacing;
@@ -93,6 +110,17 @@ $evo-top-bar-mega-menu-ctn-border-radius: 0 !default;
 								&[class^="evo-icon-site-"]		{
 																font-family: $evo-top-bar-icon-site-font-family;
 																}
+
+								&[class^="evo-icon-"],
+								&[class^="evo-icon-site-"]		{
+																margin-top: $evo-top-bar-section-anchor-icon-margin-top;
+																padding-right: $evo-top-bar-section-anchor-icon-padding-right !important;
+																padding-left: $evo-top-bar-section-anchor-icon-padding-left !important;
+																font-size: $evo-top-bar-section-anchor-icon-font-size;
+																}
+
+								[class^="evo-icon-"],
+								[class^="evo-icon-site-"]		{top: 0;}
 
 								// TOP BAR NAV LINKS WITH ICONS
 								[class^=evo-icon-]				{

@@ -13,9 +13,10 @@
 //
 // @variables
 //
+$evo-off-canvas-tab-bar-menu-icon-font-size: rem-calc(24) !default;
 $evo-off-canvas-tab-bar-menu-icon-color: $tabbar-menu-icon-color !default;
-$evo-off-canvas-tab-bar-menu-icon-position-top: 6px !default;
-$evo-off-canvas-tab-bar-menu-icon-position-left: 7px !default;
+$evo-off-canvas-tab-bar-menu-icon-position-top: 5px !default;
+$evo-off-canvas-tab-bar-menu-icon-position-left: 15px !default;
 $evo-off-canvas-tab-bar-menu-icon-hover-color: $tabbar-menu-icon-hover !default;
 $evo-off-canvas-tab-bar-header-font-family: $font-family-sans-serif !default;
 $evo-off-canvas-tab-bar-header-letter-spacing: rem-calc(3) !default;
@@ -24,14 +25,14 @@ $evo-off-canvas-tab-bar-header-image-margin: rem-calc(-3 0 0 0) !default;
 $evo-off-canvas-menu-label-font-family: $font-family-sans-serif !default;
 $evo-off-canvas-menu-label-letter-spacing: rem-calc(3) !default;
 $evo-off-canvas-menu-anchor-font-size: rem-calc(16) !default;
-$evo-off-canvas-menu-anchor-line-height: 1.5 !default;
+$evo-off-canvas-menu-anchor-line-height: 1.25 !default;
 $evo-off-canvas-menu-anchor-letter-spacing: normal !default;
 $evo-off-canvas-menu-anchor-text-transform: none !default;
 $evo-off-canvas-menu-anchor-icon-font-family: $evo-icon-font-stack !default;
 $evo-off-canvas-menu-anchor-icon-font-size: rem-calc(16) !default;
 $evo-off-canvas-menu-anchor-icon-position-top: 2px !default;
-$evo-off-canvas-menu-back-padding-top: rem-calc(9) !default;
-$evo-off-canvas-menu-back-padding-bottom: rem-calc(12) !default;
+$evo-off-canvas-menu-back-padding-top: rem-calc(14) !default;
+$evo-off-canvas-menu-back-padding-bottom: rem-calc(18) !default;
 $evo-off-canvas-menu-back-letter-spacing: rem-calc(3) !default;
 $evo-off-canvas-menu-back-text-transform: uppercase !default;
 $evo-off-canvas-menu-back-icon-font-family: $evo-icon-font-stack !default;
@@ -60,6 +61,7 @@ $evo-off-canvas-menu-right-back-icon-margin-left: 0 !default;
 		.tab-bar						{
 			.menu-icon						{
 				[class*="evo-icon-"]			{
+												font-size: $evo-off-canvas-tab-bar-menu-icon-font-size;
 												color: $evo-off-canvas-tab-bar-menu-icon-color;
 												top: $evo-off-canvas-tab-bar-menu-icon-position-top;
 												left: $evo-off-canvas-tab-bar-menu-icon-position-left;

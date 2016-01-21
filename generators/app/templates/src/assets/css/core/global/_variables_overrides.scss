@@ -123,7 +123,7 @@ $font-weight-bold: bold;
 // $black       : #000000;
 
 // We use these as default colors throughout, Message container colors
-$primary-color: <%= primaryColor %>; // $onyx-dark-70
+$primary-color: $onyx-dark-70; // $onyx-dark-70
 $secondary-color: $onyx-dark-6;
 $alert-color: $evo-base-alert-color;
 $success-color: $evo-base-success-color;
@@ -840,8 +840,8 @@ $magellan-padding: rem-calc(10);
 // Off Canvas Tab Bar Variables
 // $include-html-off-canvas-classes: $include-html-classes;
 
-$tabbar-bg: $onyx-dark-80;
-$tabbar-height: rem-calc(46);
+$tabbar-bg: $onyx-medium;
+$tabbar-height: rem-calc(55);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
 $tabbar-color: $white;
@@ -858,34 +858,34 @@ $tabbar-header-weight: $font-weight-normal;
 // $tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
-$off-canvas-width: rem-calc(275);
+$off-canvas-width: rem-calc(265);
 $off-canvas-bg: $onyx-dark-6;
 $off-canvas-bg-hover: scale-color($off-canvas-bg, $lightness: -10%);
 $off-canvas-bg-active: scale-color($off-canvas-bg, $lightness: -20%);
 
 // Off Canvas Menu List Variables
-$off-canvas-label-padding: rem-calc(13 24 14 24);
+$off-canvas-label-padding: rem-calc(19 24 18 24);
 $off-canvas-label-color: $white;
 $off-canvas-label-text-transform: uppercase;
 $off-canvas-label-font-size: $small-font-size;
 $off-canvas-label-font-weight: $font-weight-normal;
 $off-canvas-label-bg: $onyx-dark-60;
-$off-canvas-label-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 15%);
-// $off-canvas-label-border-bottom: none;
+$off-canvas-label-border-top: 0;
+$off-canvas-label-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -15%);
 // $off-canvas-label-margin: 0;
 $off-canvas-link-padding: rem-calc(24);
 $off-canvas-link-color: $onyx-dark-80;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -15%);
 $off-canvas-back-bg: $onyx-dark-70;
 $off-canvas-back-border-top: none;
-// $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
+$off-canvas-back-border-bottom: none;
 $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
 $off-canvas-back-hover-border-top: none;
 // $off-canvas-back-hover-border-bottom: none;
 
 // Off Canvas Menu Icon Variables
 $tabbar-menu-icon-color: $white;
-$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -15%);
+$tabbar-menu-icon-hover: $white;
 
 $tabbar-menu-icon-text-indent: 0;
 // $tabbar-menu-icon-width: $tabbar-icon-width;
@@ -1409,12 +1409,12 @@ $topbar-bg-color: $black;
 $topbar-bg: scale-color($topbar-bg-color, $lightness: 25%);
 
 // Height and margin
-$topbar-height: rem-calc(56);
+$topbar-height: rem-calc(55);
 $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 $topbar-title-weight: $font-weight-normal;
-$topbar-title-font-size: rem-calc(22);
+$topbar-title-font-size: rem-calc(20);
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: scale-color($topbar-bg-color, $lightness: 84%);
@@ -1430,7 +1430,7 @@ $topbar-link-bg-color-hover: $transparent;
 $topbar-link-bg-active: scale-color($topbar-bg-color, $lightness: 30%);
 $topbar-link-bg-active-hover: $topbar-link-bg-active;
 $topbar-link-text-transform: none;
-$topbar-link-padding: ($topbar-height / 3);
+$topbar-link-padding: ($topbar-height / 2.5);
 $topbar-back-link-size: rem-calc(22);
 $topbar-link-dropdown-padding: rem-calc(20);
 $topbar-button-font-size: .75rem;
@@ -1863,9 +1863,10 @@ $evo-form-input-hover-background-color: 	$white;
 
 // OFF-CANVAS
 // ------------------------------------------------------------------------------------------
+// $evo-off-canvas-tab-bar-menu-icon-font-size: rem-calc(24);
 // $evo-off-canvas-tab-bar-menu-icon-color: $tabbar-menu-icon-color;
-// $evo-off-canvas-tab-bar-menu-icon-position-top: 6px;
-// $evo-off-canvas-tab-bar-menu-icon-position-left: 7px;
+// $evo-off-canvas-tab-bar-menu-icon-position-top: 5px;
+// $evo-off-canvas-tab-bar-menu-icon-position-left: 15px;
 // $evo-off-canvas-tab-bar-menu-icon-hover-color: $tabbar-menu-icon-hover;
 // $evo-off-canvas-tab-bar-header-font-family: $font-family-sans-serif;
 // $evo-off-canvas-tab-bar-header-letter-spacing: rem-calc(3);
@@ -1874,14 +1875,14 @@ $evo-form-input-hover-background-color: 	$white;
 // $evo-off-canvas-menu-label-font-family: 	$font-family-sans-serif;
 // $evo-off-canvas-menu-label-letter-spacing: rem-calc(3);
 // $evo-off-canvas-menu-anchor-font-size: 	rem-calc(16);
-// $evo-off-canvas-menu-anchor-line-height: 1.5;
+// $evo-off-canvas-menu-anchor-line-height: 1.25;
 // $evo-off-canvas-menu-anchor-letter-spacing: rem-calc(3);
 // $evo-off-canvas-menu-anchor-text-transform: none;
 // $evo-off-canvas-menu-anchor-icon-font-family: $evo-icon-font-stack;
 // $evo-off-canvas-menu-anchor-icon-font-size: rem-calc(16);
 // $evo-off-canvas-menu-anchor-icon-position-top: 2px;
-// $evo-off-canvas-menu-back-padding-top: 	rem-calc(9);
-// $evo-off-canvas-menu-back-padding-bottom: rem-calc(12);
+// $evo-off-canvas-menu-back-padding-top: 	rem-calc(14);
+// $evo-off-canvas-menu-back-padding-bottom: rem-calc(18);
 // $evo-off-canvas-menu-back-letter-spacing: rem-calc(3);
 // $evo-off-canvas-menu-back-text-transform: uppercase;
 // $evo-off-canvas-menu-back-icon-font-family: $evo-icon-font-stack;
@@ -1990,11 +1991,17 @@ $evo-form-input-hover-background-color: 	$white;
 // $evo-top-bar-icon-font-family: 			$evo-icon-font-stack;
 // $evo-top-bar-icon-site-font-family: 		$evo-icon-site-font-stack;
 // $evo-top-bar-anchor-decoration: 			none;
+// $evo-top-bar-title-area-image-position-top: -2px;
+// $evo-top-bar-title-area-image-position-left: -7px;
 // $evo-top-bar-title-area-name-font-family: $font-family-sans-serif;
 // $evo-top-bar-title-area-name-letter-spacing: rem-calc(3);
 // $evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%);
 // $evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%);
 // $evo-top-bar-title-area-sub-name-font-family: $font-family-sans-serif;
+// $evo-top-bar-section-anchor-icon-margin-top: -1px;
+// $evo-top-bar-section-anchor-icon-padding-right: rem-calc(18);
+// $evo-top-bar-section-anchor-icon-padding-left: rem-calc(18);
+// $evo-top-bar-section-anchor-icon-font-size: rem-calc(24);
 // $evo-top-bar-section-anchor-icon-color: 	$topbar-link-color;
 // $evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover;
 // $evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active;
