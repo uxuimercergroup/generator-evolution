@@ -38,9 +38,10 @@ module.exports = yeoman.generators.Base.extend({
         choices : ['Core', 'Benefits Portals']
       },
       {
+        when: function(props) { return (/core/i).test(props.addProductSuite); },
         type: 'input',
         name: 'addPrimaryColor',
-        message: 'What is the primary color of your project? (Core product suite only)',
+        message: 'What is the primary color of your project?',
         default: '$onyx-dark-70'
       }
     ];
