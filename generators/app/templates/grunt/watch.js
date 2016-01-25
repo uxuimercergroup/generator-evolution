@@ -14,7 +14,7 @@ module.exports = {
     tasks: ['assemble', 'notify:assemble']
   },
   templates: {
-    files: ['src/views/**/*.hbs'],
+    files: ['src/views/templates/**/*.hbs'],
     tasks: ['newer:assemble:dist', 'notify:assemble']
   },
   data: {
