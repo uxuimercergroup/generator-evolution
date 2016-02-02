@@ -5,14 +5,12 @@
     "date": "January 14, 2016",
     "url": "https://github.com/uxuimercergroup/evolution"
   },
-
   "project": "<%= projectName %>",
   "version": "0.0.0",
   "author": "<%= projectAuthor %>",
   "date": "<%= projectCreationDate %>",
   "url": "<%= projectURL %>",
   "product_suite": "<%= productSuiteType %>",
-
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-assemble": "^0.4.0",
@@ -34,9 +32,10 @@
     "load-grunt-config": "^0.19.1",
     "time-grunt": "^1.2.2"
   },
-  "dependencies": {
-  },
-
+  "dependencies": {},
+  "jquery_version": "2.1.4",
+  "jquery_ui_version": "1.11.2",
+  "foundation_version": "5.5.2",
   "organisms": {
     "conversational_form": {
       "name": "Conversational Form",
