@@ -164,6 +164,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/css/core/global/_variables.scss')
       );
       this.fs.copy(
+        this.templatePath('src/assets/css/core/lib'),
+        this.destinationPath('src/assets/css/core/lib')
+      );
+      this.fs.copy(
         this.templatePath('src/assets/css/core/molecules'),
         this.destinationPath('src/assets/css/core/molecules')
       );
