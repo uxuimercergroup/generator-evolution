@@ -14,22 +14,26 @@ module.exports = yeoman.generators.Base.extend({
       {
         type: 'input',
         name: 'addProjectAuthor',
-        message: 'What is your full name?'
+        message: 'What is your full name?',
+        store: true
       },
       {
         type: 'input',
         name: 'addProjectName',
-        message: 'What is the name of your project?'
+        message: 'What is the name of your project?',
+        store: true
       },
       {
         type: 'input',
         name: 'addProjectCreationDate',
-        message: 'What is today\'s date? (January 1, 2016)'
+        message: 'What is today\'s date? (example: January 1, 2016)',
+        store: true
       },
       {
         type: 'input',
         name: 'addProjectURL',
-        message: 'Where will this project be hosted? (URL)'
+        message: 'Where will this project be hosted? (URL)',
+        store: true
       },
       {
         type: 'list',
@@ -224,8 +228,8 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/scripts/')
       );
       this.fs.copy(
-        this.templatePath('src/data/form.json'),
-        this.destinationPath('src/data/form.json')
+        this.templatePath('src/data/patterns/atoms/forms/form.json'),
+        this.destinationPath('src/data/patterns/atoms/forms/form.json')
       );
       this.fs.copy(
         this.templatePath('src/design/'),
