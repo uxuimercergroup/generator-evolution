@@ -1,19 +1,10 @@
 ---
 title: "Home"
+home_content: "src/content/home.md"
 ---
 
 <div class="small-12 columns">
 
-{{# markdown }}
-# {{ title }}
-
-This boilerplate template is for the project homepage.
-
-{{#repeat count=5}}
-
-{{lorem count=5}}
-
-{{/repeat}}
-{{/ markdown }}
+{{{md home_content}}}
 
 </div>

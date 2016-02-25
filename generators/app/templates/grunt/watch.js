@@ -17,6 +17,10 @@ module.exports = {
     files: ['src/views/templates/**/*.hbs'],
     tasks: ['newer:assemble:dist', 'notify:assemble']
   },
+  content: {
+    files: ['src/content/**/*.md'],
+    tasks: ['assemble', 'notify:assemble']
+  },
   data: {
     files: ['src/data/**/*.json'],
     tasks: ['assemble', 'notify:assemble']
