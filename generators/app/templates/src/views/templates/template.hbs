@@ -4,17 +4,33 @@ title: "Template"
 
 <div class="small-12 columns">
 
-	<h1>{{ title }}</h1>
-	
+{{# markdown }}
+# {{ title }}
+{{/ markdown }}
+
 	<div class="row">
 		<div class="medium-8 columns">
 
-			<p>This boilerplate template is for general pages.</p>
+{{# markdown }}
+This boilerplate template is for the project homepage.
+
+{{#repeat count=5}}
+
+{{lorem count=5}}
+
+{{/repeat}}
+{{/ markdown }}
 
 		</div>
 		<div class="medium-4 columns">
 
-			<p>This boilerplate template is for general pages.</p>
+{{# markdown }}
+{{#repeat count=3}}
+
+{{lorem count=5}}
+
+{{/repeat}}
+{{/ markdown }}
 
 		</div>
 	</div>

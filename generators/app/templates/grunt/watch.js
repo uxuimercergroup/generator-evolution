@@ -5,36 +5,48 @@ module.exports = {
     livereload: true,
     spawn: false
   },
+  layouts: {
+    files: ['src/views/layouts/**/*.hbs'],
+    tasks: ['assemble', 'notify:assemble']
+  },
   partials: {
-    files: ['src/views/partials/**/*.hbs', 'src/patterns/**/*.hbs'],
+    files: ['src/views/partials/**/*{.hbs,.md}', 'src/patterns/**/*.hbs'],
     tasks: ['assemble', 'notify:assemble']
   },
   templates: {
-    files: ['src/views/**/*.hbs'],
+    files: ['src/views/templates/**/*.hbs'],
     tasks: ['newer:assemble:dist', 'notify:assemble']
+  },
+  content: {
+    files: ['src/content/**/*.md'],
+    tasks: ['assemble', 'notify:assemble']
   },
   data: {
     files: ['src/data/**/*.json'],
     tasks: ['assemble', 'notify:assemble']
   },
-  images: {
-    files: ['src/assets/images/**/*'],
-    tasks: ['newer:imagemin:dist', 'notify:imagemin']
-  },
   sass: {
-    files: ['src/assets/css/**/*.scss'],
+    files: ['src/assets/css/**/*.scss', 'src/patterns/**/*.scss'],
     tasks: ['sass', 'notify:sass']
   },
   scripts: {
-    files: ['src/assets/scripts/**/*.js'],
+    files: ['src/assets/scripts/**/*.js', 'src/patterns/**/*.js'],
     tasks: ['newer:concat:core', 'newer:concat:site', 'notify:concat']
   },
-  assets_misc: {
+  assets_copy: {
     files: [
+      'src/assets/docs/**',
       'src/assets/fonts/**',
+      'src/assets/images/**',
       'src/assets/scripts/core/foundation/vendor/modernizr.js'
     ],
     tasks: ['newer:copy:dist', 'notify:copy']
+  },
+  patterns_copy: {
+    files: [
+      'src/patterns/**/*.js'
+    ],
+    tasks: ['newer:copy:patterns', 'notify:copy']
   }
 
 };

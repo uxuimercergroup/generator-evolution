@@ -7,9 +7,9 @@ module.exports = {
       authKey: 'key1'
     },
     src: 'dist/',
-    dest: '/www/content/uxui/docs/assemble_test',
+    // dest: '/www/content/uxui/docs/path/to/project/dir',
     serverSep: '/',
-    concurrency: 4,
+    concurrency: 3,
     progress: true
   }
 

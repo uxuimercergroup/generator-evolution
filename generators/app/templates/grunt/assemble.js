@@ -8,7 +8,7 @@ module.exports = {
     helpers: ['src/helpers/**/*.js'],
     layoutdir: 'src/views/layouts',
     layout: 'default-layout.hbs',
-    data: ['src/data/**/*.json']
+    data: ['src/data/**/*.json', 'package.json']
   },
   dist: {
     files: [
@@ -17,6 +17,20 @@ module.exports = {
       cwd: 'src/views/templates/',
       src: '**/*.hbs',
       dest: 'dist/',
+      ext: '.html'
+      }
+    ]
+  },
+  patterns: {
+    options: {
+      layout: 'pattern-layout.hbs'
+    },
+    files: [
+      {
+      expand: true,
+      cwd: 'src/patterns/organisms',
+      src: '**/*.hbs',
+      dest: 'dist/patterns/organisms',
       ext: '.html'
       }
     ]

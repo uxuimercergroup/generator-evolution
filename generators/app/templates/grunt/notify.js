@@ -54,7 +54,7 @@ module.exports = {
   copy: {
     options: {
       title: 'Files copied.',  // optional
-      message: 'Miscellaneous assets files copied successfully.' //required
+      message: 'Files copied successfully.' //required
     }
   },
 

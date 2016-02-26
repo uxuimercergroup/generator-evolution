@@ -1,22 +1,25 @@
 default:
   - 'clean'
-  - 'sass'
+  - 'sass:dist'
+  - 'sass:patterns'
   - 'concat'
-  - 'imagemin'
-  - 'copy'
+  - 'copy:dist'
   - 'assemble'
+  - 'string-replace'
   - 'browserSync'
   - 'notify:browserSync'
   - 'watch'
 
 prod:
   - 'clean'
-  - 'sass'
+  - 'sass:prod'
+  - 'sass:patterns'
   - 'concat'
   - 'uglify'
   - 'imagemin'
-  - 'copy'
+  - 'copy:prod'
   - 'assemble'
+  - 'string-replace'
   - 'notify:prod'
 
 deploy:

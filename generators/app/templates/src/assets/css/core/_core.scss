@@ -1,7 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Core SASS Imports Partial
-// DATE - June 3, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes
+// Mercer Evolution - Core SASS Imports Partial
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
@@ -12,29 +10,31 @@
 
 @import	"foundation/normalize";
 @import	"foundation/foundation/settings";
-@import 'foundation/foundation/components/grid';
-@import 'foundation/foundation/components/block-grid';
-@import 'foundation/foundation/components/button-groups';
-@import 'foundation/foundation/components/buttons';
-@import 'foundation/foundation/components/dropdown';
-@import 'foundation/foundation/components/forms';
-@import 'foundation/foundation/components/inline-lists';
-@import 'foundation/foundation/components/panels';
-@import 'foundation/foundation/components/tables';
-@import 'foundation/foundation/components/type';
-@import 'foundation/foundation/components/visibility';
+@import "foundation/foundation/components/grid";
+@import "foundation/foundation/components/block-grid";
+@import "foundation/foundation/components/button-groups";
+@import "foundation/foundation/components/buttons";
+@import "foundation/foundation/components/dropdown";
+@import "foundation/foundation/components/forms";
+@import "foundation/foundation/components/inline-lists";
+@import "foundation/foundation/components/panels";
+@import "foundation/foundation/components/tables";
+@import "foundation/foundation/components/type";
+@import "foundation/foundation/components/visibility";
+
+@import	"lib/anijs/anijs";
 
 @import	"global/variables";
 @import	"global/functions";
 @import	"global/mixins";
 
-@import	"base/boxes";
-@import	"base/buttons";
-@import	"base/dropdowns";
-@import	"base/form";
-@import	"base/grid";
-@import	"base/helpers";
-@import	"base/icons";
-@import	"base/lists";
-@import	"base/tables";
-@import	"base/type";
+@import	"atoms/boxes";
+@import	"atoms/buttons";
+@import	"atoms/dropdowns";
+@import	"atoms/form";
+@import	"atoms/grid";
+@import	"atoms/helpers";
+@import	"atoms/icons";
+@import	"atoms/lists";
+@import	"atoms/tables";
+@import	"atoms/type";

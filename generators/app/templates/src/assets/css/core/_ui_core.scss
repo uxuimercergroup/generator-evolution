@@ -1,7 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0 - Core UI SASS Imports Partial
-// DATE - June 3, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes
+// Mercer Evolution - Core UI SASS Imports Partial
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
@@ -11,48 +9,49 @@
 @import	"global/color_variables";
 
 @import	"foundation/foundation/settings";
-@import 'foundation/foundation/components/accordion';
-@import 'foundation/foundation/components/alert-boxes';
-@import 'foundation/foundation/components/breadcrumbs';
-@import 'foundation/foundation/components/clearing';
-@import 'foundation/foundation/components/dropdown-buttons';
-@import 'foundation/foundation/components/icon-bar';
-@import 'foundation/foundation/components/keystrokes';
-@import 'foundation/foundation/components/labels';
-@import 'foundation/foundation/components/magellan';
-@import 'foundation/foundation/components/pagination';
-@import 'foundation/foundation/components/progress-bars';
-@import 'foundation/foundation/components/reveal';
-@import 'foundation/foundation/components/side-nav';
-@import 'foundation/foundation/components/split-buttons';
-@import 'foundation/foundation/components/sub-nav';
-@import 'foundation/foundation/components/switches';
-@import 'foundation/foundation/components/tabs';
-@import 'foundation/foundation/components/thumbs';
-@import 'foundation/foundation/components/tooltips';
-@import 'foundation/foundation/components/top-bar';
-@import 'foundation/foundation/components/offcanvas';
+@import "foundation/foundation/components/accordion";
+@import "foundation/foundation/components/alert-boxes";
+@import "foundation/foundation/components/breadcrumbs";
+@import "foundation/foundation/components/clearing";
+@import "foundation/foundation/components/dropdown-buttons";
+@import "foundation/foundation/components/icon-bar";
+@import "foundation/foundation/components/keystrokes";
+@import "foundation/foundation/components/labels";
+@import "foundation/foundation/components/magellan";
+@import "foundation/foundation/components/pagination";
+@import "foundation/foundation/components/progress-bars";
+@import "foundation/foundation/components/reveal";
+@import "foundation/foundation/components/side-nav";
+@import "foundation/foundation/components/split-buttons";
+@import "foundation/foundation/components/sub-nav";
+@import "foundation/foundation/components/switches";
+@import "foundation/foundation/components/tabs";
+@import "foundation/foundation/components/thumbs";
+@import "foundation/foundation/components/tooltips";
+@import "foundation/foundation/components/top-bar";
+@import "foundation/foundation/components/offcanvas";
 
 @import	"global/variables";
 @import	"global/functions";
 @import	"global/mixins";
 		
-@import	"objects/accordion";
-@import	"objects/alert_boxes";
-@import	"objects/autocomplete";
-@import	"objects/breadcrumbs";
-@import	"objects/carousel";
-@import	"objects/data_table";
-@import	"objects/datepicker";
-@import	"objects/dropdown_buttons";
-@import	"objects/labels";
-@import	"objects/off_canvas";
-@import	"objects/pagination";
-@import	"objects/progress_bar";
-@import	"objects/reveal";
-@import	"objects/scroll_pane";
-@import	"objects/slider";
-@import	"objects/sub_nav";
-@import	"objects/tabs";
-@import	"objects/tooltip";
-@import	"objects/top_bar";
+@import	"molecules/accordion";
+@import	"molecules/alert_boxes";
+@import	"molecules/autocomplete";
+@import	"molecules/badges";
+@import	"molecules/breadcrumbs";
+@import	"molecules/carousel";
+@import	"molecules/data_table";
+@import	"molecules/datepicker";
+@import	"molecules/dropdown_buttons";
+@import	"molecules/labels";
+@import	"molecules/off_canvas";
+@import	"molecules/pagination";
+@import	"molecules/progress_bar";
+@import	"molecules/reveal";
+@import	"molecules/scroll_pane";
+@import	"molecules/slider";
+@import	"molecules/sub_nav";
+@import	"molecules/tabs";
+@import	"molecules/tooltip";
+@import	"molecules/top_bar";

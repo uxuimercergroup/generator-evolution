@@ -1,16 +1,17 @@
 @font-face {
 	font-family: 'evo-icon-font-site';
-	src:url('fonts/evo-icon-font-site.eot?5gecc7');
-	src:url('fonts/evo-icon-font-site.eot?#iefix5gecc7') format('embedded-opentype'),
-		url('fonts/evo-icon-font-site.ttf?5gecc7') format('truetype'),
-		url('fonts/evo-icon-font-site.woff?5gecc7') format('woff'),
-		url('fonts/evo-icon-font-site.svg?5gecc7#evo-icon-font-site') format('svg');
+	src:	url('fonts/evo-icon-font-site.eot?le6g7x');
+	src:	url('fonts/evo-icon-font-site.eot?le6g7x#iefix') format('embedded-opentype'),
+		url('fonts/evo-icon-font-site.ttf?le6g7x') format('truetype'),
+		url('fonts/evo-icon-font-site.woff?le6g7x') format('woff'),
+		url('fonts/evo-icon-font-site.svg?le6g7x#evo-icon-font-site') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 .icon {
-	font-family: 'evo-icon-font-site';
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'evo-icon-font-site' !important;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -23,36 +24,4 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.evo-icon-site-google-plus2:before {
-	content: "\eee5";
-}
-.evo-icon-site-facebook2:before {
-	content: "\eee9";
-}
-.evo-icon-site-twitter:before {
-	content: "\eeed";
-}
-.evo-icon-site-apple2:before {
-	content: "\ef1b";
-}
-.evo-icon-site-android:before {
-	content: "\ef1d";
-}
-.evo-icon-site-windows8:before {
-	content: "\ef1f";
-}
-.evo-icon-site-linkedin:before {
-	content: "\ef24";
-}
-.evo-icon-site-chrome:before {
-	content: "\ef41";
-}
-.evo-icon-site-firefox:before {
-	content: "\ef42";
-}
-.evo-icon-site-IE:before {
-	content: "\ef43";
-}
-.evo-icon-site-safari:before {
-	content: "\ef45";
-}
+

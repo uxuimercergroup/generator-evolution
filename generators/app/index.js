@@ -10,32 +10,122 @@ module.exports = yeoman.generators.Base.extend({
     // have Yeoman greet the user
     this.log(yosay('Evolution Tool Box'));
 
-    var prompts = [{
-      name: 'appName',
-      message: 'What is the title of your project?'
-    },{
-      type: 'list',
-      name: 'addProductSuite',
-      message: 'Please select a product suite:',
-      choices : ['Core', 'Benefits Portals']
-    }];
+    var prompts = [
+      {
+        type: 'input',
+        name: 'addProjectAuthor',
+        message: 'What is your full name?',
+        store: true
+      },
+      {
+        type: 'input',
+        name: 'addProjectName',
+        message: 'What is the name of your project?',
+        store: true
+      },
+      {
+        type: 'input',
+        name: 'addProjectCreationDate',
+        message: 'What is today\'s date? (example: January 1, 2016)',
+        store: true
+      },
+      {
+        type: 'input',
+        name: 'addProjectURL',
+        message: 'Where will this project be hosted? (URL)',
+        store: true
+      },
+      {
+        type: 'list',
+        name: 'addProductSuite',
+        message: 'Please select a product suite:',
+        choices : ['Core', 'Benefits Portals']
+      },
+      {
+        when: function(props) { return (/core/i).test(props.addProductSuite); },
+        type: 'input',
+        name: 'addPrimaryColor',
+        message: 'What is the primary color of your project?',
+        default: '$onyx-dark-70'
+      }
+    ];
 
     this.prompt(prompts, function (props) {
+
+      this.addProjectAuthor = props.addProjectAuthor;
+      var siteProjectAuthor = props.addProjectAuthor;
+
+      this.addProjectName = props.addProjectName;
+      var siteProjectName = props.addProjectName;
+
+      this.addProjectCreationDate = props.addProjectCreationDate;
+      var siteProjectCreationDate = props.addProjectCreationDate;
+
+      this.addProjectURL = props.addProjectURL;
+      var siteProjectURL = props.addProjectURL;
+
+      this.addPrimaryColor = props.addPrimaryColor;
+      var sitePrimaryColor = props.addPrimaryColor;
 
       this.addProductSuite = props.addProductSuite;
       var productSuite = props.addProductSuite;
 
       done();
 
+      this.fs.copyTpl(
+        this.templatePath('src/data/global.json'),
+        this.destinationPath('src/data/global.json'),
+        {
+          projectName: siteProjectName
+        }
+      );
+
       if (productSuite == 'Core') {
-        this.fs.copy(
+        this.fs.copyTpl(
+          this.templatePath('_package.json'),
+          this.destinationPath('package.json'),
+          {
+            projectAuthor: siteProjectAuthor,
+            projectName: siteProjectName,
+            projectCreationDate: siteProjectCreationDate,
+            projectURL: siteProjectURL,
+            productSuiteType: 'core'
+          }
+        );
+        this.fs.copyTpl(
           this.templatePath('src/assets/css/core/global/_variables_overrides.scss'),
-          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
+          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss'),
+          { primaryColor: sitePrimaryColor }
+        );
+        this.fs.copyTpl(
+          this.templatePath('src/patterns/organisms/'),
+          this.destinationPath('src/patterns/organisms/'),
+          {
+            productSuiteType: 'core'
+          }
         );
       } else if (productSuite == 'Benefits Portals') {
+        this.fs.copyTpl(
+          this.templatePath('_package.json'),
+          this.destinationPath('package.json'),
+          {
+            projectAuthor: siteProjectAuthor,
+            projectName: siteProjectName,
+            projectCreationDate: siteProjectCreationDate,
+            projectURL: siteProjectURL,
+            productSuiteType: 'bp'
+          }
+        );
         this.fs.copy(
           this.templatePath('src/assets/css/bp/core/global/_variables_overrides.scss'),
           this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
+        );
+        this.fs.copyTpl(
+          this.templatePath('src/patterns/organisms/'),
+          this.destinationPath('src/patterns/organisms/'),
+          {
+            productSuiteType: 'bp'
+          }
         );
       }
 
@@ -49,17 +139,13 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json')
       );
-      this.fs.copy(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json')
-      );
     },
 
     projectfiles: function () {
 
       this.fs.copy(
-        this.templatePath('src/assets/css/core/base'),
-        this.destinationPath('src/assets/css/core/base')
+        this.templatePath('src/assets/css/core/atoms'),
+        this.destinationPath('src/assets/css/core/atoms')
       );
       this.fs.copy(
         this.templatePath('src/assets/css/core/foundation'),
@@ -82,8 +168,12 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/css/core/global/_variables.scss')
       );
       this.fs.copy(
-        this.templatePath('src/assets/css/core/objects'),
-        this.destinationPath('src/assets/css/core/objects')
+        this.templatePath('src/assets/css/core/lib'),
+        this.destinationPath('src/assets/css/core/lib')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/css/core/molecules'),
+        this.destinationPath('src/assets/css/core/molecules')
       );
       this.fs.copy(
         this.templatePath('src/assets/css/core/_core.scss'),
@@ -122,6 +212,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/css/styles.scss')
       );
       this.fs.copy(
+        this.templatePath('src/assets/docs'),
+        this.destinationPath('src/assets/docs/')
+      );
+      this.fs.copy(
         this.templatePath('src/assets/fonts'),
         this.destinationPath('src/assets/fonts/')
       );
@@ -134,8 +228,8 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/scripts/')
       );
       this.fs.copy(
-        this.templatePath('src/data/'),
-        this.destinationPath('src/data/')
+        this.templatePath('src/content/'),
+        this.destinationPath('src/content/')
       );
       this.fs.copy(
         this.templatePath('src/design/'),
@@ -146,8 +240,16 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/helpers/')
       );
       this.fs.copy(
-        this.templatePath('src/patterns/'),
-        this.destinationPath('src/patterns/')
+        this.templatePath('src/patterns/atoms/'),
+        this.destinationPath('src/patterns/atoms/')
+      );
+      this.fs.copy(
+        this.templatePath('src/patterns/molecules/'),
+        this.destinationPath('src/patterns/molecules/')
+      );
+      this.fs.copy(
+        this.templatePath('src/snippets/'),
+        this.destinationPath('src/snippets/')
       );
       this.fs.copy(
         this.templatePath('src/views/'),
@@ -156,10 +258,6 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('.ftppass'),
         this.destinationPath('.ftppass')
-      );
-      this.fs.copy(
-        this.templatePath('favicon.ico'),
-        this.destinationPath('favicon.ico')
       );
       this.fs.copy(
         this.templatePath('Gruntfile.tpl.js'),

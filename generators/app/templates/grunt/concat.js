@@ -6,7 +6,13 @@ module.exports = {
   },
   core: {
     options: {
-      banner: '/*!\nMercer Evolution - Core JS\nAUTHOR - Doug Fraize, Matthew Holmes, Sherry Seeton\n*/\n\n'
+      banner:
+        '/*!\n' +
+        '* Mercer Evolution v<%= package.evolution.version %> - Core JS\n' +
+        '* DATE: <%= package.evolution.date %>\n' +
+        '* AUTHOR: <%= package.evolution.author %>\n' +
+        '* URL: <%= package.evolution.url %>\n' +
+        '*/\n\n'
     },
     files: {
       'dist/assets/scripts/evolution.js': [
@@ -27,37 +33,43 @@ module.exports = {
         'src/assets/scripts/core/foundation/foundation/foundation.topbar.js',
         'src/assets/scripts/core/lib/jquery/jquery-ui.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.ui.touch-punch.js',
-        'src/assets/scripts/core/lib/jquery/plugins/owl.carousel.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.dataTables.js',
         'src/assets/scripts/core/lib/jquery/plugins/datatables.foundation.js',
+        'src/assets/scripts/core/lib/jquery/plugins/jquery.autosize.input.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.maskedinput.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.mousewheel.js',
         'src/assets/scripts/core/lib/jquery/plugins/jquery.mCustomScrollbar.js',
+        'src/assets/scripts/core/lib/jquery/plugins/owl.carousel.js',
+        'src/assets/scripts/core/lib/js/anijs/anijs.js',
+        'src/assets/scripts/core/lib/js/anijs/anijs-helper-dom.js',
+        'src/assets/scripts/core/lib/js/anijs/anijs-helper-scrollreveal.js',
+        'src/assets/scripts/core/lib/js/anijs/anijs-jquery-event-system.js',
         'src/assets/scripts/core/lib/mobile/ios-orientationchange-fix.js',
-        'src/assets/scripts/core/base/abide.js',
-        'src/assets/scripts/core/base/base.js',
-        'src/assets/scripts/core/base/dropdowns.js',
-        'src/assets/scripts/core/base/equalizer.js',
-        'src/assets/scripts/core/base/helpers.js',
-        'src/assets/scripts/core/objects/accordion.js',
-        'src/assets/scripts/core/objects/autocomplete.js',
-        'src/assets/scripts/core/objects/carousel.js',
-        'src/assets/scripts/core/objects/data_table.js',
-        'src/assets/scripts/core/objects/datepicker.js',
-        'src/assets/scripts/core/objects/off_canvas.js',
-        'src/assets/scripts/core/objects/reveal.js',
-        'src/assets/scripts/core/objects/scroll_pane.js',
-        'src/assets/scripts/core/objects/slider.js',
-        'src/assets/scripts/core/objects/tabs.js',
-        'src/assets/scripts/core/objects/tooltip.js',
-        'src/assets/scripts/core/objects/top_bar.js'
+        'src/assets/scripts/core/atoms/abide.js',
+        'src/assets/scripts/core/atoms/base.js',
+        'src/assets/scripts/core/atoms/dropdowns.js',
+        'src/assets/scripts/core/atoms/equalizer.js',
+        'src/assets/scripts/core/atoms/helpers.js',
+        'src/assets/scripts/core/molecules/accordion.js',
+        'src/assets/scripts/core/molecules/autocomplete.js',
+        'src/assets/scripts/core/molecules/carousel.js',
+        'src/assets/scripts/core/molecules/data_table.js',
+        'src/assets/scripts/core/molecules/datepicker.js',
+        'src/assets/scripts/core/molecules/off_canvas.js',
+        'src/assets/scripts/core/molecules/reveal.js',
+        'src/assets/scripts/core/molecules/scroll_pane.js',
+        'src/assets/scripts/core/molecules/slider.js',
+        'src/assets/scripts/core/molecules/tabs.js',
+        'src/assets/scripts/core/molecules/tooltip.js',
+        'src/assets/scripts/core/molecules/top_bar.js'
       ]
     }
   },
   site: {
     files: {
       'dist/assets/scripts/site.js': [
-        'src/assets/scripts/site.js'
+        'src/assets/scripts/site.js',
+        'src/patterns/organisms/**/*.js'
       ]
     }
   }

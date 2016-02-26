@@ -16,12 +16,40 @@ module.exports = {
     update: true // Only compile changed files.
   },
   dist: {
+    options: {
+      style: 'expanded'
+    },
     files: [
       {
       expand: true,
       cwd: 'src/assets/css/',
       src: ['**/*.scss'],
       dest: 'dist/assets/css',
+      ext: '.css'
+      }
+    ]
+  },
+  prod: {
+    files: [
+      {
+      expand: true,
+      cwd: 'src/assets/css/',
+      src: ['**/*.scss'],
+      dest: 'dist/assets/css',
+      ext: '.css'
+      }
+    ]
+  },
+  patterns: {
+    options: {
+      style: 'expanded'
+    },
+    files: [
+      {
+      expand: true,
+      cwd: 'src/patterns',
+      src: ['**/*.scss'],
+      dest: 'dist/patterns',
       ext: '.css'
       }
     ]

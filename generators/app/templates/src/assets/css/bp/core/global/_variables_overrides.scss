@@ -1,7 +1,5 @@
 //-------------------------------------------------------------------------------------------
-// Mercer Evolution - Core v3.0.1 - Employee Portal Family Global Variables Overrides Partial
-// DATE - June 3, 2015
-// AUTHOR - Doug Fraize, Matthew Holmes
+// Mercer Evolution - Benefits Portals Family Global Variables Overrides Partial
 //-------------------------------------------------------------------------------------------
 
 // ==========================================================================================
@@ -126,7 +124,7 @@ $font-weight-bold: bold;
 
 // We use these as default colors throughout, Message container colors
 $primary-color: $sapphire-medium;
-$secondary-color: $sapphire-bright;
+$secondary-color: $onyx-dark-6;
 $alert-color: $evo-base-alert-color;
 $success-color: $evo-base-success-color;
 $warning-color: $evo-base-warning-color;
@@ -304,7 +302,7 @@ $definition-list-header-weight: $font-weight-normal;
 
 // We use these to style blockquotes
 // $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-// $blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-padding: rem-calc(9 20 2 19);
 $blockquote-border: 1px solid $onyx-dark-30;
 // $blockquote-cite-font-size: rem-calc(13);
 // $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
@@ -658,14 +656,14 @@ $input-font-size: rem-calc(16);
 $input-bg-color: $white;
 $input-focus-bg-color: scale-color($white, $lightness: 0%);
 // $input-border-color: scale-color($white, $lightness: -20%);
-$input-focus-border-color: scale-color($white, $lightness: -40%);
+$input-focus-border-color: $topaz-bright;
 // $input-border-style: solid;
 // $input-border-width: 1px;
 $input-border-radius: $global-radius;
 $input-disabled-bg: $white;
 // $input-disabled-cursor: $cursor-default-value;
 $input-box-shadow: inset 0 1px 1px $onyx-dark-6;
-$input-include-glowing-effect: false;
+$input-include-glowing-effect: true;
 
 // We use these to style the fieldset border and spacing.
 $fieldset-border-style: solid;
@@ -702,7 +700,7 @@ $input-error-message-bg-color: $transparent;
 $input-error-message-font-color-alt: $alert-color;
 
 // We use this to style the glowing effect of inputs when focused
-// $glowing-effect-fade-time: .45s;
+$glowing-effect-fade-time: .25s;
 $glowing-effect-color: $input-focus-border-color;
 
 // We use this to style the transition when inputs are focused and when the glowing effect is disabled.
@@ -842,8 +840,8 @@ $magellan-padding: rem-calc(10);
 // Off Canvas Tab Bar Variables
 // $include-html-off-canvas-classes: $include-html-classes;
 
-$tabbar-bg: $onyx-dark-80;
-$tabbar-height: rem-calc(46);
+$tabbar-bg: $sapphire-dark;
+$tabbar-height: rem-calc(55);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
 $tabbar-color: $white;
@@ -860,34 +858,34 @@ $tabbar-header-weight: $font-weight-normal;
 // $tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
-$off-canvas-width: rem-calc(275);
+$off-canvas-width: rem-calc(265);
 $off-canvas-bg: $onyx-dark-6;
-$off-canvas-bg-hover: scale-color($off-canvas-bg, $lightness: -10%);
-$off-canvas-bg-active: scale-color($off-canvas-bg, $lightness: -20%);
+$off-canvas-bg-hover: $onyx-dark-10;
+$off-canvas-bg-active: $onyx-dark-10;
 
 // Off Canvas Menu List Variables
-$off-canvas-label-padding: rem-calc(13 24 14 24);
+$off-canvas-label-padding: rem-calc(19 24 18 24);
 $off-canvas-label-color: $white;
 $off-canvas-label-text-transform: uppercase;
 $off-canvas-label-font-size: $small-font-size;
 $off-canvas-label-font-weight: $font-weight-normal;
-$off-canvas-label-bg: $onyx-dark-60;
-$off-canvas-label-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 15%);
-// $off-canvas-label-border-bottom: none;
+$off-canvas-label-bg: $sapphire-bright;
+$off-canvas-label-border-top: 0;
+$off-canvas-label-border-bottom: 1px solid $onyx-dark-14;
 // $off-canvas-label-margin: 0;
 $off-canvas-link-padding: rem-calc(24);
-$off-canvas-link-color: $onyx-dark-80;
-$off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -15%);
-$off-canvas-back-bg: $onyx-dark-70;
+$off-canvas-link-color: $onyx-medium;
+$off-canvas-link-border-bottom: 1px solid $onyx-dark-14;
+$off-canvas-back-bg: $sapphire-medium;
 $off-canvas-back-border-top: none;
-// $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
-// $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
+$off-canvas-back-border-bottom: none;
+$off-canvas-back-hover-bg: $off-canvas-back-bg;
 $off-canvas-back-hover-border-top: none;
 // $off-canvas-back-hover-border-bottom: none;
 
 // Off Canvas Menu Icon Variables
 $tabbar-menu-icon-color: $white;
-$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -15%);
+$tabbar-menu-icon-hover: $white;
 
 $tabbar-menu-icon-text-indent: 0;
 // $tabbar-menu-icon-width: $tabbar-icon-width;
@@ -1407,32 +1405,32 @@ $tooltip-max-width: rem-calc(300);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $primary-color;
-$topbar-bg: scale-color($topbar-bg-color, $lightness: 25%);
+$topbar-bg-color: $sapphire-dark;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(56);
+$topbar-height: rem-calc(55);
 $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 $topbar-title-weight: $font-weight-normal;
-$topbar-title-font-size: rem-calc(22);
+$topbar-title-font-size: rem-calc(18);
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: scale-color($topbar-bg-color, $lightness: 84%);
-$topbar-link-color-hover: scale-color($topbar-bg-color, $lightness: 100%);
-$topbar-link-color-active: scale-color($topbar-bg-color, $lightness: 100%);
-$topbar-link-color-active-hover: scale-color($topbar-bg-color, $lightness: 100%);
+$topbar-link-color: #78BDDC;
+$topbar-link-color-hover: $white;
+$topbar-link-color-active: $white;
+$topbar-link-color-active-hover: $white;
 $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(16);
 $topbar-link-hover-lightness: 0;
 $topbar-link-bg: $transparent;
 $topbar-link-bg-hover: $transparent;
 $topbar-link-bg-color-hover: $transparent;
-$topbar-link-bg-active: scale-color($topbar-bg-color, $lightness: 30%);
+$topbar-link-bg-active: #224F90;
 $topbar-link-bg-active-hover: $topbar-link-bg-active;
 $topbar-link-text-transform: none;
-$topbar-link-padding: ($topbar-height / 3);
+$topbar-link-padding: ($topbar-height / 2.5);
 $topbar-back-link-size: rem-calc(22);
 $topbar-link-dropdown-padding: rem-calc(20);
 $topbar-button-font-size: .75rem;
@@ -1442,18 +1440,18 @@ $topbar-button-top: 7px;
 $topbar-dropdown-bg: $topbar-bg;
 $topbar-dropdown-link-color: $topbar-link-color;
 $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-$topbar-dropdown-link-bg: scale-color($topbar-bg-color, $lightness: 40%);
-$topbar-dropdown-link-bg-hover: scale-color($topbar-bg-color, $lightness: 45%);
+$topbar-dropdown-link-bg: $sapphire-medium;
+$topbar-dropdown-link-bg-hover: #2084AE;
 $topbar-dropdown-link-weight: $font-weight-normal;
 $topbar-dropdown-toggle-size: 0px;
 $topbar-dropdown-toggle-color: $topbar-link-color;
 $topbar-dropdown-toggle-alpha: 1;
 
-$topbar-dropdown-label-color: scale-color($topbar-bg-color, $lightness: 84%);
+$topbar-dropdown-label-color: $white;
 $topbar-dropdown-label-text-transform: uppercase;
 $topbar-dropdown-label-font-weight: $font-weight-normal;
 $topbar-dropdown-label-font-size: rem-calc(12);
-$topbar-dropdown-label-bg: scale-color($topbar-bg-color, $lightness: 25%);
+$topbar-dropdown-label-bg: $sapphire-dark;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
@@ -1475,8 +1473,8 @@ $topbar-dropdown-label-bg: scale-color($topbar-bg-color, $lightness: 25%);
 // $topbar-input-height: rem-calc(28);
 
 // Divider Styles
-$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 30%);
-$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: 30%);
+$topbar-divider-border-bottom: solid 1px $sapphire-medium;
+$topbar-divider-border-top: solid 1px #01567c;
 
 // Sticky Class
 $topbar-sticky-class: ".sticky";
@@ -1507,6 +1505,7 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 	// $evo-base-shadow-horizontal: 		0;
 	// $evo-base-shadow-vertical: 			rem-calc(3);
 	// $evo-base-shadow-blur: 				rem-calc(5);
+	// $evo-base-shadow-spread: 			0;
 	// $evo-base-shadow-color:				rgba($black, .25);
 
 // Z-INDEX MASTER LIST
@@ -1522,7 +1521,7 @@ $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from drop
 
 // BASE FONTS
 // $evo-base-font-stack:					arial, Tahoma, Geneva, sans-serif;
-$evo-base-font-file-path:					"../../fonts";
+// $evo-base-font-file-path:				"../fonts";
 
 // WEB FONTS
 
@@ -1598,12 +1597,13 @@ $evo-base-font-file-path:					"../../fonts";
 
 // FORM
 // ------------------------------------------------------------------------------------------
+// $evo-form-required-icon-font-color: 		$alert-color;
 // $evo-form-label-font-family: 			$evo-font-medium-stack;
 // $evo-form-input-border-radius: 			$global-radius;
 // $evo-form-input-focus-border-color: 		$onyx-dark-10;
 // $evo-form-input-margin-top: 				rem-calc(3);
-// $evo-form-input-hover-border-color: 		$onyx-dark-14;
-// $evo-form-input-hover-background-color: 	$white;
+$evo-form-input-hover-border-color: 		$topaz-bright;
+$evo-form-input-hover-background-color: 	$white;
 // $evo-form-input-radio-checkbox-margin-bottom: rem-calc(18);
 // $evo-form-input-radio-checkbox-label-font-family: $font-family-sans-serif;
 // $evo-form-placholder-font-color: 		$onyx-dark-10;
@@ -1725,6 +1725,33 @@ $evo-base-font-file-path:					"../../fonts";
 // $evo-autocomplete-background-color: 		$onyx-dark-2;
 
 
+// BADGES
+// ------------------------------------------------------------------------------------------
+// $evo-badge-border-radius: 				$global-rounded;
+// $evo-badge-shadow-horizontal: 			0;
+// $evo-badge-shadow-vertical: 				rem-calc(1);
+// $evo-badge-shadow-blur: 					rem-calc(2);
+// $evo-badge-shadow-spread: 				0;
+// $evo-badge-shadow-color: 				$evo-base-shadow-color;
+// $evo-badge-line-height: 					1;
+// $evo-badge-text-align: 					center;
+// $evo-badge-font-size: 					rem-calc(12);
+// $evo-badge-padding: 						rem-calc(5 6 3 6);
+// $evo-badge-min-width: 					rem-calc(20);
+// $evo-badge-small-font-size: 				rem-calc(12);
+// $evo-badge-small-padding: 				rem-calc(5 6 3 6);
+// $evo-badge-small-min-width: 				rem-calc(20);
+// $evo-badge-medium-font-size: 			rem-calc(14);
+// $evo-badge-medium-padding: 				rem-calc(9 7 7 7);
+// $evo-badge-medium-min-width: 			rem-calc(30);
+// $evo-badge-large-font-size: 				rem-calc(16);
+// $evo-badge-large-padding: 				rem-calc(12 10);
+// $evo-badge-large-min-width: 				rem-calc(40);
+// $evo-badge-x-large-font-size: 			rem-calc(18);
+// $evo-badge-x-large-padding: 				rem-calc(17 15 15 15);
+// $evo-badge-x-large-min-width: 			rem-calc(50);
+
+
 // CAROUSEL
 // ------------------------------------------------------------------------------------------
 // $evo-carousel-controls-margin-top: 		rem-calc(13);
@@ -1838,9 +1865,10 @@ $evo-base-font-file-path:					"../../fonts";
 
 // OFF-CANVAS
 // ------------------------------------------------------------------------------------------
+// $evo-off-canvas-tab-bar-menu-icon-font-size: rem-calc(24);
 // $evo-off-canvas-tab-bar-menu-icon-color: $tabbar-menu-icon-color;
-// $evo-off-canvas-tab-bar-menu-icon-position-top: 6px;
-// $evo-off-canvas-tab-bar-menu-icon-position-left: 7px;
+// $evo-off-canvas-tab-bar-menu-icon-position-top: 5px;
+// $evo-off-canvas-tab-bar-menu-icon-position-left: 15px;
 // $evo-off-canvas-tab-bar-menu-icon-hover-color: $tabbar-menu-icon-hover;
 // $evo-off-canvas-tab-bar-header-font-family: $font-family-sans-serif;
 // $evo-off-canvas-tab-bar-header-letter-spacing: rem-calc(3);
@@ -1848,21 +1876,23 @@ $evo-base-font-file-path:					"../../fonts";
 // $evo-off-canvas-tab-bar-header-image-margin: rem-calc(-3 0 0 0);
 // $evo-off-canvas-menu-label-font-family: 	$font-family-sans-serif;
 // $evo-off-canvas-menu-label-letter-spacing: rem-calc(3);
-// $evo-off-canvas-menu-anchor-font-size: 	rem-calc(14);
-// $evo-off-canvas-menu-anchor-line-height: 1.5;
+// $evo-off-canvas-menu-anchor-font-size: 	rem-calc(16);
+// $evo-off-canvas-menu-anchor-line-height: 1.25;
 // $evo-off-canvas-menu-anchor-letter-spacing: rem-calc(3);
-// $evo-off-canvas-menu-anchor-text-transform: uppercase;
+// $evo-off-canvas-menu-anchor-text-transform: none;
 // $evo-off-canvas-menu-anchor-icon-font-family: $evo-icon-font-stack;
 // $evo-off-canvas-menu-anchor-icon-font-size: rem-calc(16);
 // $evo-off-canvas-menu-anchor-icon-position-top: 2px;
-// $evo-off-canvas-menu-back-padding-top: 	rem-calc(9);
-// $evo-off-canvas-menu-back-padding-bottom: rem-calc(12);
+// $evo-off-canvas-menu-back-padding-top: 	rem-calc(14);
+// $evo-off-canvas-menu-back-padding-bottom: rem-calc(18);
+// $evo-off-canvas-menu-back-letter-spacing: rem-calc(3);
+// $evo-off-canvas-menu-back-text-transform: uppercase;
 // $evo-off-canvas-menu-back-icon-font-family: $evo-icon-font-stack;
 // $evo-off-canvas-menu-back-icon-position-top: 2px;
 // $evo-off-canvas-menu-left-anchor-padding-right: rem-calc(40);
 // $evo-off-canvas-menu-left-has-submenu-anchor-padding-right: rem-calc(14);
 // $evo-off-canvas-menu-left-has-submenu-icon: '\edc5';
-// $evo-off-canvas-menu-left-has-submenu-icon-position-top: -2px;
+// $evo-off-canvas-menu-left-has-submenu-icon-position-top: 0;
 // $evo-off-canvas-menu-left-has-submenu-icon-margin-left: rem-calc(5);
 // $evo-off-canvas-menu-left-back-anchor-padding-left: rem-calc(19);
 // $evo-off-canvas-menu-left-back-icon: 	'\edc7';
@@ -1921,13 +1951,14 @@ $evo-base-font-file-path:					"../../fonts";
 
 // SLIDER HANDLE
 // $evo-slider-handle-border-radius: 		rem-calc(30);
-// $evo-slider-handle-background-color: 	$onyx-dark-50;
+$evo-slider-handle-background-color: 		$citrine-bright;
 // $evo-slider-handle-border-size: 			rem-calc(3);
 // $evo-slider-handle-border-style: 		solid;
 // $evo-slider-handle-border-color: 		$white;
 // $evo-slider-handle-shadow-horizontal: 	0;
 // $evo-slider-handle-shadow-vertical: 		rem-calc(1);
 // $evo-slider-handle-shadow-blur: 			rem-calc(3);
+// $evo-slider-handle-shadow-spread: 		0;
 // $evo-slider-handle-shadow-color: 		$black;
 // $evo-slider-handle-height: 				rem-calc(24);
 // $evo-slider-handle-width: 				rem-calc(24);
@@ -1936,14 +1967,15 @@ $evo-base-font-file-path:					"../../fonts";
 // $evo-slider-handle-position-top-ie9: 	-11px;
 
 // SLIDER TICK MARKS
+// $evo-slider-tick-marker-margin: 			rem-calc(3 0 0 0);
+// $evo-slider-tick-marker-width: 			rem-calc(1);
+// $evo-slider-tick-marker-height: 			rem-calc(10);
+// $evo-slider-tick-marker-color: 			$evo-slider-background-color;
 // $evo-slider-tick-marker-container-margin-top: rem-calc(7);
 // $evo-slider-tick-marker-number-font-size: $small-font-size;
 // $evo-slider-tick-marker-number-min-position-left: -5px;
 // $evo-slider-tick-marker-number-max-position-right: -10px;
-// $evo-slider-tick-marker-margin: 			rem-calc(-28 0 0 0);
-// $evo-slider-tick-marker-width: 			rem-calc(1);
-// $evo-slider-tick-marker-height: 			rem-calc(10);
-// $evo-slider-tick-marker-color: 			$evo-slider-background-color;
+// $evo-slider-tick-marker-min-max-margin: 	rem-calc(-28 0 0 0);
 // $evo-slider-tick-marker-min-position-left: 5px;
 // $evo-slider-tick-marker-max-position-right: 10px;
 
@@ -1962,26 +1994,38 @@ $evo-base-font-file-path:					"../../fonts";
 // $evo-top-bar-icon-font-family: 			$evo-icon-font-stack;
 // $evo-top-bar-icon-site-font-family: 		$evo-icon-site-font-stack;
 // $evo-top-bar-anchor-decoration: 			none;
+// $evo-top-bar-title-area-image-position-top: -2px;
+// $evo-top-bar-title-area-image-position-left: -7px;
 // $evo-top-bar-title-area-name-font-family: $font-family-sans-serif;
 // $evo-top-bar-title-area-name-letter-spacing: rem-calc(3);
 // $evo-top-bar-title-area-name-font-color: scale-color($topbar-bg-color, $lightness: 100%);
 // $evo-top-bar-title-area-name-link-color: scale-color($topbar-bg-color, $lightness: 100%);
 // $evo-top-bar-title-area-sub-name-font-family: $font-family-sans-serif;
+// $evo-top-bar-section-anchor-icon-margin-top: -1px;
+// $evo-top-bar-section-anchor-icon-padding-right: rem-calc(18);
+// $evo-top-bar-section-anchor-icon-padding-left: rem-calc(18);
+// $evo-top-bar-section-anchor-icon-font-size: rem-calc(24);
 // $evo-top-bar-section-anchor-icon-color: 	$topbar-link-color;
 // $evo-top-bar-section-anchor-hover-icon-color: $topbar-link-color-hover;
 // $evo-top-bar-section-anchor-active-icon-color: $topbar-link-color-active;
-// $evo-top-bar-section-dropdown-active-background-color: scale-color($topbar-bg-color, $lightness: 40%);
+$evo-top-bar-section-dropdown-active-background-color: $sapphire-medium;
 // $evo-top-bar-section-dropdown-label-padding-bottom: rem-calc(8);
 // $evo-top-bar-section-dropdown-border-radius: 0 0 $global-radius $global-radius;
 // $evo-top-bar-section-dropdown-anchor-active-background-color: $topbar-link-bg-active;
 // $evo-top-bar-section-dropdown-box-shadow-horizontal: $evo-base-shadow-horizontal;
 // $evo-top-bar-section-dropdown-box-shadow-vertical: $evo-base-shadow-vertical;
 // $evo-top-bar-section-dropdown-box-shadow-blur: $evo-base-shadow-blur;
+// $evo-top-bar-section-dropdown-box-shadow-spread: $evo-base-shadow-spread;
 // $evo-top-bar-section-dropdown-box-shadow-color: $evo-base-shadow-color;
 // $evo-top-bar-section-dropdown-icon: 		'\edc6';
 // $evo-top-bar-section-dropdown-icon-position-top: rem-calc(1);
 // $evo-top-bar-section-dropdown-icon-margin-right: rem-calc(28);
-// $evo-top-bar-section-dropdown-icon-padding-right: $topbar-link-padding;
 // $evo-top-bar-section-dropdown-sub-icon: '\edc5';
 // $evo-top-bar-section-dropdown-sub-icon-position-top: rem-calc(1);
 // $evo-top-bar-section-dropdown-sub-icon-position-right: rem-calc(-1);
+// $evo-top-bar-mega-menu-ctn-padding: rem-calc(20 0);
+// $evo-top-bar-mega-menu-ctn-border-top-width: 2px;
+// $evo-top-bar-mega-menu-ctn-border-top-style: solid;
+// $evo-top-bar-mega-menu-ctn-border-top-color: $evo-top-bar-section-dropdown-active-background-color;
+// $evo-top-bar-mega-menu-ctn-background-color: $onyx-dark-6;
+// $evo-top-bar-mega-menu-ctn-border-radius: 0;
