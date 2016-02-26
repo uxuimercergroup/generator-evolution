@@ -232,10 +232,6 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/content/')
       );
       this.fs.copy(
-        this.templatePath('src/data/patterns/atoms/forms/form.json'),
-        this.destinationPath('src/data/patterns/atoms/forms/form.json')
-      );
-      this.fs.copy(
         this.templatePath('src/design/'),
         this.destinationPath('src/design/')
       );
