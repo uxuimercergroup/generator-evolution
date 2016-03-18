@@ -1,15 +1,14 @@
 {
   "name": "generator-evolution",
   "version": "3.0.2",
-  "description": "Evolution Yeoman Generator",
+  "description": "Evolution boilerplate generator using Yeoman",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "uxuimercergroup/generator-evolution",
-  "author": {
-    "name": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
-    "email": "douglas.fraize@mercer.com",
-    "url": "https://github.com/uxuimercergroup"
-  },
+  "repository": "github:uxuimercergroup/generator-evolution",
+  "author": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
+  "date": "March 17, 2016",
+  "homepage": "http://evolution.mercer.com",
+  "bugs": "https://github.com/uxuimercergroup/generator-evolution/issues",
   "scripts": {
     "test": "mocha"
   },

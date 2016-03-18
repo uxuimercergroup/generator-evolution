@@ -4,10 +4,12 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
+  
+  // Prompt user
   promptUser: function() {
     var done = this.async();
 
-    // have Yeoman greet the user
+    // Have Yeoman greet the user
     this.log(yosay('Evolution Tool Box'));
 
     var prompts = [
@@ -21,6 +23,12 @@ module.exports = yeoman.generators.Base.extend({
         type: 'input',
         name: 'addProjectName',
         message: 'What is the name of your project?',
+        store: true
+      },
+      {
+        type: 'input',
+        name: 'addProjectDescription',
+        message: 'Add a short project description.',
         store: true
       },
       {
@@ -58,6 +66,9 @@ module.exports = yeoman.generators.Base.extend({
       this.addProjectName = props.addProjectName;
       var siteProjectName = props.addProjectName;
 
+      this.addProjectDescription = props.addProjectDescription;
+      var siteProjectDescription = props.addProjectDescription;
+
       this.addProjectCreationDate = props.addProjectCreationDate;
       var siteProjectCreationDate = props.addProjectCreationDate;
 
@@ -76,7 +87,8 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('src/data/global.json'),
         this.destinationPath('src/data/global.json'),
         {
-          projectName: siteProjectName
+          projectName: siteProjectName,
+          projectDescription: siteProjectDescription
         }
       );
 
@@ -87,6 +99,7 @@ module.exports = yeoman.generators.Base.extend({
           {
             projectAuthor: siteProjectAuthor,
             projectName: siteProjectName,
+            projectDescription: siteProjectDescription,
             projectCreationDate: siteProjectCreationDate,
             projectURL: siteProjectURL,
             productSuiteType: 'core'
@@ -111,6 +124,7 @@ module.exports = yeoman.generators.Base.extend({
           {
             projectAuthor: siteProjectAuthor,
             projectName: siteProjectName,
+            projectDescription: siteProjectDescription,
             projectCreationDate: siteProjectCreationDate,
             projectURL: siteProjectURL,
             productSuiteType: 'bp'
@@ -132,9 +146,13 @@ module.exports = yeoman.generators.Base.extend({
     }.bind(this));
   },
 
+  // Copy application and project files
   writing: {
 
     app: function () {
+
+      console.log('Copying the application files...');
+
       this.fs.copy(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json')
@@ -142,6 +160,8 @@ module.exports = yeoman.generators.Base.extend({
     },
 
     projectfiles: function () {
+
+      console.log('Copying the project files...');
 
       this.fs.copy(
         this.templatePath('src/assets/css/core/atoms'),
@@ -270,7 +290,11 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
 
+  // Install dependencies
   install: function () {
+
+    console.log('Installing the dependencies...');
+    
     this.installDependencies();
   }
   
