@@ -287,6 +287,14 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('grunt/'),
         this.destinationPath('grunt/')
       );
+      this.fs.copy(
+        this.templatePath('CHANGELOG.md'),
+        this.destinationPath('CHANGELOG.md')
+      );
+      this.fs.copy(
+        this.templatePath('README.md'),
+        this.destinationPath('README.md')
+      );
     }
   },
 
