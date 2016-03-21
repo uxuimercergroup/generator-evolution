@@ -3,7 +3,7 @@ module.exports = {
   // Deploy contents of generated files directory to FTP server
   build: {
     auth: {
-      host: 'usfkl21as292v',
+      host: '',
       authKey: 'key1'
     },
     src: 'dist/',
