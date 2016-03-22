@@ -144,6 +144,42 @@ module.exports = {
         }
       ]
     }
+  },
+
+  // String replace package.json data for Sass boilerplate
+  package_boilerplate_sass: {
+    files: [{
+      expand: true,
+      cwd: 'dist/',
+      src: ['package.json'],
+      dest: 'dist/'
+    }],
+    options: {
+      replacements: [
+        {
+          pattern: /https:\/\/github.com\/uxuimercergroup\/evolution/g,
+          replacement: 'https://github.com/uxuimercergroup/evolution-boilerplate-sass'
+        }
+      ]
+    }
+  },
+
+  // String replace package.json data for CSS boilerplate
+  package_boilerplate_css: {
+    files: [{
+      expand: true,
+      cwd: 'dist/',
+      src: ['package.json'],
+      dest: 'dist/'
+    }],
+    options: {
+      replacements: [
+        {
+          pattern: /https:\/\/github.com\/uxuimercergroup\/evolution/g,
+          replacement: 'https://github.com/uxuimercergroup/evolution-boilerplate-css'
+        }
+      ]
+    }
   }
 
 };
