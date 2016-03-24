@@ -2,7 +2,7 @@
 
 <!-- CONTENT SECTION - BEGINS -->
 	<section class="row evo-footer-content-section">
-		<div class="evo-contain-to-grid">
+		<div class="{{#is basename "full-width"}}evo-full-width{{else}}evo-contain-to-grid{{/is}}">
 			<div class="medium-6 columns">
 
 				<section class="row collapse">
@@ -39,7 +39,7 @@
 
 <!-- BRAND BAR - BEGINS -->
 	<section class="row evo-thin-footer-brand-bar">
-		<div class="evo-contain-to-grid">
+		<div class="{{#is basename "full-width"}}evo-full-width{{else}}evo-contain-to-grid{{/is}}">
 		<!-- FOOTER BRAND LOGO - BEGINS -->
 			<div class="medium-6 medium-push-6 columns small-text-center medium-text-right evo-footer-logo">
 				<a class="small-only-text-center" href="http://www.mercer.com/" target="_blank" title="Mercer - Make Tomorrow, Today">

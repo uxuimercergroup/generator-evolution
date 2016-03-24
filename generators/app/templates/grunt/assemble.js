@@ -34,6 +34,17 @@ module.exports = {
       ext: '.html'
       }
     ]
+  },
+  page_templates: {
+    files: [
+      {
+      expand: true,
+      cwd: 'src/views/page-templates',
+      src: '*.hbs',
+      dest: 'dist/page-templates',
+      ext: '.html'
+      }
+    ]
   }
 
 };
