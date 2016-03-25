@@ -1,7 +1,6 @@
 ## Home
-***
 
-This boilerplate template is for the project homepage.
+This is a boilerplate template for a project homepage.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum dictum nulla sed facilisis. Nulla a lobortis purus. Donec rutrum odio et nisi pharetra, porta euismod ipsum vulputate. Curabitur sit amet auctor quam. Mauris gravida massa id massa lobortis, a dapibus arcu semper. Nunc sed lorem purus. Quisque consectetur, felis et sollicitudin egestas, orci sem fermentum elit, aliquet semper ipsum ex finibus felis.
 
