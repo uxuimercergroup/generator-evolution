@@ -7,13 +7,13 @@
 
 The Evolution Tool Box is a collection of development technologies assembled in one spot so you can begin using the Evolution framework and Evolution web components in minutes!
 
-The Tool Box will:
+The Evolution Tool Box will:
 
 - Set up a development environment that will allow you to view changes live in your browser with automatic refresh.
 - Scaffold the directory structure of your site, including all asset and template directories.
 - Optimize your files for production and allow you to FTP the files with one command.
 
-The Tool Box utilizes the following technologies:
+The Evolution Tool Box utilizes the following technologies:
 
 - Node.js (npm) Runtime Environment
 - Yo Scaffolding Generator
@@ -24,6 +24,8 @@ The Tool Box utilizes the following technologies:
 **NOTE: Please refer to the [Evolution Tool Box wiki](https://github.com/uxuimercergroup/evolution/wiki/Evolution-Tool-Box) for the latest dependency versions that are in use by the Evolution Tool Box development enviroment.**
 
 Follow improvements, updates, and fixes to the Evolution Tool Box (generator-evolution) on the official [Github repository](https://github.com/uxuimercergroup/generator-evolution).
+
+*Have you found any issues or bugs with the Evolution Tool Box?* Please log them on the [Evolution Tool Box issues](https://github.com/uxuimercergroup/generator-evolution/issues) page.
 
 ## Prerequisites
 
@@ -89,20 +91,25 @@ Now that the Evolution Tool Box has been installed in your current working direc
 
 The Evolution Tool Box includes several other tasks to streamline the web development process.
 
-- **Production**: Generate production UI code for hand-off
-	- While still in the current working directory, copy and paste this command into the cli/terminal: `grunt prod`
-	- The *dist* directory in the current working directory now contains production ready code (static HTML, minified CSS, minified JS, and optimized images).
-- **Deploy**: FTP the final production UI code to a secure FTP server.
-	- Setup:
-		1. Using your text editor, open the *grunt* directory in the root of the current working directory. Open the *sftp-deploy.js* file.
-		2. Edit the *sftp-deploy.js* `host` option under `auth` to set the FTP server host name.
-		3. Edit the *sftp-deploy.js* `dest` option to set the destination path where the production files will get uploaded on the FTP server.
-		4. Open the *.ftppass* file in your text editor or cli (may be easier in a text editor that displays hidden files but you can also run `ls -al` in the cli/terminal to see hidden files and edit right in the cli using a built-in text editor).
-		5. Edit *.ftpass* file and enter the correct username/password credentials for the FTP server being used for deployment. **IMPORTANT: Make sure to ignore the .ftppass file in your source control repository settings so that the login information for the FTP server does not get checked into the project and exposed to others.**
-	- Deployment
-		1. While still in the current working directory, copy and paste this command into the cli/terminal: `grunt deploy`
-		2. The deploy task runs `grunt prod` and then deploys the files to the FTP server location.
-		3. Check the server URL in a browser to make sure your deployment was successful and correct.
+### Production
+Generate production UI code for hand-off
+
+- While still in the current working directory, copy and paste this command into the cli/terminal: `grunt prod`
+- The *dist* directory in the current working directory now contains production ready code (static HTML, minified CSS, minified JS, and optimized images).
+
+### Deploy
+FTP the final production UI code to a secure FTP server.
+
+- Setup:
+	1. Using your text editor, open the *grunt* directory in the root of the current working directory. Open the *sftp-deploy.js* file.
+	2. Edit the *sftp-deploy.js* `host` option under `auth` to set the FTP server host name.
+	3. Edit the *sftp-deploy.js* `dest` option to set the destination path where the production files will get uploaded on the FTP server.
+	4. Open the *.ftppass* file in your text editor or cli (may be easier in a text editor that displays hidden files but you can also run `ls -al` in the cli/terminal to see hidden files and edit right in the cli using a built-in text editor).
+	5. Edit *.ftpass* file and enter the correct username/password credentials for the FTP server being used for deployment. **IMPORTANT: Make sure to ignore the .ftppass file in your source control repository settings so that the login information for the FTP server does not get checked into the project and exposed to others.**
+- Deployment
+	1. While still in the current working directory, copy and paste this command into the cli/terminal: `grunt deploy`
+	2. The deploy task runs `grunt prod` and then deploys the files to the FTP server location.
+	3. Check the server URL in a browser to make sure your deployment was successful and correct.
 
 ## License
 
