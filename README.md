@@ -98,7 +98,7 @@ Generate production UI code for hand-off
 - The *dist* directory in the current working directory now contains production ready code (static HTML, minified CSS, minified JS, and optimized images).
 
 ### Deploy
-FTP the final production UI code to a secure FTP server.
+FTP the final production UI code to a secure FTP server
 
 - Setup:
 	1. Using your text editor, open the *grunt* directory in the root of the current working directory. Open the *sftp-deploy.js* file.
