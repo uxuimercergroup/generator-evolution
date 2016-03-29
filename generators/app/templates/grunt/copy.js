@@ -43,6 +43,47 @@ module.exports = {
       dest: 'dist/patterns'
       }
     ]
-  }
-
+  },
+  source_boilerplate_sass: {
+    files: [
+      {
+      expand: true,
+      cwd: '',
+      src: [
+        'grunt/**',
+        'src/**',
+        'bower.json',
+        'Gruntfile.js'
+      ],
+      dest: 'dist/build'
+      }
+    ]
+  },
+  source_boilerplate_css: {
+    files: [
+      {
+      expand: true,
+      cwd: '',
+      src: [
+        'src/assets/scripts/**',
+        'src/design/**'
+      ],
+      dest: 'dist/build'
+      }
+    ]
+  },
+  source_boilerplate_docs: {
+    files: [
+      {
+      expand: true,
+      cwd: '',
+      src: [
+        'CHANGELOG.md',
+        'package.json',
+        'README.md',
+      ],
+      dest: 'dist'
+      }
+    ]
+  },
 };

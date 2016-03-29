@@ -31,6 +31,26 @@ module.exports = {
   },
 
   //
+  // Distribution Tasks
+  //
+
+  // Sass boilerplate generation notification
+  boilerplate_sass: {
+    options: {
+      title: 'Sass boilerplate files created.',  // optional
+      message: 'Sass boilerplate files generated successfully.' //required
+    }
+  },
+
+  // CSS boilerplate generation notification
+  boilerplate_css: {
+    options: {
+      title: 'CSS boilerplate files created.',  // optional
+      message: 'CSS boilerplate files generated successfully.' //required
+    }
+  },
+
+  //
   // Watch Tasks
   //
 
