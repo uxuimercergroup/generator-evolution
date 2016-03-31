@@ -13,7 +13,7 @@
 
 ##### Changed
 
-- Updated installation instructions README.md for the Evolution Tool Box to clarify the correct version of Node.js to download
+- Updated installation instructions README.md for the Evolution Tool Box to clarify the correct version of Node.js to download and how to update to latest version of NPM
 
 ## [3.0.2] - 2016-03-17
 
