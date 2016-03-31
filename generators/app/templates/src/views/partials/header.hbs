@@ -9,7 +9,7 @@
 			<!-- TOP BAR TITLE AREA - BEGINS -->
 			<ul class="title-area">
 				<li class="name">
-					<h1><a href="/index.html">{{ global.title }} <span class="evo-top-bar-sub-name"></span></a></h1>
+					<h1><a href="{{#is dirname "dist/page-templates"}}../index.html{{else}}index.html{{/is}}">{{ global.title }} <span class="evo-top-bar-sub-name"></span></a></h1>
 					<!-- <a href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
 				</li>
 			</ul>
@@ -161,7 +161,7 @@
 
 		<section class="middle tab-bar-section">
 			<h1 class="title">
-				<a href="/">{{ global.title }}</a>
+				<a href="{{#is dirname "dist/page-templates"}}../index.html{{else}}index.html{{/is}}">{{ global.title }}</a>
 			</h1>
 			<!-- <a class="title" href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
 		</section>
