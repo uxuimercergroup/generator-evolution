@@ -4,7 +4,7 @@
   "description": "Global Framework for Digital Design, Development and maintained by the Mercer Digital Center of Excellence",
   "license": "MIT",
   "repository": {
-    "type" : "github",
+    "type" : "git",
     "url" : "https://github.com/uxuimercergroup/evolution"
   },
   "author": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
@@ -15,13 +15,17 @@
     "name": "<%= projectName %>",
     "version": "1.0.0",
     "description": "<%= projectDescription %>",
-    "repository": "",
+    "repository": {
+      "type": "",
+      "url": ""
+    },
     "author": "<%= projectAuthor %>",
     "date": "<%= projectCreationDate %>",
     "homepage": "<%= projectURL %>",
     "product_suite": "<%= productSuiteType %>"
   },
   "devDependencies": {
+    "foundation-sites": "^6.2.0",
     "grunt": "~0.4.5",
     "grunt-assemble": "^0.4.0",
     "grunt-browser-sync": "^2.2.0",
