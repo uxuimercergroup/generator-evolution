@@ -137,34 +137,6 @@ $(function() {
 			// Dateoicker masked date input example
 			evoDatepicker('evo-datepicker-masked-example');
 
-		// SCROLL PANE
-
-			// Scroll pane example
-			evoScrollPane('evo-scroll-pane-example');
-
-			// Horizontal scroll pane example
-			evoScrollPane('evo-scroll-pane-horizontal-example',{
-				axis:'x',
-				mouseWheel:{
-					axis:'x'
-				},
-				advanced:{
-					autoExpandHorizontalScroll: true
-				}
-			});
-
-			// Horizontal + vertical scroll pane example
-			evoScrollPane('evo-scroll-pane-horizontal-vertical-example',{
-				axis:'yx',
-				advanced:{
-					autoExpandHorizontalScroll: true
-				}
-			});
-
-			// Scroll pane custom height example
-			evoScrollPane('evo-scroll-pane-custom-height-example',{
-				setHeight: 200
-			});
 
 		// SLIDER
 
