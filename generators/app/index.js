@@ -266,6 +266,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/views/')
       );
       this.fs.copy(
+        this.templatePath('_bower.json'),
+        this.destinationPath('bower.json')
+      );
+      this.fs.copy(
         this.templatePath('.ftppass'),
         this.destinationPath('.ftppass')
       );
