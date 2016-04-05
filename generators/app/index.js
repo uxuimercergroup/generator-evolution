@@ -149,16 +149,6 @@ module.exports = yeoman.generators.Base.extend({
   // Copy application and project files
   writing: {
 
-    app: function () {
-
-      console.log('Copying the application files...');
-
-      this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
-      );
-    },
-
     projectfiles: function () {
 
       console.log('Copying the project files...');

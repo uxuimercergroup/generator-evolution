@@ -15,11 +15,12 @@ The Evolution Tool Box will:
 
 The Evolution Tool Box utilizes the following technologies:
 
-- Node.js (npm) Runtime Environment
-- Yo Scaffolding Generator
-- Grunt.js Task Runner
-- Handlebars.js Templating Engine
-- Sass CSS Preprocessor
+- Node.js - Runtime Environment
+- NPM - Package Manager
+- Yo - Scaffolding Generator
+- Grunt - Task Runner
+- Handlebars - Templating Engine
+- Sass - CSS Preprocessor
 
 **NOTE: Please refer to the [Evolution Tool Box wiki](https://github.com/uxuimercergroup/evolution/wiki/Evolution-Tool-Box) for the latest dependency versions that are in use by the Evolution Tool Box development enviroment.**
 
@@ -33,9 +34,12 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 
 1. Install Node.js globally. NOTE: Node Package Manager (http://npmjs.org) will be installed globally when you install Node.js.
 	- Go to: http://nodejs.org
-	- Download the current version of Node.js. *Use the Mature and Dependable version*
+	- Download the current version of Node.js. *Use the LTS (Long Term Support) version*
 	- Install Node.js on your system.
-2. Use Node Package Manager (npm) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
+2. Update Node Package Manager (npm) to the latest version:
+	- Open the command line interface (cli) or terminal (for Mac users)
+	- Copy and paste this command into the cli/terminal: `sudo npm install npm -g`
+3. Use Node Package Manager (npm) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
 	- Open the command line interface (cli) or terminal (for Mac users)
 	- Copy and paste this command into the cli/terminal: `npm login` 
 		- NOTE: If you have not already been assigned a username and password for the private Evolution npm registry, please contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com).
