@@ -232,10 +232,6 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/css/styles.scss')
       );
       this.fs.copy(
-        this.templatePath('src/assets/docs'),
-        this.destinationPath('src/assets/docs/')
-      );
-      this.fs.copy(
         this.templatePath('src/assets/fonts'),
         this.destinationPath('src/assets/fonts/')
       );

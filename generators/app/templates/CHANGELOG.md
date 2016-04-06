@@ -2,6 +2,14 @@
 ## [Unreleased]
 -->
 
+## [3.0.4] - 2016-04-06
+
+##### Changed
+- Updated installation instructions README.md for the Evolution Tool Box to clarify steps for the Windows install.
+
+##### Fixed
+- Fixed bug in generator index.js. Deleted a copy function used for the directory "assets/docs" that did not exist and was causing boilerplate generation to fail.
+
 ## [3.0.3] - 2016-03-31
 
 ##### Fixed
