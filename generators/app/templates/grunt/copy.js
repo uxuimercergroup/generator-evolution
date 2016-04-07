@@ -9,8 +9,7 @@ module.exports = {
       src: [
         'docs/**',
         'fonts/**',
-        'images/**',
-        'scripts/core/foundation/vendor/modernizr.js'
+        'images/**'
       ],
       dest: 'dist/assets'
       }
@@ -24,8 +23,7 @@ module.exports = {
       src: [
         'docs/**',
         'fonts/**',
-        'images/core/favicon.ico',
-        'scripts/core/foundation/vendor/modernizr.js'
+        'images/core/favicon.ico'
       ],
       dest: 'dist/assets'
       }

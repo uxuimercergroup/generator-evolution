@@ -45,8 +45,7 @@ module.exports = {
     files: [
       'src/assets/docs/**',
       'src/assets/fonts/**',
-      'src/assets/images/**',
-      'src/assets/scripts/core/foundation/vendor/modernizr.js'
+      'src/assets/images/**'
     ],
     tasks: ['newer:copy:dist', 'notify:copy']
   },
