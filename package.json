@@ -1,5 +1,5 @@
 {
-  "name": "generator-evolution",
+  "name": "@mercer/generator-evolution",
   "version": "3.0.4",
   "description": "Evolution boilerplate generator using Yeoman",
   "license": "MIT",
