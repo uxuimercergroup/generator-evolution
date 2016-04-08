@@ -1,6 +1,6 @@
 {
   "name": "@mercer/generator-evolution",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Evolution boilerplate generator using Yeoman",
   "license": "MIT",
   "main": "app/index.js",
