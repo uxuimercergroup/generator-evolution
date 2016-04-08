@@ -55,20 +55,28 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 	- Go to: http://nodejs.org
 	- Download the current version of Node.js. *Use the LTS (Long Term Support) version*
 	- Install Node.js on your system.
-2. Update Node Package Manager (npm) to the latest version:
+2. Update Node Package Manager (NPM) to the latest version:
 	- Open the command line interface (cli)
 	- Copy and paste this command into the cli: `npm install npm -g`, you may need to run `sudo npm install npm -g` if the regular command does not work.
-3. Use Node Package Manager (npm) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
+3. Use Node Package Manager (NPM) to install the Evolution Tool Box generator globally. The Yo scaffolding tool will also be installed at this time.
+	- You will need a NPM account and access privileges to the private Evolution Tool Box generator NPM package.
+		1. [Sign up for a NPM account](https://www.npmjs.com/signup)
+		2. Contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com) and request to be added to the *@mercer* NPM organization as a developer and get access to download the private NPM packages.
 	- Open the command line interface (cli)
 	- Copy and paste this command into the cli: `npm login`, you may need to run `sudo npm login` if the regular command does not work. 
-		- NOTE: If you have not already been assigned a username and password for the private Evolution npm registry, please contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com).
-	- Copy and paste this command into the cli: `npm install -g yo generator-evolution`, you may need to run `sudo npm install -g yo generator-evolution` if the regular command does not work.
+	- Enter your NPM account username, password, and email address.
+		- NOTE: If you have not signed up for a NPM account, please [sign up for a NPM account](https://www.npmjs.com/signup). 
+		- NOTE: Contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com) and request to be added to the *@mercer* NPM organization as a developer and get access to download the private NPM packages.
+	- Copy and paste this command into the cli: `npm install -g yo @mercer/generator-evolution`, you may need to run `sudo npm install -g yo @mercer/generator-evolution` if the regular command does not work.
 4. Use Node Package Manager (npm) to install grunt-cli tool:
 	- Open the command line interface (cli)
 	- Copy and paste this command into the cli: `npm install grunt-cli -g`, you may need to run `sudo npm install grunt-cli -g` if the regular command does not work.
 5. If you are on a Windows system you need to install Ruby to use the Sass CSS preprocessor. If you are on a Mac you can skip this step as Ruby is installed by default on Mac OS. Follow these instructions to install Ruby for Windows:
 	- Download the Ruby Installer from http://rubyinstaller.org/.
 		- Make sure to get version *2.2.4 (x64)*
+	- If you are unable to download the Ruby Installer because it's blocked by corporate security protocols then please download the Ruby installer from the Mercer UXUI FTP server at this location:
+		- docs/miscellaneous/software/ruby_installer_windows/rubyinstaller-2.2.4-x64.exe
+		- *If you need access to the Mercer UXUI FTP server please contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com).*
 	- Run the Ruby Installer application
 		- **IMPORTANT: When running the Ruby Installer make sure to check all install options (Install Tcl/Tk support, Add Ruby executables to your PATH, Associate .rb and .rbw files with this Ruby installation) before confirming the installation.**
 6. Install Sass CSS Preprocessor
@@ -80,7 +88,7 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 Now that the Evolution Tool Box generator is installed on your system, you can install the Evolution Tool Box into your current working directory.
 
 1. Using the cli, change directory (cd) to the directory where you will be working or your current working directory.
-2. Copy and paste this command into the cli: `yo evolution`
+2. Copy and paste this command into the cli: `yo @mercer/evolution`
 3. The Evolution Tool Box generator will run in the cli and prompt you with the following questions so that you can customize the Evolution Tool Box to your project.
 	- *What is your full name?*
 	- *What is the name of your project?*
@@ -92,7 +100,7 @@ Now that the Evolution Tool Box generator is installed on your system, you can i
 		- Benefits Portals (Get a boilerplate utilizing the Evolution framework customized for Benefits Portals.)
 	- *What is the primary color of your project?* (Only asked if *Core* product suite is selected - default is $onyx-dark-70 - accepts Sass variable from color palette or hex-color formatted like so: #000000)
 4. The Evolution Tool Box generator will now install all required files and dependencies into your current working directory.
-5. Please ignore any warnings when `yo evolution` is run.
+5. Please ignore any warnings when `yo @mercer/evolution` is run.
 
 ## Updating the Evolution Tool Box
 
