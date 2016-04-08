@@ -15,7 +15,7 @@ The Evolution Tool Box will:
 
 The Evolution Tool Box utilizes the following technologies:
 
-- Node.js (npm) Runtime Environment
+- Node.js (NPM) Runtime Environment
 - Yo Scaffolding Generator
 - Grunt.js Task Runner
 - Handlebars.js Templating Engine
@@ -49,7 +49,7 @@ Windows users:
 
 ### Environment Dependencies
 
-The Evolution Tool Box is installed on your system using the [generator-evolution](https://github.com/uxuimercergroup/generator-evolution) Yeoman generator, which is a Node.js module. Node.js and Node Package Manager (npm) must be installed globally on your system before you can install the Evolution Tool Box generator. The Evolution Tool Box generator is then installed globally as well, so that you can continue to use it to set up the Evolution Tool Box in any directory on your system without needing to install the Evolution Tool Box generator again.
+The Evolution Tool Box is installed on your system using the [generator-evolution](https://github.com/uxuimercergroup/generator-evolution) Yeoman generator, which is a Node.js module. Node.js and Node Package Manager (NPM) must be installed globally on your system before you can install the Evolution Tool Box generator. The Evolution Tool Box generator is then installed globally as well, so that you can continue to use it to set up the Evolution Tool Box in any directory on your system without needing to install the Evolution Tool Box generator again.
 
 1. Install Node.js globally. NOTE: Node Package Manager (http://npmjs.org) will be installed globally when you install Node.js.
 	- Go to: http://nodejs.org
@@ -68,7 +68,7 @@ The Evolution Tool Box is installed on your system using the [generator-evolutio
 		- NOTE: If you have not signed up for a NPM account, please [sign up for a NPM account](https://www.npmjs.com/signup). 
 		- NOTE: Contact Douglas Fraize at [douglas.fraize@mercer.com](mailto:douglas.fraize@mercer.com) and request to be added to the *@mercer* NPM organization as a developer and get access to download the private NPM packages.
 	- Copy and paste this command into the cli: `npm install -g yo @mercer/generator-evolution`, you may need to run `sudo npm install -g yo @mercer/generator-evolution` if the regular command does not work.
-4. Use Node Package Manager (npm) to install grunt-cli tool:
+4. Use Node Package Manager (NPM) to install grunt-cli tool:
 	- Open the command line interface (cli)
 	- Copy and paste this command into the cli: `npm install grunt-cli -g`, you may need to run `sudo npm install grunt-cli -g` if the regular command does not work.
 5. If you are on a Windows system you need to install Ruby to use the Sass CSS preprocessor. If you are on a Mac you can skip this step as Ruby is installed by default on Mac OS. Follow these instructions to install Ruby for Windows:
@@ -105,9 +105,9 @@ Now that the Evolution Tool Box generator is installed on your system, you can i
 ## Updating the Evolution Tool Box
 
 To ensure the Evolution Tool Box generator (generator-evolution) and the Evolution Tool Box installed in your current working directory are both current versions, run the following updates.
-- Update all global npm packages *before* installing the Evolution Tool Box into your project's directory (including yo and generator-evolution):
+- Update all global NPM packages *before* installing the Evolution Tool Box into your project's directory (including yo and generator-evolution):
 	- Copy and paste this command into the cli: `npm update -g`, you may need to run `sudo npm update -g` if the regular command does not work.
-- Update only the npm packages located inside the project directory where the Evolution Tool Box has already been installed:
+- Update only the NPM packages located inside the project directory where the Evolution Tool Box has already been installed:
 	1. Using the cli, change directory (cd) to the project directory.
 	2. Copy and paste this command into the cli: `npm update`, you may need to run `sudo npm update` if the regular command does not work.
 	3. All build tools located within your current working directory are now current versions.
@@ -118,7 +118,7 @@ There may be a case when multiple developers are working on a project where you 
 
 1. Using the cli, change directory (cd) to your current working directory
 2. Copy and paste this command into the cli: `npm install`, you may need to run `sudo npm install` if the regular command does not work.
-3. Project dependencies should then be retrieved from npm and installed.
+3. Project dependencies should then be retrieved from NPM and installed.
 4. Proceed to use build tools like `grunt`.
 
 ## Using the Build Tools
