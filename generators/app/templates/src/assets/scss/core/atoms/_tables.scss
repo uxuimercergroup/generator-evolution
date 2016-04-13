@@ -1,0 +1,58 @@
+//-------------------------------------------------------------------------------------------
+// Mercer Evolution - Base Tables Partial
+//-------------------------------------------------------------------------------------------
+
+//
+// @variables
+//
+
+
+@if $use-tables == true{
+
+	// TABLE HORIZONTAL SCROLL CONTAINER FOR SMALL MEDIA QUERY
+	.evo-table-small-mediaquery
+						{
+						overflow-x: auto;
+						overflow-y: hidden;
+						-ms-overflow-style: -ms-autohiding-scrollbar;
+						-webkit-overflow-scrolling: touch;
+						}
+
+	// TABLE BASE
+	.evo-table			{
+						min-width: rem-calc(768);
+		th					{
+							border: $table-border;
+							border-left: 0;
+							font-weight: normal;
+							vertical-align: bottom;
+			&:first-child		{border-left: $table-border;}
+							}
+		td					{border: $table-border;}
+						}
+
+
+	//=== MEDIA QUERIES =========================================================================
+
+	// MEDIUM MEDIA QUERY RANGE AND UP - 768px +
+	@if $use-medium-up-mediaquery == true {
+		
+		@media #{$medium-up} {
+
+			// TABLE HORIZONTAL SCROLL CONTAINER FOR SMALL MEDIA QUERY, TURNED OFF FOR MEDIUM AND UP
+			.evo-table-small-mediaquery
+						{
+						overflow: hidden;
+						width: 100%;
+						}
+
+			.evo-table	{
+						min-width: 100%;
+						width: 100%;
+						}
+
+		}
+		
+	}// endif
+
+}//endif
