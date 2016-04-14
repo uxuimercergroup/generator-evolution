@@ -136,7 +136,7 @@ module.exports = yeoman.generators.Base.extend({
             productSuiteType: 'bp'
           }
         );
-        this.fs.copyTpl(
+        this.fs.copy(
           this.templatePath('src/assets/scss/bp/_foundation_settings.scss'),
           this.destinationPath('src/assets/scss/core/_foundation_settings.scss')
         );
@@ -177,6 +177,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/js/')
       );
       this.fs.copy(
+        this.templatePath('src/assets/scss/app'),
+        this.destinationPath('src/assets/scss/app')
+      );
+      this.fs.copy(
         this.templatePath('src/assets/scss/core/atoms'),
         this.destinationPath('src/assets/scss/core/atoms')
       );
@@ -189,16 +193,8 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/scss/core/molecules')
       );
       this.fs.copy(
-        this.templatePath('src/assets/scss/core/_foundation_settings.scss'),
-        this.destinationPath('src/assets/scss/core/_foundation_settings.scss')
-      );
-      this.fs.copy(
         this.templatePath('src/assets/scss/core/_global.scss'),
         this.destinationPath('src/assets/scss/core/_global.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/scss/core/_settings.scss'),
-        this.destinationPath('src/assets/scss/core/_settings.scss')
       );
       this.fs.copy(
         this.templatePath('src/assets/scss/app.scss'),
