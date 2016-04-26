@@ -249,6 +249,12 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/views/')
       );
 
+      // Babel
+      this.fs.copy(
+        this.templatePath('.babelrc'),
+        this.destinationPath('.babelrc')
+      );
+
       // FTP
       this.fs.copy(
         this.templatePath('.ftppass'),
