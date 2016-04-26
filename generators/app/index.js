@@ -106,8 +106,8 @@ module.exports = yeoman.generators.Base.extend({
           }
         );
         this.fs.copyTpl(
-          this.templatePath('src/assets/scss/core/_foundation_settings.scss'),
-          this.destinationPath('src/assets/scss/core/_foundation_settings.scss'),
+          this.templatePath('src/assets/scss/core/_global.scss'),
+          this.destinationPath('src/assets/scss/core/_global.scss'),
           {
             primaryColor: sitePrimaryColor
           }

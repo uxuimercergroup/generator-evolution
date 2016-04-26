@@ -14,8 +14,22 @@
 // GLOBAL VARIABLES
 // ==========================================================================================
 
-// BASE
-// ------------------------------------------------------------------------------------------
+// COLOR PALETTE
+$evo-primary-color:							<%= primaryColor %> !default;
+$evo-secondary-color:						$onyx-dark-6 !default;
+$evo-alert-color:							#EF4E45 !default;
+$evo-success-color:							#72BE44 !default;
+$evo-warning-color:							#FCC770 !default;
+$evo-info-color:							#A6E2EF !default;
+$evo-highlight-color:						#F7F0B2 !default;
+
+$system-color-palette: (
+	alert-color: 							(color: $evo-alert-color),
+	success-color: 							(color: $evo-success-color),
+	warning-color: 							(color: $evo-warning-color),
+	info-color: 							(color: $evo-info-color),
+	highlight-color: 						(color: $evo-highlight-color)
+);
 
 // LAYOUT
 $evo-base-margin:							0.875rem !default;
