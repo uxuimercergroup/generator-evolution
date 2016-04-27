@@ -47,7 +47,8 @@ module.exports = yeoman.generators.Base.extend({
         type: 'list',
         name: 'addProductSuite',
         message: 'Please select a product suite:',
-        choices : ['Core', 'Benefits Portals']
+        choices : ['Core']
+        // choices : ['Core', 'Benefits Portals']
       },
       {
         when: function(props) { return (/core/i).test(props.addProductSuite); },
@@ -103,7 +104,11 @@ module.exports = yeoman.generators.Base.extend({
             projectCreationDate: siteProjectCreationDate,
             projectURL: siteProjectURL,
             productSuiteType: 'core'
-          }
+          } 
+        );
+        this.fs.copy(
+          this.templatePath('src/assets/scss/core/_foundation_settings.scss'),
+          this.destinationPath('src/assets/scss/core/_foundation_settings.scss')
         );
         this.fs.copyTpl(
           this.templatePath('src/assets/scss/core/_global.scss'),
@@ -139,6 +144,10 @@ module.exports = yeoman.generators.Base.extend({
         this.fs.copy(
           this.templatePath('src/assets/scss/bp/_foundation_settings.scss'),
           this.destinationPath('src/assets/scss/core/_foundation_settings.scss')
+        );
+        this.fs.copy(
+          this.templatePath('src/assets/scss/core/_global.scss'),
+          this.destinationPath('src/assets/scss/core/_global.scss')
         );
         this.fs.copy(
           this.templatePath('src/assets/scss/bp/_settings.scss'),
@@ -191,10 +200,6 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('src/assets/scss/core/molecules'),
         this.destinationPath('src/assets/scss/core/molecules')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/scss/core/_global.scss'),
-        this.destinationPath('src/assets/scss/core/_global.scss')
       );
       this.fs.copy(
         this.templatePath('src/assets/scss/app.scss'),
