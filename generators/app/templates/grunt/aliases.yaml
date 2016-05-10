@@ -12,6 +12,21 @@ default:
   - 'notify:browserSync'
   - 'watch'
 
+test:
+  - 'clean'
+  - 'sass:dist'
+  - 'sass:patterns'
+  - 'postcss:dist'
+  - 'concat'
+  - 'babel'
+  - 'copy:dist'
+  - 'copy:patterns'
+  - 'assemble'
+  - 'string-replace:meta'
+  - 'browserSync'
+  - 'notify:test'
+  - 'watch'
+
 prod:
   - 'clean'
   - 'sass:prod'
@@ -38,6 +53,7 @@ boilerplate_sass:
   - 'sass:patterns'
   - 'postcss:dist'
   - 'concat'
+  - 'babel'
   - 'imagemin'
   - 'copy:prod'
   - 'copy:patterns'
@@ -54,6 +70,7 @@ boilerplate_css:
   - 'sass:patterns'
   - 'postcss:dist'
   - 'concat'
+  - 'babel'
   - 'imagemin'
   - 'copy:prod'
   - 'copy:patterns'
