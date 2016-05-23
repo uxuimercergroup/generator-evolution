@@ -54,8 +54,8 @@ module.exports = yeoman.generators.Base.extend({
         when: function(props) { return (/core/i).test(props.addProductSuite); },
         type: 'input',
         name: 'addPrimaryColor',
-        message: 'What is the primary color of your project?',
-        default: '$onyx-dark-70'
+        message: 'What is the primary color of your project? (color palette: https://evolution.mercer.com/pattern-library/color-palette.html)',
+        default: '$sapphire-dark'
       }
     ];
 
