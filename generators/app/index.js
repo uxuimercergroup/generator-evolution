@@ -146,7 +146,7 @@ module.exports = yeoman.generators.Base.extend({
           this.destinationPath('src/assets/scss/core/_foundation_settings.scss')
         );
         this.fs.copy(
-          this.templatePath('src/assets/scss/core/_global.scss'),
+          this.templatePath('src/assets/scss/bp/_global.scss'),
           this.destinationPath('src/assets/scss/core/_global.scss')
         );
         this.fs.copy(
@@ -204,6 +204,10 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('src/assets/scss/app.scss'),
         this.destinationPath('src/assets/scss/app.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/evolution-animations.scss'),
+        this.destinationPath('src/assets/scss/evolution-animations.scss')
       );
       this.fs.copy(
         this.templatePath('src/assets/scss/evolution.scss'),

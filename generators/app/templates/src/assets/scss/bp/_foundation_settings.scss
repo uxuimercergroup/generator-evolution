@@ -46,29 +46,32 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(980);
-$global-lineheight: 1.5;
+$global-width: $evo-base-grid-width;
+$global-lineheight: $evo-base-line-height;
 $foundation-palette: (
-  primary: $sapphire-medium,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  primary: $evo-primary-color,
+  secondary: $evo-secondary-color,
+  tertiary: $evo-tertiary-color,
+  quaternary: $evo-quaternary-color,
+  quinary: $evo-quinary-color,
+  alert: $evo-alert-color,
+  success: $evo-success-color,
+  warning: $evo-warning-color,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
-$body-font-color: $black;
-$body-font-family: $evo-font-regular-stack;
-$body-antialiased: true;
-$global-margin: 1rem;
-$global-padding: 1rem;
+$light-gray: $onyx-dark-10;
+$medium-gray: $onyx-dark-20;
+$dark-gray: $onyx-dark-50;
+$black: $black;
+$white: $white;
+$body-background: $evo-base-body-background;
+$body-font-color: $evo-base-font-color;
+$body-font-family: $evo-base-font-family;
+$body-antialiased: $evo-base-font-antialiased;
+$global-margin: $evo-base-margin;
+$global-padding: $evo-base-padding;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 3px;
+$global-radius: $evo-base-radius;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
@@ -80,10 +83,10 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
-  large: 1024px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
+  medium: 768px,
+  large: 1025px,
+  xlarge: 1441px,
+  xxlarge: 1921px,
 );
 $breakpoint-classes: (small medium large xlarge xxlarge);
 
@@ -95,9 +98,10 @@ $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
   medium: 30px,
+  large: 40px,
 );
 $grid-column-align-edge: true;
-$block-grid-max: 8;
+$block-grid-max: 12;
 
 // 4. Base Typography
 // ------------------
@@ -108,29 +112,29 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': 26,
+    'h2': 22,
+    'h3': 18,
+    'h4': 16,
+    'h5': 14,
+    'h6': 12,
   ),
   medium: (
-    'h1': 48,
-    'h2': 40,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
+    'h1': 38,
+    'h2': 32,
+    'h3': 26,
+    'h4': 22,
+    'h5': 18,
+    'h6': 14,
   ),
 );
-$header-color: inherit;
+$header-color: $evo-base-header-color;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
-$small-font-size: rem-calc(12);
+$small-font-size: $evo-base-small-font-size;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.32;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -139,11 +143,11 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
-$anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
-$hr-width: $global-width;
+$anchor-color: $evo-base-anchor-color;
+$anchor-color-hover: scale-color($evo-base-anchor-color, $lightness: -14%);
+$anchor-text-decoration: $evo-base-anchor-text-decoration;
+$anchor-text-decoration-hover: $evo-base-anchor-text-decoration-hover;
+$hr-width: 100%;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
@@ -158,7 +162,7 @@ $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: $dark-gray;
 $blockquote-padding: rem-calc(9 20 0 19);
 $blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
+$cite-font-size: $evo-base-small-font-size;
 $cite-color: $dark-gray;
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
@@ -187,19 +191,19 @@ $abide-labels: true;
 $input-background-invalid: map-get($foundation-palette, alert);
 $form-label-color-invalid: map-get($foundation-palette, alert);
 $input-error-color: map-get($foundation-palette, alert);
-$input-error-font-size: rem-calc(12);
+$input-error-font-size: $small-font-size;
 $input-error-font-weight: $global-weight-bold;
 
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
+$accordion-background: $transparent;
 $accordion-plusminus: false;
 $accordion-item-color: foreground($accordion-background, $primary-color);
 $accordion-item-background-hover: $transparent;
 $accordion-item-padding: 1.25rem 1rem;
-$accordion-content-background: $white;
-$accordion-content-border: 1px solid $onyx-dark-30;
+$accordion-content-background: $accordion-background;
+$accordion-content-border: 1px solid $medium-gray;
 $accordion-content-color: foreground($accordion-background, $primary-color);
 $accordion-content-padding: 1rem;
 
@@ -214,9 +218,9 @@ $accordionmenu-arrow-color: $primary-color;
 
 $badge-background: $primary-color;
 $badge-color: foreground($badge-background);
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
+$badge-padding: 0.27em;
+$badge-minwidth: 2.0em;
+$badge-font-size: $evo-base-small-font-size;
 
 // 10. Breadcrumbs
 // ---------------
@@ -242,10 +246,12 @@ $button-color: $white;
 $button-color-alt: $onyx-dark-70;
 $button-radius: $global-radius;
 $button-sizes: (
-  tiny: 0.6rem,
-  small: 0.75rem,
-  default: 0.9rem,
+  tiny:  0.688rem,
+  small: 0.813rem,
+  default: 1rem,
   large: 1.25rem,
+  xlarge: 1.5rem,
+  xxlarge: 1.75rem,
 );
 $button-opacity-disabled: 0.25;
 
@@ -255,20 +261,20 @@ $button-opacity-disabled: 0.25;
 $buttongroup-margin: 1rem;
 $buttongroup-spacing: 1px;
 $buttongroup-child-selector: '.button';
-$buttongroup-expand-max: 6;
+$buttongroup-expand-max: 8;
 
 // 13. Callout
 // -----------
 
-$callout-background: $white;
-$callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, 0.25);
+$callout-background: $transparent;
+$callout-background-fade: 0%;
+$callout-border: 1px solid $medium-gray;
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
-$callout-link-tint: 30%;
+$callout-link-tint: false;
 
 // 14. Close Button
 // ----------------
@@ -292,9 +298,9 @@ $drilldown-background: $white;
 // 16. Dropdown
 // ------------
 
-$dropdown-padding: 1rem;
+$dropdown-padding: $global-padding;
 $dropdown-border: 1px solid $medium-gray;
-$dropdown-font-size: 1rem;
+$dropdown-font-size: $evo-base-font-size;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
@@ -327,15 +333,15 @@ $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
 $legend-padding: rem-calc(0 3);
 $form-spacing: rem-calc(16);
-$helptext-color: $black;
-$helptext-font-size: rem-calc(13);
-$helptext-font-style: italic;
+$helptext-color: $dark-gray;
+$helptext-font-size: $small-font-size;
+$helptext-font-style: normal;
 $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
 $form-label-color: $black;
-$form-label-font-size: rem-calc(14);
+$form-label-font-size: $evo-base-font-size;
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
@@ -344,13 +350,13 @@ $select-radius: $global-radius;
 $input-color: $black;
 $input-placeholder-color: $medium-gray;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
+$input-font-size: $evo-base-font-size;
 $input-background: $white;
 $input-background-focus: $white;
-$input-background-disabled: $light-gray;
+$input-background-disabled: $onyx-dark-6;
 $input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $onyx-dark-40;
-$input-shadow: inset 0 1px 1px $onyx-dark-6;
+$input-border-focus: 1px solid $dark-gray;
+$input-shadow: inset 0 1px 1px $light-gray;
 $input-shadow-focus: 0 0 5px $medium-gray;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -362,8 +368,8 @@ $input-radius: $global-radius;
 
 $label-background: $primary-color;
 $label-color: foreground($label-background);
-$label-font-size: 0.8rem;
-$label-padding: 0.33333rem 0.5rem;
+$label-font-size: $evo-base-small-font-size;
+$label-padding: 0.5rem 0.5rem 0.45rem 0.5rem;
 $label-radius: $global-radius;
 
 // 21. Media Object
@@ -396,23 +402,23 @@ $meter-fill-bad: $alert-color;
 // 24. Off-canvas
 // --------------
 
-$offcanvas-size: 250px;
-$offcanvas-background: $light-gray;
+$offcanvas-size: 265px;
+$offcanvas-background: $onyx-dark-6;
 $offcanvas-zindex: -1;
 $offcanvas-transition-length: 0.5s;
 $offcanvas-transition-timing: ease;
 $offcanvas-fixed-reveal: true;
-$offcanvas-exit-background: rgba($white, 0.25);
+$offcanvas-exit-background: rgba($white, 0.4);
 $maincontent-class: 'off-canvas-content';
-$maincontent-shadow: 0 0 10px rgba($black, 0.5);
+$maincontent-shadow: none;
 
 // 25. Orbit
 // ---------
 
-$orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $dark-gray;
-$orbit-bullet-diameter: 1.2rem;
-$orbit-bullet-margin: 0.1rem;
+$orbit-bullet-background: $light-gray;
+$orbit-bullet-background-active: $primary-color;
+$orbit-bullet-diameter: 1rem;
+$orbit-bullet-margin: 0.2rem;
 $orbit-bullet-margin-top: 0.8rem;
 $orbit-bullet-margin-bottom: 0.8rem;
 $orbit-caption-background: rgba($black, 0.5);
@@ -450,7 +456,7 @@ $progress-radius: $global-radius;
 // 28. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: $evo-base-reveal-background;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
@@ -492,19 +498,19 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 31. Table
 // ---------
 
-$table-background: $white;
+$table-background: $evo-base-table-color;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
-$table-padding: rem-calc(8 10 10);
+$table-padding: rem-calc(12 10);
 $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
-$table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-head-background: smart-scale($table-background, $table-color-scale * 9.75);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
-$table-head-font-color: $body-font-color;
-$show-header-for-stacked: false;
+$table-head-font-color: $white;
+$show-header-for-stacked: true;
 
 // 32. Tabs
 // --------
@@ -514,12 +520,12 @@ $tab-background: $transparent;
 $tab-background-active: $white;
 $tab-item-font-size: rem-calc(16);
 $tab-item-background-hover: $onyx-dark-14;
-$tab-item-padding: rem-calc(8) $evo-base-padding;
+$tab-item-padding: rem-calc(8) $global-padding;
 $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: foreground($tab-background, $primary-color);
-$tab-content-padding: $evo-base-padding $evo-base-padding 0 $evo-base-padding;
+$tab-content-padding: $global-padding $global-padding 0 $global-padding;
 
 // 33. Thumbnail
 // -------------
@@ -548,7 +554,7 @@ $titlebar-icon-spacing: 0.25rem;
 $has-tip-font-weight: $global-weight-normal;
 $has-tip-border-bottom: dotted 1px $dark-gray;
 $tooltip-background-color: $onyx-dark-70;
-$tooltip-color: #FFF;
+$tooltip-color: $white;
 $tooltip-padding: 0.75rem;
 $tooltip-font-size: $small-font-size;
 $tooltip-pip-width: 0.75rem;
@@ -558,10 +564,9 @@ $tooltip-radius: $global-radius;
 // 36. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $sapphire-dark;
+$topbar-padding: 0;
+$topbar-background: $primary-color;
 $topbar-submenu-background: $topbar-background;
-$topbar-title-spacing: 1rem;
+$topbar-title-spacing: 0;
 $topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
-
+$topbar-unstack-breakpoint: large;

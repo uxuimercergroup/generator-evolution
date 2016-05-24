@@ -25,15 +25,10 @@ $evo-hdr-rule-border-size: 1px !default;
 $evo-hdr-rule-border-style:	dotted !default;
 $evo-hdr-rule-margin-bottom: rem-calc(10) !default;
 $evo-hdr-rule-border-color:	$onyx-dark-30 !default;
-$evo-hdr-background-color: $onyx-dark-6 !default;
+$evo-hdr-background-color: $evo-secondary-color !default;
 
 // FOOTERS
 $evo-footer-font-size: rem-calc(14) !default;
-
-// LINKS
-$evo-anchor-font-size-small: rem-calc(14) !default;
-$evo-anchor-font-color-reverse: $white !default;
-$evo-anchor-font-color-alt: $onyx-dark-10 !default;
 
 
 @if $use-type == true{
@@ -161,8 +156,7 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 
 	
 	// BOLD AND OTHER TYPES OF HEADERS
-	b, strong, th, thead,
-	dt, legend					{
+	b, strong, th, thead, dt	{
 								font-family: $evo-font-medium-stack;
 								font-weight: $global-weight-normal !important;
 								}
@@ -175,7 +169,7 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 
 	// FOOTNOTES
 	.evo-footnote				{
-								line-height: 1.0625;
+								line-height: 1.125;
 								margin-bottom: rem-calc(10);
 								}
 
@@ -202,17 +196,6 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 									}
 								}
 
-
-	// LINKS
-	a							{	
-		&:visited					{color: $evo-anchor-font-color-visited;}
-								}
-
-	a.evo-anchor-small			{font-size: $evo-anchor-font-size-small;}
-	a.evo-anchor-reverse		{color: $evo-anchor-font-color-reverse;}
-	a.evo-anchor-alt			{color: $evo-anchor-font-color-alt;}
-
-
 	// OTHER ELEMENTS
 	sup, sub					{font-size: ($small-font-size - rem-calc(2));}
 	sup							{vertical-align: rem-calc(0);}
@@ -227,5 +210,19 @@ $evo-anchor-font-color-alt: $onyx-dark-10 !default;
 		a, p, li, dd				{font-size: $evo-footer-font-size;}
 		.evo-copyright				{text-transform: uppercase;}
 								}
+
+
+	// ==========================================================================================
+	// HELPERS
+	// ==========================================================================================
+
+	// TEXT OVERFLOW
+	.evo-text-overflow						{@include text-overflow;}
+
+	// WHITE SPACE NO WRAP
+	.evo-nowrap								{white-space: nowrap !important;}
+
+	// WORD BREAK
+	.evo-word-break							{word-wrap: break-word;}
 
 }//endif
