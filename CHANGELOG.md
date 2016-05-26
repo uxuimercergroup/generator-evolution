@@ -6,7 +6,6 @@
 
 ##### Changed
 - Generator boilerplates now use "Sapphire" theme from Evolution site by default and is not grayscale anymore
-- 
 
 ##### Removed
 - Benefits Portal product suite choice removed from generator until product suite themes are designed (later release)
