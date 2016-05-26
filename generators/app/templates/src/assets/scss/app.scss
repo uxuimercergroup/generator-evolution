@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------------------------------------
+{{ meta_project }} v{{ meta_version }} - Application CSS
+DATE: {{ meta_date }}
+AUTHOR: {{ meta_author }}
+URL: {{ meta_url }}
+--------------------------------------------------------------------------------------------*/
+
+@charset 'utf-8';
+
+// ===========================================================================================
+// CORE IMPORTS
+// ===========================================================================================
+
+@import	"core/global";
+@import	"core/foundation-settings";
+@import	"core/settings";
+
+
+// ===========================================================================================
+// APPLICATION IMPORTS
+// ===========================================================================================
+
+@import	"app/settings";
+@import	"app/variables";
+@import	"app/icons";
+
+
+/*=== STYLES ===============================================================================*/
+
+/*--- GLOBAL -------------------------------------------------------------------------------*/
+
+
+
+/*--- STYLES SECTION HEADER ----------------------------------------------------------------*/
+
+
+
+/*--- KITCHEN SINK -------------------------------------------------------------------------*/
+
+// GRID DEMO - BEGINS
+.evo-grid-demo							{
+	.row									{
+											border: 1px solid $onyx-dark-10;
+											margin-bottom: $evo-base-margin;
+											margin-left: 0 !important;
+											margin-right: 0 !important;
+											}
+	.columns								{background-color: $onyx-dark-6;}
+	.columns:nth-child(2n)					{background-color: $onyx-dark-14;}
+										}
+// GRID DEMO - ENDS
+
+// BLOCK GRID DEMO - BEGINS
+.evo-block-grid-demo					{
+	.row									{
+											margin-left: 0 !important;
+											margin-right: 0 !important;
+											}
+										}
+// BLOCK GRID DEMO - ENDS
+
+// KEYLINE DEMO - BEGINS
+.evo-site--helpers-keyline-example		{
+	.evo-keyline-right						{
+											border-color: $onyx-dark-30;
+											min-height: auto;
+											}
+	[data-equalizer-watch]					{min-height: rem-calc(276);}
+
+	@include breakpoint(small only)			{
+		[data-equalizer-watch]					{min-height: auto;}					
+											}
+
+	@include breakpoint(medium only)		{
+		.evo-keyline-right						{
+												border-right-width: 1px;
+												border-right-style: solid;
+												border-right-color: $onyx-dark-30;
+												}
+											}
+
+										}
+// KEYLINE DEMO - ENDS
+
+// CALLOUT DIMENSIONS DEMO - BEGINS
+.evo-callout-dimensions-demo			{
+										height: rem-calc(200);
+										width: 100%;
+	p										{
+											width: rem-calc(200) !important;
+											}
+										}
+// CALLOUT DIMENSIONS DEMO - ENDS
+
+// HYPHEN DEMO - BEGINS
+.evo-hyphen-demo						{@include hyphens(auto);}
+// HYPHEN DEMO - ENDS
+
+// WORD BREAK DEMO - BEGINS
+.evo-word-break-container-dimensions-demo
+										{
+										height: rem-calc(50);
+										width: rem-calc(200);
+										}
+// WORD BREAK DEMO - ENDS
+
+
+// ===========================================================================================
+// PATTERN IMPORTS
+// ===========================================================================================
+
+// CONVERSATIONAL FORM
+@import	"../../patterns/organisms/conversational-form/conversational-form.scss";
+
+// FAT FOOTER
+@import	"../../patterns/organisms/fat-footer/fat-footer.scss";
+
+// ITEM SELECTION PANEL
+@import	"../../patterns/organisms/item-selection-panel/item-selection-panel.scss";
+
+// PRICING TABLE
+@import	"../../patterns/organisms/pricing-table/pricing-table.scss";
+
+// SHOWCASE PANEL
+@import	"../../patterns/organisms/showcase-panel/showcase-panel.scss";
+
+// SOCIAL MEDIA BADGES
+@import	"../../patterns/organisms/social-media-badges/social-media-badges.scss";
+
+// STEPPER
+@import	"../../patterns/organisms/stepper/stepper.scss";
+
+// THIN FOOTER
+@import	"../../patterns/organisms/thin-footer/thin-footer.scss";

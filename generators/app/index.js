@@ -47,14 +47,15 @@ module.exports = yeoman.generators.Base.extend({
         type: 'list',
         name: 'addProductSuite',
         message: 'Please select a product suite:',
-        choices : ['Core', 'Benefits Portals']
+        choices : ['Core']
+        // choices : ['Core', 'Benefits Portals']
       },
       {
         when: function(props) { return (/core/i).test(props.addProductSuite); },
         type: 'input',
         name: 'addPrimaryColor',
-        message: 'What is the primary color of your project?',
-        default: '$onyx-dark-70'
+        message: 'What is the primary color of your project? (color palette: https://evolution.mercer.com/pattern-library/color-palette.html)',
+        default: '$sapphire-dark'
       }
     ];
 
@@ -103,12 +104,22 @@ module.exports = yeoman.generators.Base.extend({
             projectCreationDate: siteProjectCreationDate,
             projectURL: siteProjectURL,
             productSuiteType: 'core'
-          }
+          } 
+        );
+        this.fs.copy(
+          this.templatePath('src/assets/scss/core/_foundation-settings.scss'),
+          this.destinationPath('src/assets/scss/core/_foundation-settings.scss')
         );
         this.fs.copyTpl(
-          this.templatePath('src/assets/css/core/global/_variables_overrides.scss'),
-          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss'),
-          { primaryColor: sitePrimaryColor }
+          this.templatePath('src/assets/scss/core/_global.scss'),
+          this.destinationPath('src/assets/scss/core/_global.scss'),
+          {
+            primaryColor: sitePrimaryColor
+          }
+        );
+        this.fs.copy(
+          this.templatePath('src/assets/scss/core/_settings.scss'),
+          this.destinationPath('src/assets/scss/core/_settings.scss')
         );
         this.fs.copyTpl(
           this.templatePath('src/patterns/organisms/'),
@@ -131,8 +142,16 @@ module.exports = yeoman.generators.Base.extend({
           }
         );
         this.fs.copy(
-          this.templatePath('src/assets/css/bp/core/global/_variables_overrides.scss'),
-          this.destinationPath('src/assets/css/core/global/_variables_overrides.scss')
+          this.templatePath('src/assets/scss/bp/_foundation-settings.scss'),
+          this.destinationPath('src/assets/scss/core/_foundation-settings.scss')
+        );
+        this.fs.copy(
+          this.templatePath('src/assets/scss/bp/_global.scss'),
+          this.destinationPath('src/assets/scss/core/_global.scss')
+        );
+        this.fs.copy(
+          this.templatePath('src/assets/scss/bp/_settings.scss'),
+          this.destinationPath('src/assets/scss/core/_settings.scss')
         );
         this.fs.copyTpl(
           this.templatePath('src/patterns/organisms/'),
@@ -149,88 +168,11 @@ module.exports = yeoman.generators.Base.extend({
   // Copy application and project files
   writing: {
 
-    app: function () {
-
-      console.log('Copying the application files...');
-
-      this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
-      );
-    },
-
     projectfiles: function () {
 
       console.log('Copying the project files...');
 
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/atoms'),
-        this.destinationPath('src/assets/css/core/atoms')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/foundation'),
-        this.destinationPath('src/assets/css/core/foundation')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/global/_color_variables.scss'),
-        this.destinationPath('src/assets/css/core/global/_color_variables.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/global/_functions.scss'),
-        this.destinationPath('src/assets/css/core/global/_functions.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/global/_mixins.scss'),
-        this.destinationPath('src/assets/css/core/global/_mixins.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/global/_variables.scss'),
-        this.destinationPath('src/assets/css/core/global/_variables.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/lib'),
-        this.destinationPath('src/assets/css/core/lib')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/molecules'),
-        this.destinationPath('src/assets/css/core/molecules')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/_core.scss'),
-        this.destinationPath('src/assets/css/core/_core.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/_settings.scss'),
-        this.destinationPath('src/assets/css/core/_settings.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/_ui_core.scss'),
-        this.destinationPath('src/assets/css/core/_ui_core.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/core/_ui_settings.scss'),
-        this.destinationPath('src/assets/css/core/_ui_settings.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/partials'),
-        this.destinationPath('src/assets/css/partials')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/evolution.scss'),
-        this.destinationPath('src/assets/css/evolution.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/evolution_ui.scss'),
-        this.destinationPath('src/assets/css/evolution_ui.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/ie.scss'),
-        this.destinationPath('src/assets/css/ie.scss')
-      );
-      this.fs.copy(
-        this.templatePath('src/assets/css/styles.scss'),
-        this.destinationPath('src/assets/css/styles.scss')
-      );
+      // Assets (fonts, images, js, scss)
       this.fs.copy(
         this.templatePath('src/assets/fonts'),
         this.destinationPath('src/assets/fonts/')
@@ -240,21 +182,61 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('src/assets/images/')
       );
       this.fs.copy(
-        this.templatePath('src/assets/scripts/'),
-        this.destinationPath('src/assets/scripts/')
+        this.templatePath('src/assets/js/'),
+        this.destinationPath('src/assets/js/')
       );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/app'),
+        this.destinationPath('src/assets/scss/app')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/core/atoms'),
+        this.destinationPath('src/assets/scss/core/atoms')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/core/global'),
+        this.destinationPath('src/assets/scss/core/global')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/core/molecules'),
+        this.destinationPath('src/assets/scss/core/molecules')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/app.scss'),
+        this.destinationPath('src/assets/scss/app.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/evolution-animations.scss'),
+        this.destinationPath('src/assets/scss/evolution-animations.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/evolution.scss'),
+        this.destinationPath('src/assets/scss/evolution.scss')
+      );
+      this.fs.copy(
+        this.templatePath('src/assets/scss/ie.scss'),
+        this.destinationPath('src/assets/scss/ie.scss')
+      );
+      
+      // Content (markdown)
       this.fs.copy(
         this.templatePath('src/content/'),
         this.destinationPath('src/content/')
       );
+
+      // Design files
       this.fs.copy(
         this.templatePath('src/design/'),
         this.destinationPath('src/design/')
       );
+
+      // Handlebars helpers
       this.fs.copy(
         this.templatePath('src/helpers/'),
         this.destinationPath('src/helpers/')
       );
+
+      // Patterns
       this.fs.copy(
         this.templatePath('src/patterns/atoms/'),
         this.destinationPath('src/patterns/atoms/')
@@ -263,18 +245,38 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('src/patterns/molecules/'),
         this.destinationPath('src/patterns/molecules/')
       );
+
+      // Snippets (sublime)
       this.fs.copy(
         this.templatePath('src/snippets/'),
         this.destinationPath('src/snippets/')
       );
+
+      // Views (layouts, page templates, partials, templates)
       this.fs.copy(
         this.templatePath('src/views/'),
         this.destinationPath('src/views/')
       );
+
+      // Babel
+      this.fs.copy(
+        this.templatePath('.babelrc'),
+        this.destinationPath('.babelrc')
+      );
+
+      // FTP
       this.fs.copy(
         this.templatePath('.ftppass'),
         this.destinationPath('.ftppass')
       );
+
+      // Bower
+      this.fs.copy(
+        this.templatePath('_bower.json'),
+        this.destinationPath('bower.json')
+      );
+
+      // Grunt
       this.fs.copy(
         this.templatePath('Gruntfile.tpl.js'),
         this.destinationPath('Gruntfile.js')
@@ -283,10 +285,14 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('grunt/'),
         this.destinationPath('grunt/')
       );
+
+      // Change log (markdown)
       this.fs.copy(
         this.templatePath('CHANGELOG.md'),
         this.destinationPath('CHANGELOG.md')
       );
+
+      // Read me (markdown)
       this.fs.copy(
         this.templatePath('README.md'),
         this.destinationPath('README.md')
@@ -303,4 +309,3 @@ module.exports = yeoman.generators.Base.extend({
   }
   
 });
-

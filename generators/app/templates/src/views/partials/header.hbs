@@ -1,252 +1,247 @@
-<header class="evo-header" role="banner">
-	
-	<!-- TOP BAR CONTAINER - DEFAULT - BEGINS -->
-	<div class="{{#isnt basename "full-width"}}contain-to-grid {{/isnt}}show-for-large-up">
+<header class="evo-header evo-site-header" role="banner">
 
-		<!-- TOP BAR - BEGINS -->
-		<nav class="top-bar evo-top-bar" data-topbar role="navigation">
-			
-			<!-- TOP BAR TITLE AREA - BEGINS -->
-			<ul class="title-area">
-				<li class="name">
-					<h1><a href="{{#is dirname "dist/page-templates"}}../index.html{{else}}index.html{{/is}}">{{ global.title }} <span class="evo-top-bar-sub-name"></span></a></h1>
-					<!-- <a href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
-				</li>
-			</ul>
-			<!-- TOP BAR TITLE AREA - ENDS -->
-
-			<!-- TOP BAR NAV SECTION - BEGINS -->
-			<section class="top-bar-section">
-
-				<!-- TOP BAR RIGHT NAV SECTION - BEGINS -->
-				<ul class="right">
-					<li class="has-dropdown">
-						<a class="evo-icon-user"></a>
-						<ul class="dropdown">
-							<li>
-								<a href="">View Profile</a>
-							</li>
-							<li class="divider"></li>
-							<li class="active">
-								<a href="">Change Language</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="">User Administration</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="">Log Out</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<!-- TOP BAR RIGHT NAV SECTION - ENDS -->
-
-				<!-- TOP BAR LEFT NAV SECTION - BEGINS -->
-				<ul class="left">
-					<li class="has-dropdown">
-						<a>Nav Link 1</a>
-						<ul class="dropdown">
-							<li>
-								<a href="">Item 1</a>
-							</li>
-							<li class="divider"></li>
-							<li class="has-dropdown">
-								<a>Item 2</a>
-								<ul class="dropdown">
-									<li>
-										<a href="">Sub-item 1</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a href="">Sub-item 2</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a href="">Sub-item 3</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a href="">Sub-item 4</a>
-									</li>
-								</ul>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="">Item 3</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="">Item 4</a>
-							</li>
-						</ul>
-					</li>
-					<li class="active">
-						<a href="">Nav Link 2</a>
-					</li>
-					<li>
-						<a href="">Nav Link 3</a>
-					</li>
-
-					<!-- TOP BAR - MEGA MENU - BEGINS -->
-					<li class="has-dropdown" data-evo-top-bar-mega-menu>
-						<a>Mega Menu</a>
-						<ul class="dropdown" data-evo-top-bar-mega-menu-ctn>
-							<li>
-								<div class="evo-contain-to-grid" data-evo-top-bar-mega-menu-content-ctn>
-									<div class="row">
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-										<div class="large-3 columns">
-											<h6 class="evo-hdr-rule">H6 Header</h6>
-											<ul class="no-bullet">
-												<li><a href="#/">Section One</a></li>
-												<li><a href="#/">Section Two</a></li>
-												<li><a href="#/">Section Three</a></li>
-												<li><a href="#/">Section Four</a></li>	
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<!-- TOP BAR - MEGA MENU - ENDS -->
-					
-				</ul>
-				<!-- TOP BAR LEFT NAV SECTION - ENDS -->
-
-			</section>
-			<!-- TOP BAR NAV SECTION - ENDS -->
-
-		</nav>
-		<!-- TOP BAR - ENDS -->
-
-	</div>
-	<!-- TOP BAR CONTAINER - DEFAULT - ENDS -->
-
-	<!-- OFF-CANVAS - TAB BAR - BEGINS -->
-	<nav class="tab-bar hide-for-large-up" aria-hidden="true">
-		<section class="left-small">
-			<a class="left-off-canvas-toggle menu-icon">
+<!-- OFF-CANVAS - TITLE BAR - BEGINS -->
+	<nav class="title-bar" data-responsive-toggle="evo-site-top-bar" data-hide-for="large" role="navigation">
+		<div class="title-bar-left">
+			<button class="menu-icon" type="button" data-open="evo-off-canvas-left-menu">
 				<i class="evo-icon-menu7 evo-icon-size-medium" title="Menu"></i>
-			</a>
-		</section>
-
-		<section class="middle tab-bar-section">
-			<h1 class="title">
-				<a href="{{#is dirname "dist/page-templates"}}../index.html{{else}}index.html{{/is}}">{{ global.title }}</a>
-			</h1>
-			<!-- <a class="title" href="#/">{{> image src="core/corp-logos/mercer/mercer_logo_rgb_reverse.png" alt="Mercer - Make Tomorrow, Today" width="160"}}</a> -->
-		</section>
-
-		<section class="right-small">
-			<a class="right-off-canvas-toggle menu-icon">
-				<i class="evo-icon-user evo-icon-size-medium" title="User Account"></i>
-			</a>
-		</section>
+			</button>
+		</div>
+		<div class="title-bar-title">
+			<a href="{{#is dirname "dist/page-templates"}}../index.html{{else}}index.html{{/is}}">{{ global.title }}</a>
+		</div>
+		<div class="title-bar-right">
+			<button class="menu-icon" type="button" data-open="evo-off-canvas-right-menu">
+				<i class="evo-icon-user evo-icon-size-medium" title="Menu"></i>
+			</button>
+		</div>
 	</nav>
-	<!-- OFF-CANVAS - TAB BAR - ENDS -->
+<!-- OFF-CANVAS - TITLE BAR - ENDS -->
 
-	<!-- OFF-CANVAS - LEFT MENU - BEGINS -->
-	<aside class="left-off-canvas-menu">
-		<ul class="off-canvas-list">
+<!-- OFF-CANVAS - LEFT MENU - BEGINS -->
+	<div class="off-canvas position-left" id="evo-off-canvas-left-menu" data-off-canvas>
+		<ul class="vertical menu" data-drilldown>
 			<li>
 				<label>Label</label>
 			</li>
-			<li class="has-submenu">
+			<li>
 				<a href="">Item 1 w/ menu</a>
-				<ul class="left-submenu">
-					<li class="back">
-						<a href="">Back</a>
-					</li>
+				<ul class="vertical menu">
 					<li>
 						<label>Level 1</label>
 					</li>
 					<li>
-						<a href="">Sub-item 1</a>
+						<a href="#/">Sub-item 1</a>
 					</li>
-					<li class="has-submenu">
+					<li>
 						<a href="">Sub-item 2 w/ menu</a>
-						<ul class="left-submenu">
-							<li class="back">
-								<a href="">Back</a>
-							</li>
+						<ul class="vertical menu">
 							<li>
 								<label>Level 2</label>
 							</li>
 							<li>
-								<a href="">Sub-sub-item 1</a>
+								<a href="#/">Sub-sub-item 1</a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="">Sub-item 3</a>
+						<a href="#/">Sub-item 3</a>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="">Item 2</a>
+				<a href="#/">Item 2</a>
 			</li>
 			<li>
-				<a href="">Item 3</a>
+				<a href="#/">Item 3</a>
 			</li>
 			<li>
-				<a href="">Item 4</a>
+				<a href="#/">Item 4</a>
 			</li>
 			<li>
-				<a href="">Item 5</a>
+				<a href="#/">Item 5</a>
 			</li>
 		</ul>
-	</aside>
-	<!-- OFF-CANVAS - LEFT MENU - ENDS -->
+	</div>
+<!-- OFF-CANVAS - LEFT MENU - ENDS -->
 
-	<!-- OFF-CANVAS - RIGHT MENU - BEGINS -->
-	<aside class="right-off-canvas-menu">
-		<ul class="off-canvas-list">
+<!-- OFF-CANVAS - RIGHT MENU - BEGINS -->
+	<div class="off-canvas position-right" id="evo-off-canvas-right-menu" data-off-canvas data-position="right">
+		<ul class="vertical menu" data-drilldown>
 			<li>
-				<label>User Account</label>
+				<label>Label</label>
 			</li>
 			<li>
-				<a href="">View Profile</a>
+				<a href="">Item 1 w/ menu</a>
+				<ul class="vertical menu">
+					<li>
+						<label>Level 1</label>
+					</li>
+					<li>
+						<a href="#/">Sub-item 1</a>
+					</li>
+					<li>
+						<a href="">Sub-item 2 w/ menu</a>
+						<ul class="vertical menu">
+							<li>
+								<label>Level 2</label>
+							</li>
+							<li>
+								<a href="#/">Sub-sub-item 1</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#/">Sub-item 3</a>
+					</li>
+				</ul>
 			</li>
 			<li>
-				<a href="">Change Language</a>
+				<a href="#/">Item 2</a>
 			</li>
 			<li>
-				<a href="">User Administration</a>
+				<a href="#/">Item 3</a>
 			</li>
 			<li>
-				<a href="">Log Out</a>
+				<a href="#/">Item 4</a>
+			</li>
+			<li>
+				<a href="#/">Item 5</a>
 			</li>
 		</ul>
-	</aside>
-	<!-- OFF-CANVAS - RIGHT MENU - ENDS -->
+	</div>
+<!-- OFF-CANVAS - RIGHT MENU - ENDS -->
+
+<!-- TOP BAR - BEGINS -->
+	<nav class="top-bar evo-top-bar" id="evo-site-top-bar" role="navigation">
+		
+	<!-- TOP BAR TITLE - BEGINS -->
+		<div class="top-bar-title">
+			<a href="{{#is dirname "dist/page-templates"}}../index.html{{else}}index.html{{/is}}">{{ global.title }} <span></span></a>
+		</div>
+	<!-- TOP BAR TITLE - ENDS -->
+
+	<!-- TOP BAR CONTENT - BEGINS -->
+		<div class="evo-top-bar-content">
+
+		<!-- TOP BAR LEFT SECTION - BEGINS -->
+			<div class="top-bar-left">
+				<ul class="dropdown menu" data-dropdown-menu>
+
+					<!-- TOP BAR - MEGA MENU - BEGINS -->
+					<li data-evo-mega-menu>
+						<a class="dropdown" data-toggle="evo-site-mega-menu">Mega Menu</a>
+						<div class="dropdown-pane" id="evo-site-mega-menu" data-dropdown data-options="closeOnClick:true; hover: true; hoverPane: true;">
+							<div class="row">
+								<div class="large-3 columns">
+									<h6 class="evo-hdr-rule">H6 Header</h6>
+									<ul class="no-bullet">
+										<li><a href="#/">Section One</a></li>
+										<li><a href="#/">Section Two</a></li>
+										<li><a href="#/">Section Three</a></li>
+										<li><a href="#/">Section Four</a></li>	
+									</ul>
+								</div>
+								<div class="large-3 columns">
+									<h6 class="evo-hdr-rule">H6 Header</h6>
+									<ul class="no-bullet">
+										<li><a href="#/">Section One</a></li>
+										<li><a href="#/">Section Two</a></li>
+										<li><a href="#/">Section Three</a></li>
+										<li><a href="#/">Section Four</a></li>	
+									</ul>
+								</div>
+								<div class="large-3 columns">
+									<h6 class="evo-hdr-rule">H6 Header</h6>
+									<ul class="no-bullet">
+										<li><a href="#/">Section One</a></li>
+										<li><a href="#/">Section Two</a></li>
+										<li><a href="#/">Section Three</a></li>
+										<li><a href="#/">Section Four</a></li>	
+									</ul>
+								</div>
+								<div class="large-3 columns">
+									<h6 class="evo-hdr-rule">H6 Header</h6>
+									<ul class="no-bullet">
+										<li><a href="#/">Section One</a></li>
+										<li><a href="#/">Section Two</a></li>
+										<li><a href="#/">Section Three</a></li>
+										<li><a href="#/">Section Four</a></li>	
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- TOP BAR - MEGA MENU - ENDS -->
+
+					<li>
+						<a href="javascript:;">Item 1</a>
+						<ul class="dropdown menu" data-dropdown-menu>
+							<li>
+								<a href="#/">Sub-item 1</a>
+							</li>
+							<li>
+								<a href="javascript:;">Sub-item 2</a>
+								<ul class="dropdown menu" data-dropdown-menu>
+									<li>
+										<a href="#/">Sub-sub-item 1</a>
+									</li>
+									<li>
+										<a href="#/">Sub-sub-item 2</a>
+									</li>
+									<li>
+										<a href="#/">Sub-sub-item 3</a>
+									</li>
+									<li>
+										<a href="#/">Sub-sub-item 4</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#/">Sub-item 3</a>
+							</li>
+							<li>
+								<a href="#/">Sub-item 4</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		<!-- TOP BAR LEFT SECTION - ENDS -->
+
+		<!-- TOP BAR RIGHT SECTION - BEGINS -->
+			<div class="top-bar-right">
+				<ul class="dropdown menu" data-dropdown-menu>
+					<li class="active">
+						<a href="#/">Item 2</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="evo-icon-user" aria-label="Open Menu">
+							<span class="show-for-sr">Open Menu</span>
+						</a>
+						<ul class="dropdown menu" data-dropdown-menu>
+							<li>
+								<a href="#/">Sub-item 1</a>
+							</li>
+							<li>
+								<a href="#/">Sub-item 2</a>
+							</li>
+							<li class="active">
+								<a href="#/">Sub-item 3</a>
+							</li>
+							<li>
+								<a href="#/">Sub-item 4</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		<!-- TOP BAR RIGHT SECTION - ENDS -->
+
+		</div>
+	<!-- TOP BAR CONTENT - ENDS -->
+
+	</nav>
+<!-- TOP BAR - ENDS -->
 
 </header>
