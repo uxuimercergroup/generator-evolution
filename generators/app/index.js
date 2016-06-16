@@ -276,6 +276,12 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('bower.json')
       );
 
+      // NPM Shrinkwrap
+      this.fs.copy(
+        this.templatePath('_npm-shrinkwrap.json'),
+        this.destinationPath('npm-shrinkwrap.json')
+      );
+
       // Grunt
       this.fs.copy(
         this.templatePath('Gruntfile.tpl.js'),
