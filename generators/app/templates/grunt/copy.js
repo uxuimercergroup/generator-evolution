@@ -48,12 +48,10 @@ module.exports = {
       expand: true,
       cwd: '',
       src: [
-        'grunt/**',
-        'src/**',
-        'bower.json',
-        'Gruntfile.js'
+        'src/assets/**',
+        'src/design/**'
       ],
-      dest: 'dist/build'
+      dest: 'dist'
       }
     ]
   },
@@ -63,10 +61,9 @@ module.exports = {
       expand: true,
       cwd: '',
       src: [
-        'src/assets/scripts/**',
         'src/design/**'
       ],
-      dest: 'dist/build'
+      dest: 'dist'
       }
     ]
   },
