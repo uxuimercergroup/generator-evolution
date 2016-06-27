@@ -8,8 +8,8 @@
     "type" : "git",
     "url" : "https://github.com/uxuimercergroup/generator-evolution"
   },
-  "author": "Douglas Fraize, Matthew Holmes, Sherry Seeton",
-  "date": "June 10, 2016",
+  "author": "Douglas Fraize, Matthew Holmes",
+  "date": "July 1, 2016",
   "homepage": "http://evolution.mercer.com",
   "bugs": "https://github.com/uxuimercergroup/generator-evolution/issues",
   "scripts": {
