@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'evo-icon-font-app';
+    src:    url('fonts/evo-icon-font-app.eot?w6aav0');
+    src:    url('fonts/evo-icon-font-app.eot?w6aav0#iefix') format('embedded-opentype'),
+        url('fonts/evo-icon-font-app.ttf?w6aav0') format('truetype'),
+        url('fonts/evo-icon-font-app.woff?w6aav0') format('woff'),
+        url('fonts/evo-icon-font-app.svg?w6aav0#evo-icon-font-app') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'evo-icon-font-app' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.evo-icon-app-IcoMoon:before {
+    content: "\ef49";
+}
+

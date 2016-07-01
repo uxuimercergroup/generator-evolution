@@ -106,7 +106,6 @@ Now that the Evolution Tool Box generator is installed on your system, you can i
 	- *Where will this project be hosted? (URL)*
 	- *Please select a product suite:*
 		- Core (Get a default boilerplate utilizing the Evolution framework to build your project.)
-		<!-- - Benefits Portals (Get a boilerplate utilizing the Evolution framework customized for Benefits Portals.) -->
 	- *What is the primary color of your project?* (Only asked if *Core* product suite is selected - default is $sapphire-dark - accepts Sass variable from color palette or hex-color formatted like so: #000000)
 4. The Evolution Tool Box generator will now install all required files and dependencies into your current working directory.
 5. Please ignore any warnings when `yo @mercer/evolution` is run.
@@ -142,7 +141,7 @@ Now that the Evolution Tool Box has been installed in your current working direc
 
 The Evolution Tool Box includes several other tasks to streamline the web development process.
 
-###### Test (Testing development environment)
+### Test (Testing development environment)
 Generate development UI for testing in browsers that don't support ES2015 javascript syntax (translated to older ES5 syntax using Babel)
 
 1. Using the cli, make sure that you are still in your current working directory.

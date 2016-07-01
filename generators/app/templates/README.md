@@ -2,14 +2,14 @@
 
 > Starter boilerplate for building projects with Evolution
 
-## Custom Boilerplate
+## Toolbox
 
-Create a custom boilerplate by installing the Evolution Tool Box. Follow the instructions on the [installation](https://evolution.mercer.com/pattern-library/installation.html) page.
+Install our recommended development environment and begin working on your project. Follow the instructions on the Evolution [getting started](https://evolution.mercer.com/pattern-library/getting-started.html) page.
 
-## Sass Boilerplate
+## Sass
 
-This boilerplate is built using Sass, and you can work with it in the same way. Download the latest release of [evolution-boilerplate-sass](https://github.com/uxuimercergroup/evolution-boilerplate-sass/releases) and start developing.
+Sass version for advanced theming of Evolution. Compiled HTML and Javascript. Requires knowledge of Sass. Download the latest release of [evolution-boilerplate-sass](https://github.com/uxuimercergroup/evolution-boilerplate-sass/releases) and start developing.
 
-## CSS Boilerplate
+## CSS
 
-Grab this version of the boilerplate if you want everything in vanilla CSS and JS. Download the latest release of [evolution-boilerplate-css](https://github.com/uxuimercergroup/evolution-boilerplate-css/releases) and start developing.
+CSS version is the most basic setup. Compiled HTML, CSS and JavaScript. Required knowledge of CSS and JS. Download the latest release of [evolution-boilerplate-css](https://github.com/uxuimercergroup/evolution-boilerplate-css/releases) and start developing.

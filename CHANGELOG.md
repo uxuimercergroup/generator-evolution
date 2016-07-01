@@ -2,6 +2,18 @@
 ## [Unreleased]
 -->
 
+## [4.1.0] - 2016-07-01
+
+##### Changed
+- Cleaned up deliverable files for Sass and CSS boilerplate packages to correspond to "Getting Started" documentation on Evolution site.
+- Application level icon font files were renamed to correspond to "app" versus "site" naming:
+	- assets/fonts/evo-icon-font-site.* renamed to assets/fonts/evo-icon-font-app.*
+	- Sass variables and icon class names updated
+
+##### Fixed
+- Fixed package.json to be "shrink wrapped" so NPM dependency versions are locked in for each release. This will make sure newer NPM dependencies are not downloaded on Tool Box install.
+- Fixed the application level icomoon font files to be blank by default and not contain the whole icomoon library.
+
 ## [4.0.0] - 2016-05-26
 
 ##### Changed
