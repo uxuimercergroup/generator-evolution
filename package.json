@@ -1,6 +1,6 @@
 {
   "name": "@mercer/generator-evolution",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "Evolution boilerplate generator using Yeoman",
   "license": "MIT",
   "main": "app/index.js",
@@ -9,7 +9,7 @@
     "url" : "https://github.com/uxuimercergroup/generator-evolution"
   },
   "author": "Douglas Fraize, Matthew Holmes",
-  "date": "July 1, 2016",
+  "date": "September 1, 2016",
   "homepage": "http://evolution.mercer.com",
   "bugs": "https://github.com/uxuimercergroup/generator-evolution/issues",
   "scripts": {
